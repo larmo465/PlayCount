@@ -1,0 +1,1592 @@
+{
+ "status": 200,
+ "body": {
+  "resultCount": 198,
+  "results": [
+   {
+    "trackName": "September",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/77/93/c4/7793c4f4-a834-97f0-ec38-685e2d3d95d3/mzaf_4969122594945994096.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Let's Groove",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/99/f3/94/99f3947c-5c7f-d4c8-d974-369fdc72be77/mzaf_7880397302369465444.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Reasons",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "That's the Way of the World",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a6/3d/9d/a63d9d10-4faa-b7b4-20b3-6619b0f34cc4/mzaf_8866086258551154936.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Boogie Wonderland (feat. The Emotions)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "I Am",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b7/0b/98/b70b9825-ae86-85b0-3ed0-b8cefb9fe7e8/mzaf_3286029532135755043.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Fantasy",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "All 'N All",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a5/d8/e6/a5d8e628-4cde-80a5-a130-094bdb6162aa/mzaf_6602520248007817878.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Devotion",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d3/c1/49/d3c1491e-11b6-6e18-2ccc-5f5acf39aa20/mzaf_3253374908698188650.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Can't Hide Love (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Live at Velfarre",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/57/ed/8b/57ed8bd4-26a5-f09a-648b-6144e2dcf76b/mzaf_5386810889243150315.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Spirit",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/56/b8/67/56b867ad-6bf0-201b-5cc2-2886809189b2/mzaf_16060218220745868051.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Love Together",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Illumination",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0f/83/5b/0f835b00-17df-be10-ccf4-abd9182fe3cd/mzaf_3543055501327435041.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/89/8a/3c/898a3cef-eb1f-91b0-3420-06db970af503/5414939551178.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/89/8a/3c/898a3cef-eb1f-91b0-3420-06db970af503/5414939551178.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire",
+    "artistName": "BOYNEXTDOOR",
+    "collectionName": "HOW?",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/70/9b/ac/709bac30-5bad-1794-5869-3e7720f8202d/mzaf_5658452199662629014.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3e/38/bf/3e38bf61-7171-1cfc-7dc4-8e74751f2b6b/196922852268_Cover.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3e/38/bf/3e38bf61-7171-1cfc-7dc4-8e74751f2b6b/196922852268_Cover.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Runaway (feat. Earth, Wind & Fire & The Product G&B)",
+    "artistName": "Wyclef Jean",
+    "collectionName": "The Ecleftic -2 Sides II A Book",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3c/88/a4/3c88a429-f293-da74-3b40-40ef893876a7/mzaf_11963186463011870179.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ae/fa/21/aefa2199-48c6-40ba-b614-0ab7edac0004/mzi.ejfgsafg.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ae/fa/21/aefa2199-48c6-40ba-b614-0ab7edac0004/mzi.ejfgsafg.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire (English Ver.)",
+    "artistName": "BOYNEXTDOOR",
+    "collectionName": "HOW?",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/10/3d/1e/103d1efd-0dc9-d6ee-1a7c-da00eccf0bc3/mzaf_11854657753501625766.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3e/38/bf/3e38bf61-7171-1cfc-7dc4-8e74751f2b6b/196922852268_Cover.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3e/38/bf/3e38bf61-7171-1cfc-7dc4-8e74751f2b6b/196922852268_Cover.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire (Live Ver.)",
+    "artistName": "BOYNEXTDOOR",
+    "collectionName": "BOYNEXTDOOR TOUR ‘KNOCK ON Vol.1’ FINAL (LIVE)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ef/92/d0/ef92d0f3-4590-3f22-acaa-3be50690ed7f/mzaf_8521914164455961235.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/92/58/2d/92582d41-5957-1894-f3e6-9bffd49224cc/198704944123_Cover.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/92/58/2d/92582d41-5957-1894-f3e6-9bffd49224cc/198704944123_Cover.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire (Japanese Version)",
+    "artistName": "BOYNEXTDOOR",
+    "collectionName": "Earth, Wind & Fire (Japanese Version) - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c8/02/03/c802036f-cc75-54a9-e165-4f5095303403/mzaf_3654633726952201773.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/ee/50/48ee5085-4dd8-cf87-0ac5-575a093eabc8/24UMGIM60613.rgb.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/48/ee/50/48ee5085-4dd8-cf87-0ac5-575a093eabc8/24UMGIM60613.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire (Japanese Version)",
+    "artistName": "BOYNEXTDOOR",
+    "collectionName": "AND, - EP",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/94/e0/0694e013-eff4-fa3b-1a0e-d327656c2aef/mzaf_2613309529482977253.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/ff/ed/1dffedb5-ac49-3659-ea30-c82a0530da95/24UMGIM60620.rgb.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1d/ff/ed/1dffedb5-ac49-3659-ea30-c82a0530da95/24UMGIM60620.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire",
+    "artistName": "YOUNGBAEKANSIE",
+    "collectionName": "VIBES",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ee/f6/da/eef6da2b-f21b-3072-6c7b-048843b05d67/mzaf_8250867013627767056.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/82/20/9f/82209fd0-a813-a9e2-96c4-937d63610534/artwork.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/82/20/9f/82209fd0-a813-a9e2-96c4-937d63610534/artwork.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Let Your Feelings Show (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Live at Velfarre",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/96/1c/b2/961cb267-c010-32b7-557f-4a1ec4bbc414/mzaf_9640044360441935654.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire",
+    "artistName": "Tessanne Chin",
+    "collectionName": "Earth, Wind & Fire - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/3e/b6/ab/3eb6aba7-21e7-f590-6725-6d5f6a53287d/mzaf_9920148122898335853.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/42/78/b2/4278b252-8338-fe1d-349d-9f60f1facc18/TESSANNE_-_BLUE.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/42/78/b2/4278b252-8338-fe1d-349d-9f60f1facc18/TESSANNE_-_BLUE.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Fantasy",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/83/be/14/83be147a-8247-21a6-10f7-a02817ee7ec3/mzaf_15484972692705955339.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Meet Earth, Wind & Fire (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Live In Japan (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b0/47/47/b0474795-7214-fc3c-fc46-7b57e4763667/mzaf_4042270340187695061.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/af/f5/27/aff5278f-088a-b89f-7072-477692b4058b/08PNDIM02874.rgb.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/af/f5/27/aff5278f-088a-b89f-7072-477692b4058b/08PNDIM02874.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Shining Star",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "That's the Way of the World",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fe/e3/a5/fee3a59e-84a1-74b4-1370-b57b41670d1f/mzaf_176989037408320573.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "After the Love Has Gone",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "I Am",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/72/77/3d7277c0-a4ec-8fe6-fdcd-1503a16b2801/mzaf_2231744054265929448.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Let's Groove",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Raise!",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/76/23/e3/7623e32f-d6c5-e92f-9460-9bb4cceeb02f/mzaf_6972883878085351196.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ca/f8/29/caf82937-caba-e739-79b1-fe53a673dd53/dj.vikfvxxi.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ca/f8/29/caf82937-caba-e739-79b1-fe53a673dd53/dj.vikfvxxi.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Can't Hide Love",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/a2/d9/cba2d9ee-a932-d5e8-a349-8187df6070e7/mzaf_11743557650278816976.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "That's the Way of the World",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "That's the Way of the World",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/33/b8/70/33b870f6-b19a-fed5-ffbf-443825178110/mzaf_8203739678540691541.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "EARTH WIND & FIRE",
+    "artistName": "Pizzy Priest",
+    "collectionName": "EARTH WIND & FIRE - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/7a/91/fb7a9126-e26a-c1a0-cf10-06b235f53b37/mzaf_13599298283252011325.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/75/64/c8/7564c85f-2d54-f2fa-d4b2-7c0a883d58cf/8e9dfc00-ba4c-4735-8505-a314a63c31e8.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/75/64/c8/7564c85f-2d54-f2fa-d4b2-7c0a883d58cf/8e9dfc00-ba4c-4735-8505-a314a63c31e8.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Keep Your Head to the Sky",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Head to the Sky (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/d0/f6/c3d0f6be-f504-4e4a-df9a-6eb6b34ad895/mzaf_2213405167717749321.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/80/e4/56/80e456ab-4012-9f58-f4a5-42ee82965649/886443461277.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/80/e4/56/80e456ab-4012-9f58-f4a5-42ee82965649/886443461277.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sing a Song",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e8/33/2c/e8332c93-1170-0014-8b4c-a724310d855e/mzaf_12633185844683851274.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Be Ever Wonderful",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "All 'N All",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ef/13/41/ef13416c-02e3-cf27-e6a1-aca9661e4cfb/mzaf_12859987502740608058.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "September",
+    "artistName": "Justin Timberlake, Anna Kendrick & Earth, Wind & Fire",
+    "collectionName": "TROLLS (Original Motion Picture Soundtrack)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/76/2a/c6/762ac661-d34e-371d-e6e6-3c3406bc2227/mzaf_2582656645490202271.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/68/19/43/68194388-efa7-3afe-8a15-a4c3eebef1f6/886445915211.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/68/19/43/68194388-efa7-3afe-8a15-a4c3eebef1f6/886445915211.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "September",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3d/87/3a/3d873a69-725f-8560-00b3-ffa38df4d526/mzaf_3488042292485014542.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "On Your Face",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Spirit",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/13/71/80/13718040-b429-7a15-4ae7-a915f2e32461/mzaf_15635474098249651563.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Love's Holiday",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "All 'N All",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/95/b2/2f/95b22f2c-ad99-8741-5f10-f7a6efdf68fc/mzaf_4122550695453743470.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I'll Write a Song for You",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "All 'N All",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d9/8a/2f/d98a2fdc-4fb0-64a1-b4ea-5739b73315cc/mzaf_844986352672174423.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Reasons",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/be/61/78be61cc-2fe8-13ae-aa58-136e2130556b/mzaf_8539425181679209217.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "September",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Best Of Earth, Wind & Fire Vol. 1",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/49/2d/44/492d441e-f0ce-5c3a-dcc6-3a892d2600f2/mzaf_2765278844043228646.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "September",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Eternal Dance",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/d4/95/78d49529-bd72-c490-5392-3a7f3d24755b/mzaf_6924139238970009441.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Got to Get You Into My Life",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fe/cd/0b/fecd0b55-664c-5f45-49f0-ccc9e5b2eae2/mzaf_15619515656924322077.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Shining Star",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/05/c3/8a/05c38a2b-6f8e-67dc-5fa3-d32f3ce19752/mzaf_14789305120725529894.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire",
+    "artistName": "Jamie T",
+    "collectionName": "Kings & Queens",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5a/f5/7e/5af57ed9-6090-b49c-4b11-6c0a7da55ce7/mzaf_16799259023760541878.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1f/01/b2/1f01b29d-1c98-db7b-f6e0-06a7884e694f/13UABIM52393.rgb.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1f/01/b2/1f01b29d-1c98-db7b-f6e0-06a7884e694f/13UABIM52393.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You Want My Love (feat. Lucky Daye)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "You Want My Love (feat. Lucky Daye) - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d4/49/7a/d4497aee-3cad-3113-d110-7cad803e58ee/mzaf_6976693192148911305.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/8c/98/eb/8c98eb68-e56e-1a15-387d-a9b73d93df82/21UMGIM67092.rgb.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/8c/98/eb/8c98eb68-e56e-1a15-387d-a9b73d93df82/21UMGIM67092.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Serpentine Fire",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "All 'N All",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b2/91/68/b29168b2-892d-75d4-7cd7-474d2aadf53f/mzaf_14432015131796503253.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "That's the Way of the World",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/35/dd/4e/35dd4e14-daed-9b91-db58-4ef7706d280d/mzaf_10892092069767944885.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Got to Get You Into My Life",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Best Of Earth, Wind & Fire Vol. 1",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b8/16/7a/b8167ad3-48bb-a6f4-349c-b35cdafd89cf/mzaf_7845572142034034717.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "In the Stone",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "I Am",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/a9/b3/5ea9b346-7262-4b20-cef1-a1d1055ee531/mzaf_4902091025195932833.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "September",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "'70s Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/94/ba/40/94ba4092-1a90-d66a-2451-56a4dac51713/mzaf_15499251579526754575.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/87/ee/4d/87ee4d9d-f3e2-8c37-f123-95e1137d237d/dj.aqsfsbsd.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/87/ee/4d/87ee4d9d-f3e2-8c37-f123-95e1137d237d/dj.aqsfsbsd.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Boogie Wonderland (with The Emotions)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9a/cd/5e/9acd5e75-3d18-6463-4ca8-9158a15eb9dc/mzaf_2836085676486500884.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "After the Love Has Gone",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/04/47/dc/0447dc04-b264-23c8-ac02-08a050573792/mzaf_16975660341383336028.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sun Goddess (feat. Special Guest Soloist Ramsey Lewis)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Sun Goddess",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/08/dd/a1/08dda144-7513-bfb2-910e-c270d7aa11c9/mzaf_16457355881814981555.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/26/0a/98/260a984d-f13d-a9f3-4b52-387119ad72aa/mzi.tnxxthub.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/26/0a/98/260a984d-f13d-a9f3-4b52-387119ad72aa/mzi.tnxxthub.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Let's Go Dumb Crasy",
+    "artistName": "Big Boogie, Big Money Blitz & Earth, Wind & Fire",
+    "collectionName": "Let's Go Dumb Crasy - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f4/93/a3/f493a303-e04d-dad7-ffd6-53e479475e47/mzaf_7612166231315661977.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/68/a0/ab/68a0ab5a-7d05-efc3-c50b-e8d2b7b306f7/764656227616_cover.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/68/a0/ab/68a0ab5a-7d05-efc3-c50b-e8d2b7b306f7/764656227616_cover.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Getaway",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Spirit",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/07/32/b0/0732b0d7-585d-91ab-cf27-ed3c9189c4b1/mzaf_5532063670205502961.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sing a Song",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Gratitude (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5f/29/6b/5f296bf3-4cd4-3cfa-5b20-e2016bad7e65/mzaf_18254383777496533090.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Can't Hide Love",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Gratitude (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/24/05/14/24051464-7f0b-de8f-f5d4-93cc7465c1c8/mzaf_3982011292539114629.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Can't Hide Love",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Best Of Earth, Wind & Fire Vol. 1",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/81/b2/ae/81b2ae4b-1913-d7af-acd3-4dac56a98c79/mzaf_1985676833696964874.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Serpentine Fire",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/b7/58/9cb75874-9ffb-19c3-4dfa-a5a708e44f27/mzaf_9297251208786883325.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gratitude",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/37/6e/2d/376e2df2-8033-caab-2fde-0a84492cf3b6/mzaf_6701071728184707699.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Devotion",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Open Our Eyes",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/67/21/65/6721657b-d4fb-d65a-937c-42932b2e3623/mzaf_579485677947430112.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/cc/9d/70/cc9d7078-7ab8-a991-6786-9fb3ecddd7bf/886443461390.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/cc/9d/70/cc9d7078-7ab8-a991-6786-9fb3ecddd7bf/886443461390.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Got to Get You Into My Life",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Eternal Dance",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/4b/d0/fb4bd0b4-b8dd-be11-1e76-c7b383ac1183/mzaf_17345438302748788545.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Saturday Nite",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Spirit",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c9/ef/8c/c9ef8c11-8871-0d87-6ee8-600ed178dc8a/mzaf_14083641662978876482.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Fall in Love with Me",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Powerlight",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7e/8a/63/7e8a6346-9850-641e-67ba-831dd429be02/mzaf_13048289246782757015.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/db/51/5f/db515f72-1998-615c-1c73-edff93313ac5/dj.mvwqjcyf.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/db/51/5f/db515f72-1998-615c-1c73-edff93313ac5/dj.mvwqjcyf.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Getaway",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/31/91/e2/3191e2a3-890c-9045-d89a-0b06dbfcdbf8/mzaf_6936121165528349417.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Would You Mind",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Constellations: The Universe of Earth, Wind & Fire (Rarities)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7c/12/c6/7c12c612-317d-9356-4706-8a1199410223/mzaf_14830287754919425268.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/cd/94/ff/cd94ff62-c073-e858-fd83-8be575dc51d5/886447609477.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/cd/94/ff/cd94ff62-c073-e858-fd83-8be575dc51d5/886447609477.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Hollywood (feat. Earth, Wind & Fire & Hazel Monet)",
+    "artistName": "Victoria Monét",
+    "collectionName": "JAGUAR II",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/05/65/43/05654398-cbb3-3fa2-c356-e89ff076ffe4/mzaf_758495650781663222.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/8a/80/48/8a80487e-4bfc-f07c-c47e-79d21905f7e8/196589891235.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/8a/80/48/8a80487e-4bfc-f07c-c47e-79d21905f7e8/196589891235.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Never Change (feat. Philip Bailey)",
+    "artistName": "BJ the Chicago Kid",
+    "collectionName": "Gravy",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d0/b4/e2/d0b4e2b1-8ced-4a65-e72b-046a0a670755/mzaf_17727126088916870465.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/79/a4/1f/79a41f71-4488-921a-e6c6-467409c40ab1/196871077095.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/79/a4/1f/79a41f71-4488-921a-e6c6-467409c40ab1/196871077095.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire",
+    "artistName": "Nigel Hall & DJ Harrison",
+    "collectionName": "The Burning Bush: A Journey Through the Music of Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/77/65/57/776557c0-233a-7625-0108-329b2f59dd29/mzaf_1949166803450049578.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4c/53/12/4c53122e-7872-0a0d-8a0f-2ac6b554d80b/196922462054_Cover.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4c/53/12/4c53122e-7872-0a0d-8a0f-2ac6b554d80b/196922462054_Cover.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Can't Let Go",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "I Am",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/08/99/43/08994361-f69c-a4ab-095b-9ecb25fef0b4/mzaf_16081502604920017541.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Imagination",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Spirit",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ce/14/bc/ce14bc47-556b-290d-96d0-90cd2d2ba252/mzaf_8546255095645671920.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The Way You Move",
+    "artistName": "Kenny G",
+    "collectionName": "At Last...The Duets Album",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/24/b9/72/24b97218-0fd7-313f-2cce-22f57ca5a9f6/mzaf_10165294707330997739.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/00/d7/ba/mzi.nsbjzlao.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/00/d7/ba/mzi.nsbjzlao.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "All About Love (First Impression)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "That's the Way of the World",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a8/7e/f9/a87ef9ad-c71f-073e-7041-fc21322d7112/mzaf_6538549621013185492.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Saturday Nite",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3b/b9/b2/3bb9b23a-ddd0-0b41-f537-aecef17e3e95/mzaf_1158843864703767361.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Kalimba Story",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/72/d1/04/72d1042a-f13e-3627-e5e5-f4f6083999eb/mzaf_8103319814743180474.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mighty Mighty",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Open Our Eyes",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d0/13/c4/d013c4e9-8f6b-ba29-b436-a3cb3a361be0/mzaf_6084044007069163730.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/cc/9d/70/cc9d7078-7ab8-a991-6786-9fb3ecddd7bf/886443461390.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/cc/9d/70/cc9d7078-7ab8-a991-6786-9fb3ecddd7bf/886443461390.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Beijo (Interlude)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "All 'N All",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a1/ab/a8/a1aba85f-63d6-ec8e-c3b7-0cd50687bdc4/mzaf_7745352019427752169.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Happy Feelin'",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "That's the Way of the World",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/cc/7e/9fcc7eb0-c3ae-9122-33c9-08afa858437a/mzaf_8950134372320569319.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mighty Mighty",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d2/38/b6/d238b601-d312-3031-f54f-7f8ae6a8cd0d/mzaf_14648961714531337462.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5d/66/3b/5d663b1f-dcc9-030d-0cf1-fc5d344d391d/886447618448.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire (Caroline Riddim)",
+    "artistName": "Tessanne Chin",
+    "collectionName": "Caroline Riddim EP",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/75/29/82/75298236-205d-9067-eedc-f77282ef9e21/mzaf_16835757387421784185.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9f/9b/76/9f9b76cd-792f-ec0f-770f-205b377afb1b/artwork-Caroline_VArious_859772657338.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/9f/9b/76/9f9b76cd-792f-ec0f-770f-205b377afb1b/artwork-Caroline_VArious_859772657338.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Devotion (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Gratitude (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/de/f7/09/def7094e-615b-ca73-7b6e-13d8727c5ec1/mzaf_4053990956279672197.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Evil",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Head to the Sky (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e4/80/6b/e4806b5c-0573-3763-9618-9fcd2027d430/mzaf_14469460660415183328.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/80/e4/56/80e456ab-4012-9f58-f4a5-42ee82965649/886443461277.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/80/e4/56/80e456ab-4012-9f58-f4a5-42ee82965649/886443461277.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You and I",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "I Am",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8c/16/e6/8c16e612-a482-9b47-8f2e-f0043c44624a/mzaf_9327975383646985883.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Yearnin' Learnin'",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "That's the Way of the World",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cb/66/5b/cb665bdd-5d33-e983-cab4-d965f4d2627f/mzaf_8633763814211249999.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Devotion",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Open Our Eyes (Bonus Tracks Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a3/79/5b/a3795b28-8a25-0250-7571-915f49362a9a/mzaf_13834294384541748233.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/fd/dc/a4/mzi.qtujtzwa.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/fd/dc/a4/mzi.qtujtzwa.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Holidays (feat. Earth, Wind & Fire)",
+    "artistName": "Meghan Trainor",
+    "collectionName": "A Very Trainor Christmas",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/de/69/e9/de69e970-7fad-b5d2-f864-ea8f522e2aaa/mzaf_4485419315118342308.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ce/5b/c2/ce5bc2fb-f762-285b-8780-1c3156016594/886448685012.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ce/5b/c2/ce5bc2fb-f762-285b-8780-1c3156016594/886448685012.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Getaway",
+    "artistName": "Auburn University Marching Band & Johnnie Vinson",
+    "collectionName": "From the Vault - The University of Auburn Marching Band 1976 Season",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/86/23/c2/8623c2c6-6eec-74a2-17ff-5347cf0c88bd/mzaf_9189753275441461346.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/09/d7/e9/09d7e998-223d-d906-e2e6-361d793ab37e/887396363526.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/09/d7/e9/09d7e998-223d-d906-e2e6-361d793ab37e/887396363526.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Jupiter",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "All 'N All",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/77/30/91/773091f8-c138-3319-f603-cf96cece9e4c/mzaf_840782653634191832.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sing a Song",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/34/d7/3834d76a-5d81-31d4-d3c0-05fae9844b82/mzaf_2362719635411971334.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Wait",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "I Am",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a9/c5/1e/a9c51e58-d46e-3750-8c70-28a6c1fd115a/mzaf_14905176862909517482.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africano",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "That's the Way of the World",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/89/1e/a7/891ea73d-3ba4-09da-916c-d4205cd40a41/mzaf_15859989287068031594.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "After the Love Has Gone",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/7a/27/c67a279f-e274-c802-c318-c661ebfe5f71/mzaf_7589605684627978129.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Let's Groove",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/32/20/f3/3220f3d5-d281-c894-499b-d0f3f48427e0/mzaf_7547075041744378028.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Reasons (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Gratitude (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/04/22/9f/04229fd8-2759-5444-3202-3c0ec8ce97ef/mzaf_11660527259610794802.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Fantasy (Single Version)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Best Of Earth, Wind & Fire Vol. 1",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ef/33/6a/ef336a77-0123-399a-385e-eb71c1a5f3b8/mzaf_166441483959892790.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Kalimba Story",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Open Our Eyes",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a9/99/59/a99959ef-8f85-cdcd-e2c3-9ffca9eb6334/mzaf_16201208518058624203.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/cc/9d/70/cc9d7078-7ab8-a991-6786-9fb3ecddd7bf/886443461390.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/cc/9d/70/cc9d7078-7ab8-a991-6786-9fb3ecddd7bf/886443461390.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Love Music",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Best Of Earth, Wind & Fire Vol. 1",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2b/5c/61/2b5c6154-64aa-1afa-895c-17820a0c158d/mzaf_1632364876170440174.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Wanna Be With You",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Raise!",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4e/fb/f4/4efbf412-fc56-fe4d-e7ca-8bdfad405125/mzaf_9145008462527925487.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ca/f8/29/caf82937-caba-e739-79b1-fe53a673dd53/dj.vikfvxxi.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ca/f8/29/caf82937-caba-e739-79b1-fe53a673dd53/dj.vikfvxxi.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Shining Star",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bc/94/5a/bc945aae-17d6-3d3f-13a9-354f580a48eb/mzaf_8216857505901643238.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Show Me the Way (feat. Raphael Saadiq)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Illumination",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a4/e6/bd/a4e6bd4a-c5bc-92b1-9bf6-42df19cdbe99/mzaf_6111155118409463710.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/89/8a/3c/898a3cef-eb1f-91b0-3420-06db970af503/5414939551178.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/89/8a/3c/898a3cef-eb1f-91b0-3420-06db970af503/5414939551178.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Side by Side",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Powerlight",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/07/f9/9a/07f99aa1-ef71-739c-23df-0a233c47ad65/mzaf_12731644006902556303.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/db/51/5f/db515f72-1998-615c-1c73-edff93313ac5/dj.mvwqjcyf.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/db/51/5f/db515f72-1998-615c-1c73-edff93313ac5/dj.mvwqjcyf.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth Wind & Fire (feat. Paul Blackman)",
+    "artistName": "Augustus Pablo",
+    "collectionName": "The Mystical World Of Augustus Pablo: Crucial Cuts",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6a/62/82/6a62826d-9362-5910-6daa-c736e1b76e90/mzaf_10894041738980200789.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7e/f6/56/7ef65678-0df0-3d60-d1ff-09cb75f2a989/016351457721_Cover.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/7e/f6/56/7ef65678-0df0-3d60-d1ff-09cb75f2a989/016351457721_Cover.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "That's the Way of the World",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a1/1f/58/a11f5811-8f44-a5cb-887d-14fc8b29d566/mzaf_9195593496424674068.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "There'll Never Be (feat. Earth, Wind & Fire & El DeBarge)",
+    "artistName": "Ronald Isley & The Isley Brothers",
+    "collectionName": "Make Me Say It Again, Girl",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/83/a0/6f/83a06f56-1885-a1bd-7dcb-3d6d7094fc9a/mzaf_8310429845033560514.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c7/06/25/c7062575-3c8f-4481-0650-21211d124a2c/193436302845_edadbdafbbd.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c7/06/25/c7062575-3c8f-4481-0650-21211d124a2c/193436302845_edadbdafbbd.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Reasons",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/7e/c2/db7ec2a9-78e3-cc99-a7ef-f03020eda201/mzaf_6664077802982489313.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "And Love Goes On",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Faces",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/6c/c9/8d6cc99c-292e-eddd-cdfd-449d07f106fb/mzaf_18383654895598506403.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/21/e1/79/21e17901-0aae-7bf9-a409-a757e31136dd/886443461543.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/21/e1/79/21e17901-0aae-7bf9-a409-a757e31136dd/886443461543.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Keep Your Head to the Sky",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/24/05/47/240547a2-68bd-aea7-dbde-a3c21da083bb/mzaf_10800234917583417033.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "In the Stone",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0c/46/d1/0c46d1cb-506c-ac68-4c7a-ee0746ec4e5c/mzaf_3886869765075763515.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Star",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "I Am",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4c/29/96/4c299661-d720-6457-dd53-4ecb03787f77/mzaf_16100025832324530770.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Can't Hide Love",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a5/b6/8c/a5b68c83-3c4b-edc7-00e3-42bd114290f6/mzaf_11207441001689216183.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Fantasy",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/98/f1/07/98f10724-fdc4-c80b-e41d-d84848a5ccc2/mzaf_7026015408546321061.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "December (Based on \"September\")",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Holiday",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/5a/50/3a/5a503a44-0d10-b3cc-8b7f-b9acd8623626/mzaf_15587722778676320354.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/70/62/d2/7062d2d4-ae11-b9da-0f71-13be242d7aaa/886444825160.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/70/62/d2/7062d2d4-ae11-b9da-0f71-13be242d7aaa/886444825160.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Let Your Feelings Show",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "I Am",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/34/02/8a/34028a49-44ea-8ece-1b86-6fc8bc2d4501/mzaf_17615067729909662379.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "EARTH, WIND & FIRE",
+    "artistName": "Skip Waiters",
+    "collectionName": "THE HUMAN EXPERIENCE",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0a/21/82/0a2182b7-8236-04dd-59da-38933bfd2236/mzaf_5588151343614788234.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a2/3a/46/a23a46bc-1ee8-1528-a375-ff6328ed930c/cover.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a2/3a/46/a23a46bc-1ee8-1528-a375-ff6328ed930c/cover.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "That's the Way of the World",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Eternal Dance",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d0/92/dd/d092dd49-9e8e-cd44-6771-8ccab17f348b/mzaf_12846476286284413576.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Runnin'",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "All 'N All",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/da/b5/5ddab599-895e-ed4b-1c3e-342114059912/mzaf_17382767514090273256.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Never Change (feat. Philip Bailey)",
+    "artistName": "BJ the Chicago Kid",
+    "collectionName": "Gravy (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/26/86/67/26866707-8d56-dfc6-4d0e-041bc4d6698a/mzaf_10632239635974469566.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b2/9a/60/b29a6045-53df-695e-0e4e-9b2dd10f83a2/196872452587.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b2/9a/60/b29a6045-53df-695e-0e4e-9b2dd10f83a2/196872452587.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Boogie Wonderland (feat. The Emotions)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d2/1c/24/d21c24c3-7d20-9418-79f6-61f30df27343/mzaf_10633133123214157750.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Faces",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e6/95/a1/e695a1db-dcd0-0aed-1144-7f30e7066316/mzaf_8540617744269937380.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/21/e1/79/21e17901-0aae-7bf9-a409-a757e31136dd/886443461543.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/21/e1/79/21e17901-0aae-7bf9-a409-a757e31136dd/886443461543.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "On Your Face",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3b/5b/98/3b5b9832-58f8-c863-7fdf-9e55ecd6dc6e/mzaf_10789035715233127234.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mighty Mighty",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Open Our Eyes (Bonus Tracks Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/66/96/ce/6696cead-77c8-9518-db23-008e488d5bb6/mzaf_16439747157502423502.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/fd/dc/a4/mzi.qtujtzwa.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/fd/dc/a4/mzi.qtujtzwa.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Magic Mind",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "All 'N All",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/39/ce/32/39ce32e1-504d-2558-c260-01b86f332b5d/mzaf_694961171636198808.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I'll Write a Song for You",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/06/e7/18/06e718bb-92ce-1dc5-2c57-16921a177697/mzaf_4104595433680835257.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Brazilian Rhyme (aka Ponta de Areia)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "All 'N All",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0d/71/dd/0d71dd78-b445-48b5-32bf-c6c258f26b5b/mzaf_14302092375594130573.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Kalimba Story",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Open Our Eyes (Bonus Tracks Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c7/46/7f/c7467f04-7df9-a735-315c-994ef7fbca6b/mzaf_10405391571482760916.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/fd/dc/a4/mzi.qtujtzwa.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/fd/dc/a4/mzi.qtujtzwa.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire",
+    "artistName": "Val Watson",
+    "collectionName": "Urbal",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/aa/a4/37/aaa437d9-48c2-7fd2-fab5-6ad0c62e8f97/mzaf_9727349941770931417.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/49/65/3a/mzi.xrphgare.tif/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/49/65/3a/mzi.xrphgare.tif/100x100bb.jpg"
+   },
+   {
+    "trackName": "Hollywood (feat. Earth, Wind & Fire & Hazel Monet)",
+    "artistName": "Victoria Monét",
+    "collectionName": "JAGUAR II : Deluxe",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3b/f9/ab/3bf9ab48-c887-fce4-b343-d69f0b8b7a9c/mzaf_459293270492622136.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0a/af/5e/0aaf5e80-4028-d5e4-a25f-43d76cd97908/196872154832.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0a/af/5e/0aaf5e80-4028-d5e4-a25f-43d76cd97908/196872154832.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Pure Gold",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Illumination",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/4a/52/154a52c4-7e99-0902-d689-8d4310c06f3d/mzaf_11733394911284637639.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/89/8a/3c/898a3cef-eb1f-91b0-3420-06db970af503/5414939551178.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/89/8a/3c/898a3cef-eb1f-91b0-3420-06db970af503/5414939551178.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The Way You Move (feat. Kenny G)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Illumination",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e9/a2/f9/e9a2f9aa-d8d7-fed8-d246-227e7fa98e4a/mzaf_10527867286917272327.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/89/8a/3c/898a3cef-eb1f-91b0-3420-06db970af503/5414939551178.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/89/8a/3c/898a3cef-eb1f-91b0-3420-06db970af503/5414939551178.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "See the Light",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "That's the Way of the World",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/28/53/85285367-6a87-a85a-374d-a04511edfeeb/mzaf_3748324846326944891.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/1d/86/bc/1d86bc2d-1007-3b47-2652-f4a58fb0eaa0/dj.amgioild.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Got to Get You Into My Life",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fc/84/03/fc84033b-fdba-e29f-bfb5-2bd7bb0249ac/mzaf_7025200510069614013.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "September",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Intouchables (Original Motion Picture Soundtrack)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2e/4d/ce/2e4dce26-8833-f24d-226f-7565ea0df5c1/mzaf_16875742968512096843.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/39/bc/51/39bc513b-0721-3228-782f-057509042a50/886443484481.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/39/bc/51/39bc513b-0721-3228-782f-057509042a50/886443484481.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I Think About Lovin' You",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Need of Love",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/cb/d1/af/cbd1aff6-5cf2-def3-7ae1-3e62026abc15/mzaf_1604487129647071595.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/3d/20/4d/mzi.tkhoydih.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/3d/20/4d/mzi.tkhoydih.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "That's the Way of the World",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Best Of Earth, Wind & Fire Vol. 1",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a9/11/b0/a911b041-25ce-a835-7f9a-b102bd23f846/mzaf_3192254189142030327.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "In the Marketplace (Interlude)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "All 'N All",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/72/5c/e2/725ce2e8-1cdf-302c-5c15-cd4002124ac7/mzaf_3010298379026743735.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/48/e7/e5/48e7e5be-c322-26ed-1b77-feb2f56eb06b/dj.hzoxakii.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sun Goddess (Live)",
+    "artistName": "Earth, Wind & Fire & Ramsey Lewis",
+    "collectionName": "Gratitude (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/90/16/70/9016702c-6f0a-1e35-f5fd-cbabe2267d5b/mzaf_13426762132740678885.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Reasons",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Best Of Earth, Wind & Fire Vol. 1",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ac/2f/5e/ac2f5e6d-3ce9-4434-3b33-3149499d3b1f/mzaf_18090438446274222252.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Spirit",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Spirit",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c4/82/88/c4828896-555d-fde8-d793-13907b0bb61a/mzaf_3532083701058327536.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Let's Groove",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Eternal Dance",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/87/d7/d6/87d7d69d-d614-cfc0-57cd-dfeb97d0ccf7/mzaf_17986878820407827746.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Rock That!",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "I Am",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2b/5a/5b/2b5a5bc2-9276-6948-98c9-15577cfa66b1/mzaf_8395276051734093144.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1a/99/d8/1a99d83b-8949-029b-302b-ec6b62689b4e/886443461536.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Serpentine Fire",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/19/9b/6f199bfa-d319-cb24-574a-917adfadc6b0/mzaf_9059087450366360816.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Holidays (feat. Earth, Wind & Fire)",
+    "artistName": "Meghan Trainor",
+    "collectionName": "A Very Trainor Christmas (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/50/e4/c8/50e4c875-18b3-3300-09c1-6e846267dd4b/mzaf_12522930469495313460.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/25/a4/3c/25a43cdf-2b07-b256-a77c-6fe2e73a9dc7/886449648795.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/25/a4/3c/25a43cdf-2b07-b256-a77c-6fe2e73a9dc7/886449648795.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Boogie Wonderland (with The Emotions)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Best of My Love: The Best of The Emotions",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ee/55/49/ee554914-2477-ef8e-abe6-38231060fda1/mzaf_3078298462693396383.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b2/58/27/b258274e-9c1a-b989-46df-cc6f6506280c/074646483220.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b2/58/27/b258274e-9c1a-b989-46df-cc6f6506280c/074646483220.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Can't Let Go",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/64/5d/01/645d019b-84d6-9eec-3952-64f3503d5dfd/mzaf_8676563785128220338.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth Wind & Fire (feat. Paul Blackman)",
+    "artistName": "Augustus Pablo",
+    "collectionName": "Rockers United!",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6d/11/78/6d117893-53a5-deaa-0d59-6adec2c25b1c/mzaf_18255999935868705517.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/82/33/26/823326a7-7036-4b3c-c268-eeee67f42a22/822720782901.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/82/33/26/823326a7-7036-4b3c-c268-eeee67f42a22/822720782901.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mighty Mighty",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f3/5a/14/f35a1427-3ee4-81e8-fed1-da6c5f039984/mzaf_9615625391601536809.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Happy Seasons (Based on \"Happy Feelin'\")",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Holiday",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b0/79/b6/b079b622-aeea-7885-2f9d-e03672e1e040/mzaf_16241491030823201858.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/70/62/d2/7062d2d4-ae11-b9da-0f71-13be242d7aaa/886444825160.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/70/62/d2/7062d2d4-ae11-b9da-0f71-13be242d7aaa/886444825160.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sing a Song",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Best Of Earth, Wind & Fire Vol. 1",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/36/9c/60/369c60b5-9626-044a-3946-7f4c14eb1247/mzaf_11706561896167826577.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Saturday Nite",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6e/c0/d3/6ec0d313-c23a-2769-0559-c846aa8f8fa2/mzaf_9879308126897125355.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I've Had Enough",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Raise!",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b4/6c/78/b46c7848-c85b-b632-0364-fb0401324637/mzaf_1132233467694825893.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ca/f8/29/caf82937-caba-e739-79b1-fe53a673dd53/dj.vikfvxxi.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ca/f8/29/caf82937-caba-e739-79b1-fe53a673dd53/dj.vikfvxxi.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The World's a Masquerade",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Head to the Sky (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ef/50/b3/ef50b3c4-36fa-1097-471b-6642c00f120b/mzaf_14641667371115458008.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/80/e4/56/80e456ab-4012-9f58-f4a5-42ee82965649/886443461277.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/80/e4/56/80e456ab-4012-9f58-f4a5-42ee82965649/886443461277.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Getaway",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fb/a6/10/fba6101d-33e7-beda-975e-546b4b177491/mzaf_15583700274924157700.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Shining Star",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Best Of Earth, Wind & Fire Vol. 1",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/fd/98/3dfd988f-efd3-14f3-97ee-9a64b4ee1e3a/mzaf_13918187596244618922.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The Way You Move (feat. Earth, Wind & Fire)",
+    "artistName": "Kenny G",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/00/5c/9b/005c9b2b-28db-349b-bc12-f899fb20638c/mzaf_6929756899185633697.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The First Noel",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "21 Classic Christmas Favorites",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/53/41/53/53415325-24bc-46c4-a88a-53ed02c44d64/mzaf_12819021262779561311.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0d/a3/9d/0da39dd1-0f4a-c722-8b97-51ce6c68f8df/mzm.xuuuzgxi.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0d/a3/9d/0da39dd1-0f4a-c722-8b97-51ce6c68f8df/mzm.xuuuzgxi.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I'd Rather Have You",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Last Days and Time (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/05/9b/f5/059bf531-4cb9-8852-30ff-6541302f84d5/mzaf_11378879670832350776.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e7/6d/4c/e76d4ce8-db48-5dff-706e-63d919edce10/886443461338.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e7/6d/4c/e76d4ce8-db48-5dff-706e-63d919edce10/886443461338.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sunday Morning",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Millennium",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/75/db/fc/75dbfc00-8436-fce6-eab8-08a9ffdc2a37/mzaf_1237300233544632273.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/ce/8c/b0/ce8cb0e9-fa40-432e-6570-6b572e1b3139/603497871964.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/ce/8c/b0/ce8cb0e9-fa40-432e-6570-6b572e1b3139/603497871964.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Burnin' Bush",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Spirit",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/56/1e/08561e30-af88-2cee-d0ea-acebdff24e89/mzaf_1339142717095390293.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Kalimba Story",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8e/6f/78/8e6f788b-61dc-4246-2a4b-0dbcb36e7caa/mzaf_5983027139214739131.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Fall in Love with Me",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/48/bb/0f/48bb0f32-0a33-5707-dbb0-9afb6fd3af85/mzaf_16680702697515832553.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africano / Power (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Gratitude (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/93/92/6d/93926da2-b205-e285-b87a-946eba12aa58/mzaf_62701748149700295.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You and I",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a5/02/87/a50287c7-9a51-f43c-7b93-ca13b105b31e/mzaf_6811439199983915586.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "And Love Goes On",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/d3/fb/abd3fb83-d4f1-fe0c-c90b-c4b64db9ca3e/mzaf_2531759606408530247.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "September (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Live at Velfarre",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8c/99/29/8c9929ae-b847-2fdb-6ec2-7090de24e742/mzaf_10865224771804231239.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "System of Survival",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Touch the World",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bb/d2/b2/bbd2b2bc-bac4-901c-fb17-37bd3174b976/mzaf_15287306854540707764.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/e1/93/3e/e1933e9c-2171-3d12-6c5e-2a450d5e0b3a/dj.kcvmtljk.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/e1/93/3e/e1933e9c-2171-3d12-6c5e-2a450d5e0b3a/dj.kcvmtljk.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Thinking of You",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Touch the World",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/88/f6/37/88f6378a-f65c-5430-52db-2448af913014/mzaf_16267792060751776400.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/e1/93/3e/e1933e9c-2171-3d12-6c5e-2a450d5e0b3a/dj.kcvmtljk.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/e1/93/3e/e1933e9c-2171-3d12-6c5e-2a450d5e0b3a/dj.kcvmtljk.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sunshine",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Gratitude (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3a/d1/c2/3ad1c251-2a7c-37bc-b74f-f9e46b8d3075/mzaf_4748495603053906179.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Let Me Talk",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Faces",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/60/a9/90/60a990b2-f834-fbf7-e0ff-1279185d4190/mzaf_11080716608163083897.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/21/e1/79/21e17901-0aae-7bf9-a409-a757e31136dd/886443461543.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/21/e1/79/21e17901-0aae-7bf9-a409-a757e31136dd/886443461543.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Where Have All the Flowers Gone",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Last Days and Time (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ea/11/1e/ea111ec9-bb75-19ed-8fa0-5b33e53fcab8/mzaf_4095279552310317707.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e7/6d/4c/e76d4ce8-db48-5dff-706e-63d919edce10/886443461338.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e7/6d/4c/e76d4ce8-db48-5dff-706e-63d919edce10/886443461338.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire",
+    "artistName": "Shin Giwon",
+    "collectionName": "Kpop Piano #69",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/87/82/19/87821956-7a0e-b569-6047-c14eeb76462e/mzaf_477139842284503211.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/78/8e/0e/788e0ec0-d6a1-28a6-0718-d07df013b679/198009693986.png/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/78/8e/0e/788e0ec0-d6a1-28a6-0718-d07df013b679/198009693986.png/100x100bb.jpg"
+   },
+   {
+    "trackName": "Boogie Wonderland (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Live at Velfarre",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a0/e9/cf/a0e9cfe4-6a69-a99e-4695-be4717bc678e/mzaf_3627161330455519638.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "EARTH WIND & FIRE",
+    "artistName": "Pizzy Priest",
+    "collectionName": "TELEPATHY",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/72/0b/53/720b5358-1303-01c0-af74-02044ba9888b/mzaf_9196583062686673219.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c3/6a/c3/c36ac3f2-154c-cc9d-9e83-3f9e67b8e689/64b9e2b2-16ca-4dab-9ef7-a6c93706bbe4.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c3/6a/c3/c36ac3f2-154c-cc9d-9e83-3f9e67b8e689/64b9e2b2-16ca-4dab-9ef7-a6c93706bbe4.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gratitude",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Gratitude (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f7/8b/f9/f78bf9d2-add1-2f65-8cc8-31fea6b3a30f/mzaf_17063584581753094503.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Getaway",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Best Of Earth, Wind & Fire Vol. 1",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c8/84/98/c8849871-cf12-8bd3-3d67-80c06549ed0e/mzaf_13079786652148280717.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5c/8e/19/5c8e191d-b458-fc29-54ef-bd9367835044/886447618547.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "My Love",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Raise!",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/52/7f/ec527fe5-d19e-5713-0307-5c2a55c15a9f/mzaf_7519390156551090226.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ca/f8/29/caf82937-caba-e739-79b1-fe53a673dd53/dj.vikfvxxi.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ca/f8/29/caf82937-caba-e739-79b1-fe53a673dd53/dj.vikfvxxi.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Brazilian Rhyme (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Live In Rio",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/e4/b7/18e4b70d-73d6-79ea-3dca-87f0b40ee69b/mzaf_7900498074767140547.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/5b/7c/53/mzi.emkoznpl.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/5b/7c/53/mzi.emkoznpl.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/20/81/a2/2081a285-4d72-b7ae-d0c9-d29e61661c64/mzaf_6903626675341719609.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth, Wind & Fire",
+    "artistName": "Nigel Hall & DJ Harrison",
+    "collectionName": "Earth, Wind & Fire - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/a2/10/87/a21087a7-0d82-441e-50b4-cf3585b211c5/mzaf_2769424137264771055.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d8/57/72/d857724e-4841-f641-5c26-c5835327f917/196922804014_Cover.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/d8/57/72/d857724e-4841-f641-5c26-c5835327f917/196922804014_Cover.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Let's Groove (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Live at Velfarre",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c4/ed/06/c4ed06f1-af2e-fb73-b6fb-2b675c36617d/mzaf_13600882330471884422.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "In the Stone (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Live at Velfarre",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/49/c0/c5/49c0c526-654a-1f4d-528c-1bd55d8ff27a/mzaf_16972089270939480174.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Love Is Life",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/80/39/c8/8039c885-d7d4-d72b-e396-3a86879ddcb6/mzaf_2603277251960946516.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/b2/2d/17/mzi.rqvhxlnw.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/b2/2d/17/mzi.rqvhxlnw.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The Way You Move (feat. Earth, Wind & Fire)",
+    "artistName": "Kenny G",
+    "collectionName": "The Essential Kenny G",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0d/59/46/0d5946d6-37f8-5454-0a28-d644e03b26de/mzaf_2147776068383446357.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/39/ab/f4/mzi.nvxsqycg.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/39/ab/f4/mzi.nvxsqycg.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Drum Song",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/da/08/db/da08dbb9-bc79-822e-9832-755725142af5/mzaf_4571733422952143499.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Never Change (feat. Philip Bailey)",
+    "artistName": "BJ the Chicago Kid",
+    "collectionName": "Gravy",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4d/de/0d/4dde0d96-7184-fddc-5e9c-45eb1f907e9b/mzaf_13248422074128235364.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/80/6d/5a/806d5aff-b66e-524f-70a8-54130ac79f69/196871077156.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/80/6d/5a/806d5aff-b66e-524f-70a8-54130ac79f69/196871077156.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "September / The Joker",
+    "artistName": "Earth, Wind & Fire & Fatboy Slim",
+    "collectionName": "Babel (Music from and Inspired By the Motion Picture)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/95/b5/a0/95b5a04e-36b2-5bf5-a74f-567176e3ac6d/mzaf_17624580289586262798.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b3/8d/f5/b38df529-bcf2-9840-ab92-992e464c00fc/00888072301917.rgb.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b3/8d/f5/b38df529-bcf2-9840-ab92-992e464c00fc/00888072301917.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Earth Wind & Fire (Keylow SA)",
+    "artistName": "Lucan Alexander",
+    "collectionName": "Earth Wind & Fire (Keylow SA) - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/1b/9b/e2/1b9be2c7-f10f-9712-16c4-0a835f3d9f86/mzaf_17605887766640693199.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ee/62/d2/ee62d278-ba51-962a-e60f-98f7f43dc276/artwork.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ee/62/d2/ee62d278-ba51-962a-e60f-98f7f43dc276/artwork.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Shining Star (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Gratitude (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/26/cf/d9/26cfd948-117d-8842-258e-a7e59ee1adf7/mzaf_776673121783610185.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Biyo",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Spirit",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/67/88/43/67884371-3216-3838-d7aa-ad23eb24ecf5/mzaf_11252018735007827284.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/5a/43/e2/5a43e229-6089-8e7b-8969-7f94edb9c7e3/886443461482.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Power",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Last Days and Time (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/43/3d/5e/433d5ee0-f187-ce3b-5f5d-00d6d4866e8f/mzaf_12401161599202112612.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e7/6d/4c/e76d4ce8-db48-5dff-706e-63d919edce10/886443461338.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e7/6d/4c/e76d4ce8-db48-5dff-706e-63d919edce10/886443461338.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "December (Based on \"September\")",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Classic Christmas Album",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1a/dd/78/1add7892-06b7-0dfd-75e0-7c7e1c8d8b73/mzaf_14368251102123370661.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/06/89/ac/0689acfc-c638-0738-21d1-32e8493c3d1b/886445473803.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/06/89/ac/0689acfc-c638-0738-21d1-32e8493c3d1b/886445473803.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Fantasy (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Live at Velfarre",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6c/2f/0d/6c2f0d08-f104-663f-23a3-4a16f6fe4e40/mzaf_6383802557339129409.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Lady Sun",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Raise!",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/f3/f2/13f3f225-2c7e-60c4-f4aa-ac5a5f98c72d/mzaf_1890100263566584529.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ca/f8/29/caf82937-caba-e739-79b1-fe53a673dd53/dj.vikfvxxi.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ca/f8/29/caf82937-caba-e739-79b1-fe53a673dd53/dj.vikfvxxi.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Shining Star",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Eternal Dance",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a9/92/0c/a9920c3f-ee15-65c3-4e48-2901279166c8/mzaf_10850399801473108471.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mom",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Last Days and Time (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/14/67/39/1467391c-0f1a-f3af-7bc6-0e5195f8c378/mzaf_13056976911518286449.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e7/6d/4c/e76d4ce8-db48-5dff-706e-63d919edce10/886443461338.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e7/6d/4c/e76d4ce8-db48-5dff-706e-63d919edce10/886443461338.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "New World Symphony (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Gratitude (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/54/f1/89/54f18946-c8d3-2438-5015-c0139fe4cdbf/mzaf_14517714451015460558.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Show Me the Way (feat. Raphael Saadiq)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Ultimate Valentine's Day",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/37/5f/9f/375f9f72-a519-9de4-65a4-5f141b7ecc7c/mzaf_16847289147581763898.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/31/6a/a7/316aa791-89b3-e609-a3dc-4f5625d0b414/4065142005586.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/31/6a/a7/316aa791-89b3-e609-a3dc-4f5625d0b414/4065142005586.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "After the Love Is Gone (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Live at Velfarre",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/77/65/8f/77658f3a-7677-f011-0ac0-752103ec31a8/mzaf_17805555885026533150.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ab/31/40/ab314083-718f-b292-2c3e-982c166257e0/mzi.ioethdgk.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Take It to the Sky",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Faces",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3e/22/37/3e22378a-3f0a-9561-d16b-95ca0072eab9/mzaf_9839319297157322631.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/21/e1/79/21e17901-0aae-7bf9-a409-a757e31136dd/886443461543.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/21/e1/79/21e17901-0aae-7bf9-a409-a757e31136dd/886443461543.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "That's the Way of the World",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Think Like a Man (Music from & Inspired By the Film)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1c/83/71/1c83714c-51ba-2390-e57c-27e9df227779/mzaf_12787047578104575106.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/cb/5e/b7/cb5eb7c0-b3d2-95e6-9d7e-fecfafb3a348/886443414945.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/cb/5e/b7/cb5eb7c0-b3d2-95e6-9d7e-fecfafb3a348/886443414945.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Yearnin' Learnin' (Live)",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "Gratitude (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a8/f3/f2/a8f3f2fb-20c6-03ae-58a8-57e4e4709522/mzaf_14241453178646975869.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b4/39/dd/b439dd26-4030-3cf1-38f2-7413254b7187/886443461444.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Fantasy",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Eternal Dance",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0e/bc/7e/0ebc7e04-c945-1789-b671-bbaf022165da/mzaf_11717562989602518460.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/3b/0d/c63b0ddb-ba2d-49fc-f255-9c925dd4e6e1/886447605004.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Let Me Talk",
+    "artistName": "Earth, Wind & Fire",
+    "collectionName": "The Essential Earth, Wind & Fire",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a6/76/01/a6760113-716f-0fc4-af96-0b8d4dc5ffe2/mzaf_49206170367019049.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e3/43/90/e34390e9-6063-acf9-2f07-7bbeefaef9f2/886444485722.jpg/100x100bb.jpg"
+   }
+  ]
+ }
+}

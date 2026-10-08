@@ -11,6 +11,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { coverPng } from './images.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const FIXTURES = path.join(ROOT, 'tests', 'fixtures');
@@ -38,12 +39,24 @@ async function replay(kind, key, liveUrl, trim) {
   return saved;
 }
 
+// Cover images are recorded too (they're small), so the game's cover comparison sees real artwork.
+async function replayImage(url) {
+  const file = fixtureFile('images', url);
+  if (existsSync(file)) return JSON.parse(readFileSync(file, 'utf8'));
+  if (!RECORD) throw new Error(`No recorded image for "${url}". Run "npm run test:record" to record it.`);
+  const res = await fetch(url);
+  const saved = { status: res.status, contentType: res.headers.get('content-type'), base64: res.ok ? Buffer.from(await res.arrayBuffer()).toString('base64') : '' };
+  mkdirSync(path.dirname(file), { recursive: true });
+  writeFileSync(file, JSON.stringify(saved) + '\n');
+  return saved;
+}
+
 // Only keep the fields the game reads, so fixtures stay small and readable.
 const trimItunes = d => ({
   resultCount: d.resultCount,
   results: (d.results || []).map(r => ({
     trackName: r.trackName, artistName: r.artistName, collectionName: r.collectionName,
-    previewUrl: r.previewUrl, artworkUrl100: r.artworkUrl100
+    previewUrl: r.previewUrl, artworkUrl60: r.artworkUrl60, artworkUrl100: r.artworkUrl100
   }))
 });
 const trimOembed = d => ({ title: d.title, thumbnail_url: d.thumbnail_url });
@@ -67,8 +80,11 @@ export function toneWav(seconds = 30, rate = 8000) {
  *   real browsers when iTunes leaves out its CORS header; JSONP requests still work.
  * @param {boolean} offline  every external request fails to connect.
  * @param {boolean} analyticsBlocked  the Umami script fails to load, as with an ad blocker.
+ * @param {object} scenario  made-up Spotify links and iTunes answers for matching tests, instead of
+ *   recordings (see scenarioSong / scenarioTrack). Covers are generated images, so the game's cover
+ *   comparison sees real pixels.
  */
-export async function mockNetwork(page, { itunesFetch = 'ok', offline = false, analyticsBlocked = false } = {}) {
+export async function mockNetwork(page, { itunesFetch = 'ok', offline = false, analyticsBlocked = false, scenario = null } = {}) {
   const log = { itunes: [], oembed: [], unexpected: [] };
   await page.route('**/*', async route => {
     const req = route.request();
@@ -85,21 +101,28 @@ export async function mockNetwork(page, { itunesFetch = 'ok', offline = false, a
       log.itunes.push({ term, via: callback ? 'jsonp' : 'fetch' });
       if (!callback && itunesFetch === 'cors-blocked') return route.abort('failed');
       const live = new URL(url); live.searchParams.delete('callback');
-      const { status, body } = await replay('itunes', `${url.searchParams.get('country')}|${term}`, live.href, trimItunes);
+      const byArtist = url.searchParams.get('attribute') === 'artistTerm';
+      if (byArtist) log.itunes[log.itunes.length - 1].byArtist = true;
+      const { status, body } = scenario ? { status: 200, body: scenarioSearch(scenario, term, byArtist) }
+        : await replay('itunes', `${url.searchParams.get('country')}|${term}${byArtist ? '|artist' : ''}`, live.href, trimItunes);
       if (callback) return route.fulfill({ status, contentType: 'text/javascript', body: `${callback}(${JSON.stringify(body)});` });
       return route.fulfill({ status, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify(body) });
     }
     if (url.host === 'open.spotify.com' && url.pathname === '/oembed') {
       const id = (url.searchParams.get('url') || '').split('/').pop();
       log.oembed.push(id);
-      const { status, body } = await replay('oembed', id, url.href, trimOembed);
+      const { status, body } = scenario ? scenarioOembed(scenario, id) : await replay('oembed', id, url.href, trimOembed);
       return route.fulfill({ status, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify(body) });
     }
     if (url.host.startsWith('audio-ssl.') || url.pathname.endsWith('.m4a')) {
       return route.fulfill({ status: 200, contentType: 'audio/wav', body: toneWav() });
     }
     if (/mzstatic\.com$|spotifycdn\.com$|scdn\.co$/.test(url.host)) {
-      return route.fulfill({ status: 404, body: '' });   // artwork isn't needed
+      const seed = url.pathname.match(/cover(\d+)/);   // a generated scenario cover
+      if (seed) return route.fulfill({ status: 200, contentType: 'image/png', headers: { 'access-control-allow-origin': '*' }, body: coverPng(+seed[1]) });
+      if (!/60x60|100x100|00004851/.test(url.href)) return route.fulfill({ status: 404, body: '' });   // only the small covers used for matching
+      const img = await replayImage(url.href);
+      return route.fulfill({ status: img.status, contentType: img.contentType || 'image/jpeg', headers: { 'access-control-allow-origin': '*' }, body: Buffer.from(img.base64, 'base64') });
     }
     if (url.host === 'cloud.umami.is' && url.pathname === '/script.js') {
       if (analyticsBlocked) return route.abort('blockedbyclient');
@@ -113,4 +136,31 @@ export async function mockNetwork(page, { itunesFetch = 'ok', offline = false, a
     return route.abort('blockedbyclient');
   });
   return log;
+}
+
+// ---- Made-up matching scenarios ----
+// A song iTunes knows: title, artist and a cover seed (same seed = same artwork).
+export const scenarioTrack = (trackName, artistName, cover) => ({ trackName, artistName, cover });
+const artwork = (cover, px) => `https://is1-ssl.mzstatic.com/image/thumb/test/cover${cover}/${px}x${px}bb.png`;
+function asItunes(t) {
+  return {
+    trackName: t.trackName, artistName: t.artistName, collectionName: 'Test Album',
+    previewUrl: `https://audio-ssl.itunes.apple.com/test/${encodeURIComponent(t.artistName + ' ' + t.trackName)}.m4a`,
+    artworkUrl60: artwork(t.cover, 60), artworkUrl100: artwork(t.cover, 100),
+  };
+}
+// scenario = { links: { [spotifyId]: { title, cover } }, songs: [scenarioTrack…], titleSearch?: (term) => tracks }
+// By default a title search returns every song whose title starts the search text, and an artist search
+// returns that artist's songs.
+function scenarioSearch(scenario, term, byArtist) {
+  const lc = s => s.toLowerCase();
+  const hits = byArtist ? scenario.songs.filter(t => lc(t.artistName).includes(lc(term)))
+    : scenario.titleSearch ? scenario.titleSearch(term)
+    : scenario.songs.filter(t => lc(term).startsWith(lc(t.trackName.replace(/\s*\(.*$/, ''))));
+  return { resultCount: hits.length, results: hits.map(asItunes) };
+}
+function scenarioOembed(scenario, id) {
+  const link = scenario.links[id];
+  if (!link) return { status: 404, body: null };
+  return { status: 200, body: { title: link.title, thumbnail_url: link.cover == null ? undefined : `https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cover${link.cover}` } };
 }

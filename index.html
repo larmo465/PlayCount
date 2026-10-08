@@ -251,7 +251,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
 const SNIPPETS = [0.5, 1, 2, 4, 8, 16];   // seconds unlocked at each step
 const MAX_CLIP = SNIPPETS[SNIPPETS.length - 1];
 const RECENT_LIMIT = 30;                   // history mode: don't repeat a song within this many rounds
-const LS = { lib: 'pc.lib.v1', playlists: 'pc.playlists.v1', cache: 'pc.cache.v1', settings: 'pc.settings.v1', stats: 'pc.stats.v1', recent: 'pc.recent.v1' };
+const LS = { retried: 'pc.retried.v1', lib: 'pc.lib.v1', playlists: 'pc.playlists.v1', cache: 'pc.cache.v1', settings: 'pc.settings.v1', stats: 'pc.stats.v1', recent: 'pc.recent.v1' };
 
 const $ = id => document.getElementById(id);
 
@@ -280,10 +280,10 @@ function linkSearchTitle(s) {
   return String(s || '').replace(/\s*[\(\[][^\)\]]*[\)\]]/g, '')
     .replace(/\s+-\s+.*\b(remaster(ed)?|version|edit|mix|live|mono|stereo|from|acoustic|radio)\b.*$/i, '').trim();
 }
-// Featured artists named in a title: "Better Days (feat. John Mayer)" -> ['john mayer'].
+// Featured artists named in a title: "Better Days (feat. John Mayer)" -> ['John Mayer'].
 function featuredArtists(s) {
   const m = String(s || '').match(/[\(\[]\s*(?:feat\.?|ft\.?|featuring|with)\s+([^\)\]]+)[\)\]]/i);
-  return m ? m[1].split(/,|&|\band\b/i).map(norm).filter(Boolean) : [];
+  return m ? m[1].split(/,|&|\band\b/i).map(a => a.trim()).filter(Boolean) : [];
 }
 function primaryArtist(a) { return norm(String(a || '').split(/,|;|&| x | feat\.? | ft\.? /i)[0]); }
 function songKey(title, artist) { return norm(title) + '|' + primaryArtist(artist); }
@@ -490,7 +490,7 @@ async function playlistFromPaste(name, text, progress) {
       const id = work.shift();
       try {
         const j = await lookup(id);
-        if (j && j.title) tracks.push({ key: 'sp:' + id, title: j.title, artist: '', uri: 'spotify:track:' + id, query: linkSearchTitle(j.title), titleOnly: true, thumb: j.thumbnail_url || '' });
+        if (j && j.title) tracks.push({ key: 'sp:' + id, title: j.title, artist: '', uri: 'spotify:track:' + id, query: linkSearchTitle(j.title), titleOnly: true, thumb: j.thumbnail_url || '', linkTitle: j.title });
         else failed++;
       } catch { failed++; unreachable++; }
       progress && progress(++done, links.length);
@@ -504,12 +504,12 @@ async function playlistFromPaste(name, text, progress) {
 }
 
 function savePlaylists() {
-  save(LS.playlists, playlists.map(p => ({ id: p.id, name: p.name, tracks: p.tracks.map(t => [t.title, t.artist, t.uri, t.query || '', t.titleOnly ? 1 : 0, t.key, t.thumb || '']) })));
+  save(LS.playlists, playlists.map(p => ({ id: p.id, name: p.name, tracks: p.tracks.map(t => [t.title, t.artist, t.uri, t.query || '', t.titleOnly ? 1 : 0, t.key, t.thumb || '', t.linkTitle || '']) })));
 }
 function loadPlaylists() {
   return (load(LS.playlists, []) || []).map(p => ({
     id: p.id, name: p.name,
-    tracks: p.tracks.map(([title, artist, uri, query, titleOnly, key, thumb]) => ({ key, title, artist, uri, query: query || undefined, titleOnly: !!titleOnly, thumb: thumb || '' }))
+    tracks: p.tracks.map(([title, artist, uri, query, titleOnly, key, thumb, linkTitle]) => ({ key, title, artist, uri, query: query || undefined, titleOnly: !!titleOnly, thumb: thumb || '', linkTitle: linkTitle || '' }))
   }));
 }
 function addPlaylists(list) {
@@ -615,7 +615,7 @@ function jsonp(url, timeoutMs) {
 
 // Album cover comparison. Both Spotify's and Apple's image servers allow pages to read image pixels, so
 // each cover is shrunk to a 64-bit difference hash; covers that differ in only a few bits are the same artwork.
-const COVER_MAX_BITS = 10;
+const COVER_MAX_BITS = 12;   // measured: same artwork is almost always within 12 bits, other covers almost never
 const coverHashes = new Map();
 function coverHash(url) {
   if (!url) return Promise.resolve(null);
@@ -644,36 +644,114 @@ function differenceHash(img) {
 function hammingDistance(a, b) { let n = 0; for (let i = 0; i < a.length; i++) n += a[i] !== b[i]; return n; }
 // Spotify's 300px cover URL has a 64px sibling; the small one is enough for a hash.
 function smallSpotifyCover(url) { return String(url || '').replace('ab67616d00001e02', 'ab67616d00004851'); }
+function linkTitle(t) { return t.linkTitle || t.title; }
 // The candidates (same title as the link) whose album cover matches the Spotify track's cover.
 async function sameCoverAs(t, results) {
-  const sameTitle = results.filter(r => norm(r.trackName) === norm(t.title)).slice(0, 25);
-  if (sameTitle.length < 2 || !t.thumb) return new Set();   // nothing to choose between
+  const sameTitle = results.filter(r => norm(r.trackName) === norm(linkTitle(t))).slice(0, 25);
+  if (!sameTitle.length || !t.thumb) return new Set();
   const want = await coverHash(smallSpotifyCover(t.thumb));
   if (!want) return new Set();
   const hashes = await Promise.all(sameTitle.map(r => coverHash(r.artworkUrl60 || r.artworkUrl100)));
   return new Set(sameTitle.filter((r, i) => hashes[i] && hammingDistance(want, hashes[i]) <= COVER_MAX_BITS));
 }
 
+// This session's iTunes answers, so a second try at a song doesn't search again.
+const searchMemo = new Map();
+function memoSearch(url) {
+  if (!searchMemo.has(url)) searchMemo.set(url, itunesSearch(url).catch(e => { searchMemo.delete(url); throw e; }));
+  return searchMemo.get(url);
+}
+function itunesUrl(params) {
+  return `https://itunes.apple.com/search?media=music&entity=song&country=${encodeURIComponent(settings.country || 'US')}&${params}`;
+}
+// The songs iTunes has by an artist (one request per artist per session).
+const catalogs = new Map();
+function artistCatalog(name) {
+  const key = `${settings.country}|${norm(name)}`;
+  if (!catalogs.has(key)) {
+    catalogs.set(key, memoSearch(itunesUrl(`attribute=artistTerm&limit=200&term=${encodeURIComponent(name)}`))
+      .then(d => (d.results || []).filter(r => r.previewUrl && norm(r.artistName).includes(norm(name))))
+      .catch(e => { catalogs.delete(key); throw e; }));
+  }
+  return catalogs.get(key);
+}
+// The artists that come up most in the active playlist (counting only sure matches) and your history.
+function contextArtists() {
+  const counts = new Map();
+  // Full names: band names often contain "," or "&" (Earth, Wind & Fire). A search for an artist also
+  // returns their duets, so "Zach Bryan & John Mayer" needs no splitting to be found under "Zach Bryan".
+  const add = (artist, weight) => {
+    const name = String(artist || '').trim();
+    const key = norm(name);
+    if (!key) return;
+    const e = counts.get(key) || { name, n: 0 };
+    e.n += weight;
+    counts.set(key, e);
+  };
+  const pl = activePlaylist();
+  for (const t of pl ? pl.tracks : []) {
+    const info = cache[t.key];
+    if (t.titleOnly) { if (info && info.sure) add(info.artist, 1); }
+    else if (t.artist) add(t.artist, 1);
+  }
+  lib.slice(0, 300).forEach(t => add(t.artist, 0.5));
+  return [...counts.values()].sort((a, b) => b.n - a.n).map(e => e.name);
+}
+// Who a song is credited to: its artist plus any "(feat. …)" names in its title. Not "Originally
+// Performed by …", which is how karaoke versions name the real artist.
+function credits(r) { return [r.artistName, ...featuredArtists(r.trackName)].map(norm); }
+// An unconfirmed match is only trusted when it's by an artist you already have (in this playlist or
+// your history) or one named in the Spotify title. Measured on a real 150-song playlist: unconfirmed
+// matches by artists from outside it were wrong 17 times out of 19, so those songs are skipped instead.
+function trustedArtist(r, feats) {
+  const names = credits(r);
+  const mine = contextArtists().map(norm).concat(feats.map(norm));
+  return names.some(n => mine.some(m => n.includes(m) || m.includes(n)));
+}
+
 async function findPreview(t) {
   if (t.key in cache) { applyInfo(t, cache[t.key]); return cache[t.key]; }
-  // A Spotify link only gives a title (plus any featured artists in it), and popular titles are shared
-  // by many songs, so search with the featured artists and ask for more candidates.
-  const feats = t.titleOnly ? featuredArtists(t.title) : [];
-  const term = t.titleOnly ? [linkSearchTitle(t.title), ...feats].join(' ') : t.query || `${cleanTitle(t.title)} ${t.artist}`;
-  const limit = t.titleOnly ? 50 : 15;
-  const url = `https://itunes.apple.com/search?media=music&entity=song&limit=${limit}&country=${encodeURIComponent(settings.country || 'US')}&term=${encodeURIComponent(term)}`;
-  const data = await itunesSearch(url);
-  const results = (data.results || []).filter(r => r.previewUrl);
-  const ctx = { feats, sameCover: t.titleOnly ? await sameCoverAs(t, results) : new Set() };
+  let results, ctx = {}, sure = true;
+  if (t.titleOnly) {
+    // A Spotify link only gives a title (plus any featured artists in it), and popular titles are shared
+    // by many songs. Search the title with the featured artists; a candidate with the same album cover
+    // as the Spotify track is a sure match.
+    const title = linkTitle(t);
+    const feats = featuredArtists(title);
+    const term = [linkSearchTitle(title), ...feats].join(' ');
+    results = ((await memoSearch(itunesUrl(`limit=50&term=${encodeURIComponent(term)}`))).results || []).filter(r => r.previewUrl);
+    let sameCover = await sameCoverAs(t, results);
+    const fromContext = new Set();
+    if (!sameCover.size) {
+      // For a common title the right song may not be in the first 50 results at all. Look in the song
+      // lists of the artists this playlist has most, confirming by cover where possible.
+      for (const artist of contextArtists().slice(0, 8)) {
+        const hits = (await artistCatalog(artist)).filter(r => norm(r.trackName) === norm(title));
+        if (!hits.length) continue;
+        hits.forEach(r => fromContext.add(r));
+        results = results.concat(hits);
+        const covers = await sameCoverAs(t, hits);
+        if (covers.size) { sameCover = covers; break; }
+      }
+    }
+    sure = sameCover.size > 0;
+    ctx = { feats, sameCover, fromContext };
+  } else {
+    const term = t.query || `${cleanTitle(t.title)} ${t.artist}`;
+    results = ((await itunesSearch(itunesUrl(`limit=15&term=${encodeURIComponent(term)}`))).results || []).filter(r => r.previewUrl);
+  }
   let best = null, bestScore = 0;
   for (const r of results) {
     const s = matchScore(t, r, ctx);
     if (s > bestScore) { bestScore = s; best = r; }
   }
+  // Without a cover match, don't risk a same-titled song by a stranger: skip the song instead.
+  if (t.titleOnly && best && !sure && !trustedArtist(best, ctx.feats || [])) best = null;
   const info = best ? {
     preview: best.previewUrl,
     art: (best.artworkUrl100 || '').replace('100x100bb', '400x400bb'),
-    title: best.trackName, artist: best.artistName
+    title: best.trackName, artist: best.artistName,
+    ...(t.titleOnly ? { sure } : {})
   } : null;
   cache[t.key] = info;
   save(LS.cache, cache);
@@ -695,11 +773,12 @@ function baseScore(t, r, ctx = {}) {
   // almost certainly it; then prefer the featured artists named in the title and artists already in
   // your music, then trust iTunes' ranking.
   if (t.titleOnly) {
-    if (gotT !== norm(t.title)) return 0;
+    if (gotT !== norm(linkTitle(t))) return 0;
     let s = 1;
     if (ctx.sameCover && ctx.sameCover.has(r)) s += 10;
-    const credits = ' ' + norm(r.artistName + ' ' + r.trackName.replace(/[()\[\]]/g, ' ')) + ' ';
-    if (ctx.feats && ctx.feats.length && ctx.feats.some(f => credits.includes(' ' + f + ' '))) s += 3;
+    if (ctx.fromContext && ctx.fromContext.has(r)) s += 4;   // by an artist this playlist has a lot of
+    const names = credits(r);
+    if (ctx.feats && ctx.feats.some(f => names.some(n => n.includes(norm(f))))) s += 3;
     if (knownArtists.has(gotPA)) s += 1;
     return s;
   }
@@ -729,19 +808,43 @@ function applyInfo(t, info) {
 const BG_INTERVAL = window.__PC_BG_INTERVAL__ || 4000, BG_BACKOFF = 60000;   // tests shorten the interval
 let bgTimer = 0, bgBusy = false, saveTimer = 0;
 function unresolved(pl) { return pl ? pl.tracks.filter(t => !t.artist && !(t.key in cache)) : []; }
+// Links matched without a cover match (or not at all) get one more try once the whole playlist has a
+// first answer, because by then the playlist's main artists are known. Remembered across visits.
+const retried = new Set(load(LS.retried, []));
+function toRetry(pl) {
+  return pl ? pl.tracks.filter(t => t.titleOnly && t.linkTitle && t.key in cache && !(cache[t.key] && cache[t.key].sure)
+    && !retried.has(t.key) && !(round && round.track === t)) : [];
+}
 function scheduleResolve(delay) {
   clearTimeout(bgTimer);
-  if (unresolved(activePlaylist()).length) bgTimer = setTimeout(resolveNext, delay);
+  const pl = activePlaylist();
+  if (unresolved(pl).length || toRetry(pl).length) bgTimer = setTimeout(resolveNext, delay);
 }
 async function resolveNext() {
   const pl = activePlaylist();
-  const t = unresolved(pl)[0];
+  const first = unresolved(pl)[0];
+  const t = first || toRetry(pl)[0];
   if (!t) return;
   if (bgBusy || document.hidden) { scheduleResolve(BG_INTERVAL); return; }
   bgBusy = true;
   let delay = BG_INTERVAL;
-  try { await findPreview(t); }
-  catch { delay = BG_BACKOFF; }    // rate-limited or offline: back off, the game's own lookups come first
+  if (!first) {
+    const before = cache[t.key];
+    delete cache[t.key];
+    t.title = t.linkTitle; t.artist = ''; t._hay = null;
+    try {
+      const after = await findPreview(t);
+      retried.add(t.key);
+      save(LS.retried, [...retried]);
+      if ((after && after.preview) !== (before && before.preview)) nextUp = null;   // don't play a stale pick
+    } catch {
+      cache[t.key] = before; applyInfo(t, before);   // keep the first answer; try again later
+      delay = BG_BACKOFF;
+    }
+  } else {
+    try { await findPreview(t); }
+    catch { delay = BG_BACKOFF; }    // rate-limited or offline: back off, the game's own lookups come first
+  }
   bgBusy = false;
   clearTimeout(saveTimer);
   saveTimer = setTimeout(savePlaylists, 2000);
