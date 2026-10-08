@@ -5,6 +5,7 @@
 //   to record any that are missing (needs real network access).
 // - Preview audio is a generated WAV tone: Playwright's Chromium can't decode the real AAC previews.
 // - JSZip comes from node_modules instead of cdnjs.
+// - Umami analytics is a stub that records events in window.__umamiEvents.
 // - Any other request is aborted and fails the test, so a new dependency can't sneak in untested.
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -65,8 +66,9 @@ export function toneWav(seconds = 30, rate = 8000) {
  * @param {'ok'|'cors-blocked'} itunesFetch  'cors-blocked' makes fetch() to iTunes fail like it does in
  *   real browsers when iTunes leaves out its CORS header; JSONP requests still work.
  * @param {boolean} offline  every external request fails to connect.
+ * @param {boolean} analyticsBlocked  the Umami script fails to load, as with an ad blocker.
  */
-export async function mockNetwork(page, { itunesFetch = 'ok', offline = false } = {}) {
+export async function mockNetwork(page, { itunesFetch = 'ok', offline = false, analyticsBlocked = false } = {}) {
   const log = { itunes: [], oembed: [], unexpected: [] };
   await page.route('**/*', async route => {
     const req = route.request();
@@ -98,6 +100,11 @@ export async function mockNetwork(page, { itunesFetch = 'ok', offline = false } 
     }
     if (/mzstatic\.com$|spotifycdn\.com$|scdn\.co$/.test(url.host)) {
       return route.fulfill({ status: 404, body: '' });   // artwork isn't needed
+    }
+    if (url.host === 'cloud.umami.is' && url.pathname === '/script.js') {
+      if (analyticsBlocked) return route.abort('blockedbyclient');
+      return route.fulfill({ status: 200, contentType: 'text/javascript',
+        body: 'window.__umamiEvents = []; window.umami = { track: (name, data) => window.__umamiEvents.push({ name, data }) };' });
     }
     if (url.host === 'cdnjs.cloudflare.com' && url.pathname.includes('/jszip/')) {
       return route.fulfill({ status: 200, contentType: 'text/javascript', body: readFileSync(path.join(ROOT, 'node_modules/jszip/dist/jszip.min.js')) });

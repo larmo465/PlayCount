@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="build" content="dev">
+<!-- Anonymous, cookie-free usage stats (Umami). Only counted on the live site, not in tests or downloaded copies. -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="dc305b4f-66f6-435c-aea1-b1ded9f696ef" data-domains="larmo465.github.io"></script>
 <title>PlayCount</title>
 <style>
 :root{
@@ -151,7 +153,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
         <li>Tick <strong>Extended streaming history</strong> for your whole history (takes up to 30 days), or <strong>Account data</strong> for the last year (about 5 days).</li>
         <li>Download the zip from the email and drop it above.</li>
       </ol>
-      <p class="muted">Everything stays in your browser. The only network calls are song lookups on the public iTunes Search API, which supplies the 30-second previews.</p>
+      <p class="muted">Your music data stays in your browser. The game sends song searches to the public iTunes Search API, which supplies the 30-second previews, and pasted Spotify links to Spotify to read their titles. It also sends anonymous, cookie-free usage stats, such as rounds played, but never your songs, artists or history.</p>
     </div>
   </section>
 
@@ -298,6 +300,12 @@ function historyPlays(t) {
 }
 
 const NO_NETWORK = 'Couldn\'t reach Spotify, so this page seems to be blocked from the internet. That happens when the file is opened inside a preview (such as a chat app\'s file viewer). Download the file and open it in Chrome, Edge, Firefox or Safari, then paste again.';
+
+// Anonymous usage stats (Umami). Never send song titles, artists or anything else from someone's music.
+// Analytics must never break the game: it may be blocked, still loading, or absent.
+function track(event, data) {
+  try { if (window.umami && typeof window.umami.track === 'function') window.umami.track(event, data); } catch { /* ignore */ }
+}
 
 /* ---------- reading files ---------- */
 async function readFiles(fileList) {
@@ -703,6 +711,7 @@ audio.addEventListener('ended', stopAudio);
 audio.addEventListener('error', () => {
   if (!round || !audio.src) return;
   if (!audio.canPlayType('audio/mp4; codecs="mp4a.40.2"')) {
+    track('error', { kind: 'no-aac' });
     setStatus('This browser can\'t play the AAC previews. Open the game in Chrome, Edge, Safari or Firefox.', true);
     $('board').classList.add('hidden');
   } else if (!round.over) {
@@ -749,6 +758,7 @@ async function newRound() {
     if (pick && pick.source !== settings.source) pick = null;
     if (!pick) pick = await drawPlayable(round && round.track.key);
     if (!pick) {
+      track('error', { kind: 'no-playable-songs' });
       setStatus(activePlaylist() ? 'Couldn\'t find previews for any song in this playlist. Try another store country in Settings.'
         : pool.length || !lib.length ? 'Couldn\'t find previews for your songs. Try another store country in Settings.'
         : 'No songs match your settings. Lower the minimum play count.', true);
@@ -769,6 +779,7 @@ async function newRound() {
     renderRound();
     prefetchNext();
   } catch (e) {
+    track('error', { kind: 'song-lookup' });
     setStatus(e.message || String(e), true);
     const retry = document.createElement('div');
     retry.innerHTML = '<br><button class="primary">Try again</button>';
@@ -849,6 +860,7 @@ function endRound(won) {
   if (won) { stats.won++; stats.streak++; stats.max = Math.max(stats.max, stats.streak); stats.dist[round.guesses.length - 1]++; }
   else { stats.streak = 0; stats.dist[6]++; }
   save(LS.stats, stats);
+  track('round-end', { mode: activePlaylist() ? 'playlist' : 'history', result: won ? String(round.guesses.length) : 'lost' });
   stopAudio();
   renderRound();
   playClip(30);
@@ -1044,9 +1056,13 @@ async function handleFiles(files) {
       lib = tracks;
       save(LS.lib, lib.map(t => [t.title, t.artist, t.plays, t.uri]));
       found.push(`${counted.toLocaleString()} play${counted === 1 ? '' : 's'} of ${tracks.length.toLocaleString()} song${tracks.length === 1 ? '' : 's'} (${streams.toLocaleString()} streams, ${isExt ? 'extended' : 'last-year'} history)`);
+      track('import', { source: isExt ? 'extended-history' : 'last-year-history' });
     }
     const pls = playlistsFromExport(parsed);
+    if (pls.length) track('import', { source: 'export-playlists' });
+    const csvCount = pls.length;
     for (const f of parsed) if (/\.csv$/i.test(f.name)) { const p = playlistFromCSV(f.name, f.text); if (p) pls.push(p); }
+    if (pls.length > csvCount) track('import', { source: 'csv' });
     if (pls.length) { addPlaylists(pls); found.push(`${pls.length} playlist${pls.length === 1 ? '' : 's'}`); }
     if (!found.length) throw new Error('Found no listening history or playlists. Pick the Streaming_History_Audio_… / StreamingHistory_music_… files, Playlist1.json, or a playlist CSV.');
     msg.textContent = 'Loaded ' + found.join(' and ') + '.';
@@ -1071,6 +1087,7 @@ async function handlePaste() {
     const { playlist, failed, skippedLinks } = await playlistFromPaste(name, text, (d, n) => { msg.textContent = `Looking up links… ${d}/${n}`; });
     if (!playlist) throw new Error(skippedLinks ? 'Playlist and album links can\'t be read without a Spotify login. Open the playlist, select all tracks and copy them instead.' : 'No songs found in what you pasted.');
     addPlaylists([playlist]);
+    track('import', { source: 'paste' });
     const notes = [`Added ${playlist.tracks.length} song${playlist.tracks.length === 1 ? '' : 's'}.`];
     if (failed) notes.push(`${failed} link${failed === 1 ? '' : 's'} couldn't be looked up.`);
     if (skippedLinks) notes.push(`Skipped ${skippedLinks} non-track link${skippedLinks === 1 ? '' : 's'}.`);
@@ -1080,6 +1097,7 @@ async function handlePaste() {
     renderSources();
     $('sources').scrollIntoView({ behavior: 'smooth', block: 'start' });
   } catch (e) {
+    if (e.message === NO_NETWORK) track('error', { kind: 'spotify-unreachable' });
     msg.className = 'small err';
     msg.textContent = e.message || String(e);
   } finally {

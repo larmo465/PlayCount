@@ -6,6 +6,8 @@ import { toneWav } from '../support/network.mjs';
 test('the live site serves this commit and can start a round', async ({ page }) => {
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
+  // Keep CI's visits out of the Umami stats (Umami's own opt-out switch).
+  await page.addInitScript(() => localStorage.setItem('umami.disabled', '1'));
 
   const expected = process.env.EXPECTED_BUILD;
   if (expected) {
