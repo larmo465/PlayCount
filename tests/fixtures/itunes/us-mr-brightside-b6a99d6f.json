@@ -1,0 +1,106 @@
+{
+ "status": 200,
+ "body": {
+  "resultCount": 14,
+  "results": [
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "The Killers",
+    "collectionName": "Direct Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/a0/30/c3a03008-17c5-aa29-6c6a-5e757ccdbaa5/mzaf_6073120660767081787.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/64/9c/11649c80-2066-dba8-77a9-df7eecae26c1/17UM1IM06937.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "The Killers",
+    "collectionName": "Hot Fuss",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5b/17/4e/5b174e80-1047-7214-1077-d822ba1f9520/mzaf_5975692497663881329.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/1a/5a/071a5aee-6e42-060c-35b9-6a6e45b9ea59/06UMGIM10441.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "Sydney Rose",
+    "collectionName": "Mr. Brightside - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/9b/6b/ab9b6b28-b955-5f56-faab-c8297625c3e8/mzaf_16443656368092126493.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/84/fa/b0/84fab06b-498c-bac4-d2e4-fa716e2abb09/075679681249.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (feat. Cat Missal) [From \"Tell Me Lies (Season 2)\"]",
+    "artistName": "Tell Me Lies – Cast",
+    "collectionName": "Mr. Brightside (From \"Tell Me Lies (Season 2)\") [feat. Cat Missal] - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/56/0b/3a/560b3a3d-39ee-d8a8-5a54-55f1547098df/mzaf_11919948743902066990.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/cc/6a/90cc6a61-0e1a-8bda-d351-8bfc162a4ef2/24UM1IM05348.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "Run River North",
+    "collectionName": "Superstition - EP",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/f0/b7/ca/f0b7ca6f-dfe4-8f1a-4fb8-6c16823a9bb4/mzaf_15420510032164896767.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/e4/32/f2/e432f251-7fae-d184-6713-206f5447d796/067003105453.png/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "The Killers",
+    "collectionName": "Direct Hits (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/99/19/82/9919821c-754c-c106-76f4-d5973d771318/mzaf_13486487224994580415.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/5b/82/0f/5b820fbd-2fe4-c816-8564-6397e46a93de/17UM1IM06938.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (Live)",
+    "artistName": "Ben Monteith",
+    "collectionName": "Busking Live",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/80/d8/79/80d8792f-44f9-c033-c87a-4e0c821de08c/mzaf_1658024075590239783.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music127/v4/7f/76/e5/7f76e52d-81bb-9c32-4bdd-ead590c504f5/35230.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "Don Diablo",
+    "collectionName": "Mr. Brightside - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0a/8a/c3/0a8ac352-a8b9-d915-ac95-1e32a3c1367f/mzaf_13961078746126382770.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/59/16/4d/59164d1d-4eda-f275-5a9e-ea66e02d22ba/8720205183422.png/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr Brightside (feat. Blake Lewis)",
+    "artistName": "Scott Bradlee's Postmodern Jukebox & Postmodern Jukebox",
+    "collectionName": "33 Resolutions Per Minute",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/51/ec/3e/51ec3e77-c46e-4485-e0a5-eb616aa36335/mzaf_12857577092039821978.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/a9/e6/2e/a9e62ebd-5084-d4e8-effc-af11e94b49ca/5052917023769.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (Original Demo)",
+    "artistName": "The Killers",
+    "collectionName": "Direct Hits (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bd/48/4a/bd484a2a-fb28-eb25-8ef2-7923f2128f22/mzaf_4497001467019739952.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/5b/82/0f/5b820fbd-2fe4-c816-8564-6397e46a93de/17UM1IM06938.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "Lullaby Rock!",
+    "collectionName": "Mr. Brightside - EP",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/71/90/39/71903925-ed11-9641-ea15-136c44ac9cbf/mzaf_17890210153696082314.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/10/cc/e8/10cce881-b0af-1003-52a6-805e56e3ebcd/5060781952849.png/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (Jacques Lu Cont's Thin White Duke Mix)",
+    "artistName": "The Killers",
+    "collectionName": "Sawdust",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/84/5d/be/845dbeb3-dd7c-6848-3dbb-a6022be4cc61/mzaf_10611902107956663573.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a3/11/78/a3117879-7226-ca32-2629-dbc862b81b77/00602557606256.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (Live from The Royal Albert Hall / 2009)",
+    "artistName": "The Killers",
+    "collectionName": "Live from the Royal Albert Hall",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/33/e5/d3/33e5d39f-fd1c-90dc-083e-b90ec46a1f3d/mzaf_7129892176147747995.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/be/cc/31/becc31ff-3d71-4751-c333-a4cd91318bf8/00602567726388.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "The Killers",
+    "collectionName": "Rebel Diamonds",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7b/d7/8a/7bd78a98-2668-3e52-9c15-f07d538051ba/mzaf_12576475984247297585.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c7/30/5f/c7305f48-f332-4be8-2ead-3fbc0908ffb9/23UM1IM52006.rgb.jpg/100x100bb.jpg"
+   }
+  ]
+ }
+}

@@ -54,14 +54,41 @@ A play counts when you listened for 30 seconds or more, matching Spotify's own r
 
 ## Tests
 
-Headless browser tests (Playwright + Chromium) drive both modes end to end.
-Playwright's Chromium build can't decode AAC, so the tests serve a generated WAV
-in place of the iTunes previews.
+Playwright tests drive the game in a real browser. The network is mocked
+(`tests/support/network.mjs`): iTunes and Spotify answers are replayed from
+`tests/fixtures/`, previews are a generated tone (Playwright's Chromium can't decode
+AAC), and any request the tests don't expect fails the test. Song picks use a seeded
+random sequence, so runs are repeatable.
 
 ```sh
-cd tests
-python3 make_fixture.py                                   # synthetic history, export zip, playlist CSV
-ffmpeg -f lavfi -i "sine=frequency=440:duration=30" tone.wav
-node history.mjs "$(pwd)/.."                              # history mode
-node playlists.mjs "$(pwd)/.."                            # playlist imports + shuffle
+npm ci
+npx playwright install chromium
+npm test               # the full suite, offline, in about 10 seconds
+npm run test:record    # record API answers that are missing (needs internet)
+npm run smoke          # check the live site (real network, Google Chrome)
 ```
+
+If a change makes the game look up a song that has no recording yet, the test fails
+with "No recorded … response". Run `npm run test:record` and commit the new files in
+`tests/fixtures/`.
+
+## CI/CD
+
+`.github/workflows/ci-cd.yml`:
+
+| When | What runs |
+|---|---|
+| Pull request | Tests |
+| Push to `main` | Tests → deploy to GitHub Pages → smoke test of the live site |
+| Mondays | Smoke test of the live site, to catch iTunes/Spotify API changes |
+
+The live site is only published by the deploy job, and only after the tests pass on
+that commit. The deployed page carries the commit ID in `<meta name="build">`, and the
+smoke test checks that the live site is serving it.
+
+One-time setup in the repo settings:
+
+1. **Settings → Pages → Source: GitHub Actions** (instead of "Deploy from a branch").
+2. Optional, recommended: **Settings → Rules → Rulesets**, a rule for `main` that
+   requires a pull request and the **test** status check, so nothing reaches `main`
+   untested.

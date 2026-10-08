@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="build" content="dev">
 <title>PlayCount</title>
 <style>
 :root{
@@ -642,7 +643,7 @@ function applyInfo(t, info) {
    Pasted Spotify links only come with a title, so their artists can't be searched in the guess box
    until iTunes resolves them. Resolve the active playlist slowly in the background (about 15 a minute,
    under iTunes' limit of about 20), and save the names so it only happens once. */
-const BG_INTERVAL = 4000, BG_BACKOFF = 60000;
+const BG_INTERVAL = window.__PC_BG_INTERVAL__ || 4000, BG_BACKOFF = 60000;   // tests shorten the interval
 let bgTimer = 0, bgBusy = false, saveTimer = 0;
 function unresolved(pl) { return pl ? pl.tracks.filter(t => !t.artist && !(t.key in cache)) : []; }
 function scheduleResolve(delay) {
@@ -1042,7 +1043,7 @@ async function handleFiles(files) {
     if (tracks.length) {
       lib = tracks;
       save(LS.lib, lib.map(t => [t.title, t.artist, t.plays, t.uri]));
-      found.push(`${counted.toLocaleString()} plays of ${tracks.length.toLocaleString()} songs (${streams.toLocaleString()} streams, ${isExt ? 'extended' : 'last-year'} history)`);
+      found.push(`${counted.toLocaleString()} play${counted === 1 ? '' : 's'} of ${tracks.length.toLocaleString()} song${tracks.length === 1 ? '' : 's'} (${streams.toLocaleString()} streams, ${isExt ? 'extended' : 'last-year'} history)`);
     }
     const pls = playlistsFromExport(parsed);
     for (const f of parsed) if (/\.csv$/i.test(f.name)) { const p = playlistFromCSV(f.name, f.text); if (p) pls.push(p); }
@@ -1070,7 +1071,7 @@ async function handlePaste() {
     const { playlist, failed, skippedLinks } = await playlistFromPaste(name, text, (d, n) => { msg.textContent = `Looking up links… ${d}/${n}`; });
     if (!playlist) throw new Error(skippedLinks ? 'Playlist and album links can\'t be read without a Spotify login. Open the playlist, select all tracks and copy them instead.' : 'No songs found in what you pasted.');
     addPlaylists([playlist]);
-    const notes = [`Added ${playlist.tracks.length} songs.`];
+    const notes = [`Added ${playlist.tracks.length} song${playlist.tracks.length === 1 ? '' : 's'}.`];
     if (failed) notes.push(`${failed} link${failed === 1 ? '' : 's'} couldn't be looked up.`);
     if (skippedLinks) notes.push(`Skipped ${skippedLinks} non-track link${skippedLinks === 1 ? '' : 's'}.`);
     msg.textContent = notes.join(' ');

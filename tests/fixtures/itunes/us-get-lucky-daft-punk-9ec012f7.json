@@ -1,0 +1,78 @@
+{
+ "status": 200,
+ "body": {
+  "resultCount": 10,
+  "results": [
+   {
+    "trackName": "Get Lucky",
+    "artistName": "Daft Punk, Pharrell Williams & Nile Rodgers",
+    "collectionName": "Random Access Memories",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/57/a5/85/57a585aa-f1bc-7619-881b-f8a04a5541d5/mzaf_6906185026678279401.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e8/43/5f/e8435ffa-b6b9-b171-40ab-4ff3959ab661/886443919266.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Get Lucky (feat. Pharrell Williams & Nile Rodgers) [Daft Punk Remix]",
+    "artistName": "Daft Punk",
+    "collectionName": "Get Lucky (feat. Pharrell Williams & Nile Rodgers) [Daft Punk Remix]",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ab/f2/3e/abf23e05-e537-bd1f-a07f-0ffb470698d2/mzaf_6053148736670191628.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/ba/58/0c/ba580cb1-a7e2-4771-e1a9-244f32ba15a4/886444079006.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Get Lucky (Drumless Edition) (feat. Pharrell Williams and Nile Rodgers)",
+    "artistName": "Daft Punk, Pharrell Williams & Nile Rodgers",
+    "collectionName": "Random Access Memories (Drumless Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4e/33/59/4e33591f-dea5-641d-5e8b-ad0a295c1592/mzaf_1787020353271673194.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c8/6d/11/c86d1183-9e36-fc2f-6490-80568ed056e0/196871342049.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Get Lucky",
+    "artistName": "Daft Punk, Pharrell Williams & Nile Rodgers",
+    "collectionName": "Random Access Memories (10th Anniversary Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/72/53/10/725310b8-0e82-9d20-8898-0f1fc47b4cd9/mzaf_13147817334462660235.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/86/b1/92/86b192cf-ceb6-6e51-9361-dc4a35e95d22/196589921154.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Get Lucky (In the Style of Daft Punk & Pharrell Williams) [Karaoke Instrumental Version]",
+    "artistName": "Karaoke All Hits",
+    "collectionName": "Get Lucky (In the Style of Daft Punk & Pharrell Williams) [Karaoke Instrumental Version] - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/29/64/bb/2964bb33-d554-e97a-aca9-13364c929a17/mzaf_843180917093657501.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/f3/89/27/f38927be-ffa5-6c2d-863c-24a9e5f2f64b/dj.ysbyqyka.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Get Lucky",
+    "artistName": "Vitamin String Quartet",
+    "collectionName": "Vitamin String Quartet Performs Daft Punk's Random Access Memories",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/49/9e/c0/499ec063-1c54-b28f-9ad5-2b63577d6a8e/mzaf_17463549127490412360.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/95/1c/d5/951cd5be-2ff8-cca9-8ebc-e978c66773f5/1158_300dpi.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Get Lucky (Daft Punk Jazz Cover)",
+    "artistName": "The Stepkids",
+    "collectionName": "The Stepkids - Live Covers - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/46/17/d5/4617d536-c0c9-d5ec-fc56-8569642e7780/mzaf_15871602605923349194.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music2/v4/4e/54/08/4e540821-9ade-0fe2-6e3a-105f1c4de153/The_Stepkids_-_Live_Covers.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Get Lucky",
+    "artistName": "Rockabye Baby!",
+    "collectionName": "Lullaby Renditions of Daft Punk",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/d5/91/ecd5911f-22bc-2309-e5d2-925849b29937/mzaf_2743430060047577059.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/db/b6/bb/dbb6bb97-235c-cf98-7c19-c5ac768a6c52/1820.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Get Lucky",
+    "artistName": "Twinkle Twinkle Little Rock Star",
+    "collectionName": "Lullaby Versions of Daft Punk",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/82/0f/be/820fbe38-e110-e0b1-7741-b6eb77eda5b2/mzaf_5792555308497993334.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/fa/2f/25/fa2f25b7-7ffa-be8c-3739-648a59cba0c9/192641695100_Cover.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Get Lucky",
+    "artistName": "Baby Rockstar",
+    "collectionName": "Lullaby Renditions of Daft Punk - Random Access Memories",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/09/fd/86/09fd867b-53ff-043b-4ce2-9159a2e00d02/mzaf_7961383569645587690.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/0a/05/7c/0a057ce0-1933-4ee8-505e-c75754a314b3/dj.rlzzqodr.jpg/100x100bb.jpg"
+   }
+  ]
+ }
+}
