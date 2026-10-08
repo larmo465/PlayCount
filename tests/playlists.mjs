@@ -7,9 +7,14 @@ const errors = [];
 page.on('pageerror', e => errors.push(e.message));
 page.on('dialog', d => d.accept());
 await page.route(/^https:\/\//, async route => {
+  // Real browsers often get no CORS header from iTunes (always seen with Origin: null), so fetch() fails
+  // with "Failed to fetch". Fulfilled responses here skip Chromium's CORS check, so simulate the failure;
+  // JSONP (<script>) requests aren't subject to CORS and go through.
+  if (route.request().url().includes('itunes.apple.com/search') && route.request().resourceType() === 'fetch') return route.abort('failed');
   const url = route.request().url();
   if (/\.m4a|audio-ssl|mzaf_/.test(url)) return route.fulfill({ status: 200, contentType: 'audio/wav', body: fs.readFileSync(SP + '/tests/tone.wav') });
-  const r = await fetch(url);
+  // Forward the page's real headers (Origin: null from a file:// page) so CORS behaves as in a real browser.
+  const r = await fetch(url, { headers: await route.request().allHeaders() });
   const headers = Object.fromEntries(r.headers); delete headers['content-encoding']; delete headers['content-length'];
   await route.fulfill({ status: r.status, headers, body: Buffer.from(await r.arrayBuffer()) });
 });

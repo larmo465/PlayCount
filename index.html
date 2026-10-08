@@ -540,19 +540,50 @@ function excludeSet(extra) {
 function remainingInCycle() { return activePlaylist() ? queue.length : null; }   // read before prefetch pops the next one
 
 /* ---------- preview lookup (iTunes Search API, CORS-enabled, no key) ---------- */
+// iTunes only sometimes sends its CORS header (and rarely to a page opened from disk, whose origin is
+// "null"), so a plain fetch can fail in a real browser. Fall back to JSONP, which iTunes supports and
+// which doesn't depend on CORS.
+const LOOKUP_TIMEOUT = 'Song lookup timed out. Check your connection, or wait a moment if you\'ve been playing fast (iTunes allows about 20 lookups a minute).';
+async function itunesSearch(url) {
+  if (location.protocol !== 'file:') {
+    let res;
+    try { res = await fetch(url, { signal: AbortSignal.timeout(12000) }); }
+    catch (e) { if (e && e.name === 'TimeoutError') throw new Error(LOOKUP_TIMEOUT); }
+    if (res) {
+      if (!res.ok) throw new Error(`Song lookup failed (${res.status}). iTunes allows about 20 lookups a minute. Wait a moment and try again.`);
+      return res.json();
+    }
+  }
+  try { return await jsonp(url, 12000); }
+  catch (e) {
+    throw new Error(e && e.name === 'TimeoutError' ? LOOKUP_TIMEOUT
+      : 'Couldn\'t reach the iTunes song search. If you\'ve been playing fast, wait a minute (iTunes allows about 20 lookups a minute). Otherwise, check that an ad or privacy blocker isn\'t blocking itunes.apple.com.');
+  }
+}
+let jsonpSeq = 0;
+function jsonp(url, timeoutMs) {
+  return new Promise((resolve, reject) => {
+    const cb = '__pcJsonp' + (++jsonpSeq);
+    const s = document.createElement('script');
+    const done = (err, data) => {
+      clearTimeout(timer);
+      window[cb] = () => {};          // a late response after a timeout must not throw
+      s.remove();
+      err ? reject(err) : resolve(data);
+    };
+    const timer = setTimeout(() => done(Object.assign(new Error('timeout'), { name: 'TimeoutError' })), timeoutMs);
+    window[cb] = data => done(null, data);
+    s.onerror = () => done(new Error('JSONP request failed'));
+    s.src = url + '&callback=' + cb;
+    document.head.appendChild(s);
+  });
+}
+
 async function findPreview(t) {
   if (t.key in cache) { applyInfo(t, cache[t.key]); return cache[t.key]; }
   const term = t.query || `${cleanTitle(t.title)} ${t.artist}`;
   const url = `https://itunes.apple.com/search?media=music&entity=song&limit=15&country=${encodeURIComponent(settings.country || 'US')}&term=${encodeURIComponent(term)}`;
-  let res;
-  try { res = await fetch(url, { signal: AbortSignal.timeout(12000) }); }
-  catch (e) {
-    throw new Error(e && e.name === 'TimeoutError'
-      ? 'Song lookup timed out. Check your connection, or wait a moment if you\'ve been playing fast (iTunes allows about 20 lookups a minute).'
-      : NO_NETWORK.replace('reach Spotify', 'reach the iTunes song search').replace(', then paste again', ''));
-  }
-  if (!res.ok) throw new Error(`Song lookup failed (${res.status}). iTunes allows about 20 lookups a minute. Wait a moment and try again.`);
-  const data = await res.json();
+  const data = await itunesSearch(url);
   let best = null, bestScore = 0;
   for (const r of data.results || []) {
     if (!r.previewUrl) continue;
