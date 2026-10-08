@@ -247,6 +247,57 @@ test.describe('song lookups', () => {
   });
 });
 
+test.describe('analytics', () => {
+  const events = page => page.evaluate(() => window.__umamiEvents || []);
+
+  test('records imports, rounds and errors, and never song or artist names', async ({ page }) => {
+    await page.goto(APP_URL);
+    await loadFiles(page, await exportZip());
+    await page.setInputFiles('#file', [csvFile()]);
+    await pasteSongs(page, 'Pasted', PASTE);
+    await play(page, 'My listening history');
+    await giveUp(page);
+    await page.click('#settingsBtn');
+    await page.selectOption('#sourceSel', { label: 'Road Trip (shuffle)' });
+    await expect(page.locator('#board')).toBeVisible();
+    await guess(page, ROAD_TRIP[0]);
+    const recorded = await events(page);
+    expect(recorded.filter(e => e.name === 'import').map(e => e.data.source))
+      .toEqual(['extended-history', 'export-playlists', 'csv', 'paste']);
+    expect(recorded.find(e => e.name === 'round-end')).toEqual({ name: 'round-end', data: { mode: 'history', result: 'lost' } });
+    // Nothing from anyone's music may leave the browser through analytics.
+    const sent = JSON.stringify(recorded).toLowerCase();
+    for (const [title, artist] of SONGS) {
+      expect(sent).not.toContain(title.toLowerCase());
+      expect(sent).not.toContain(artist.toLowerCase());
+    }
+    for (const word of [...ROAD_TRIP, 'TOTO', 'a-ha', 'Journey', 'Gym Mix', 'Pasted', 'Road Trip', 'September']) {
+      expect(sent).not.toContain(word.toLowerCase());
+    }
+  });
+
+  test.describe('when an ad blocker blocks it', () => {
+    test.use({ netOptions: { analyticsBlocked: true } });
+    test('the game still works', async ({ page }) => {
+      await page.goto(APP_URL);
+      await loadFiles(page, historyFile());
+      await play(page, 'My listening history');
+      await giveUp(page);
+      await expect(page.locator('#outcome')).toHaveText('Out of guesses.');
+    });
+  });
+
+  test.describe('with no internet access', () => {
+    test.use({ netOptions: { offline: true } });
+    test('records the error kind only', async ({ page }) => {
+      await page.goto(APP_URL);
+      await page.evaluate(() => { window.__umamiEvents = []; window.umami = { track: (name, data) => window.__umamiEvents.push({ name, data }) }; });
+      await pasteSongs(page, 'Offline', PASTE);
+      expect(await events(page)).toEqual([{ name: 'error', data: { kind: 'spotify-unreachable' } }]);
+    });
+  });
+});
+
 test.describe('layout', () => {
   test.use({ viewport: { width: 390, height: 844 } });
   test('fits a phone screen without sideways scrolling', async ({ page }) => {
