@@ -2,6 +2,8 @@
 
 Personalized song guessing: a Songless-style game built from your own Spotify music.
 
+**Play it: <https://larmo465.github.io/PlayCount/>**
+
 You hear the first half-second of a song. Every wrong guess or skip unlocks more
 (0.5 → 1 → 2 → 4 → 8 → 16 s). You get six tries.
 
