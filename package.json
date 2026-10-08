@@ -1,0 +1,14 @@
+{
+  "name": "playcount",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:record": "RECORD=1 playwright test",
+    "smoke": "playwright test --config playwright.smoke.config.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "jszip": "3.10.1"
+  }
+}

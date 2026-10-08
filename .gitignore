@@ -1,6 +1,3 @@
 node_modules/
-tests/*.png
-tests/*.wav
-tests/*.zip
-tests/*.csv
-tests/Streaming_History_*.json
+test-results/
+playwright-report/
