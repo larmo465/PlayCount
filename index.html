@@ -221,6 +221,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
   </div>
   <label class="row"><span>iTunes store country <span class="muted small">(for previews)</span></span><input type="text" id="country" maxlength="2" style="width:56px;text-transform:uppercase"></label>
   <p class="small muted" id="poolInfo"></p>
+  <p class="small hidden" id="reprocessRow">Song matching for Spotify links has improved since this playlist was imported. <button id="reprocessFromSettings">Reprocess it</button></p>
   <details id="topDetails">
     <summary>Your most likely songs</summary>
     <table id="topTable"></table>
@@ -229,6 +230,17 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
     <button class="primary" id="closeSettings">Done</button>
     <button id="importMore">Import more</button>
     <button id="resetData">Clear all data</button>
+  </div>
+</dialog>
+
+<dialog id="reprocessDlg">
+  <h2>Better song matching</h2>
+  <p>Matching for Spotify links has improved since you imported <strong id="reprocessName"></strong>. Reprocess it to fix songs that were matched to a different artist.</p>
+  <p class="small muted">It runs in the background while you play, at about 15 songs a minute. Songs that can't be matched confidently are now left out instead of playing someone else's song.</p>
+  <p class="small" id="reprocessMsg"></p>
+  <div class="revbtns">
+    <button class="primary" id="reprocessGo">Reprocess</button>
+    <button id="reprocessLater">Not now</button>
   </div>
 </dialog>
 
@@ -251,7 +263,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
 const SNIPPETS = [0.5, 1, 2, 4, 8, 16];   // seconds unlocked at each step
 const MAX_CLIP = SNIPPETS[SNIPPETS.length - 1];
 const RECENT_LIMIT = 30;                   // history mode: don't repeat a song within this many rounds
-const LS = { retried: 'pc.retried.v1', lib: 'pc.lib.v1', playlists: 'pc.playlists.v1', cache: 'pc.cache.v1', settings: 'pc.settings.v1', stats: 'pc.stats.v1', recent: 'pc.recent.v1' };
+const LS = { reprocessDismissed: 'pc.reprocessDismissed.v1', retried: 'pc.retried.v1', lib: 'pc.lib.v1', playlists: 'pc.playlists.v1', cache: 'pc.cache.v1', settings: 'pc.settings.v1', stats: 'pc.stats.v1', recent: 'pc.recent.v1' };
 
 const $ = id => document.getElementById(id);
 
@@ -459,6 +471,16 @@ function playlistFromCSV(name, text) {
 }
 
 // Pasted text: Spotify track links (titles come from Spotify's public oEmbed endpoint) or "Artist - Title" lines.
+// A Spotify track's title and cover from Spotify's public oEmbed endpoint (null if it has none).
+async function spotifyLink(id) {
+  const url = `https://open.spotify.com/oembed?url=${encodeURIComponent('https://open.spotify.com/track/' + id)}`;
+  for (let attempt = 0; ; attempt++) {
+    const r = await fetch(url, { signal: AbortSignal.timeout(10000) });
+    if (r.status === 429 && attempt < 3) { await new Promise(res => setTimeout(res, 1000 * 2 ** attempt)); continue; }
+    return r.ok ? r.json() : null;
+  }
+}
+
 async function playlistFromPaste(name, text, progress) {
   const lines = text.split(/\r?\n|\s+(?=https?:\/\/)/).map(s => s.trim()).filter(Boolean);
   const tracks = [];
@@ -477,19 +499,11 @@ async function playlistFromPaste(name, text, progress) {
   }
   let done = 0, failed = 0, unreachable = 0;
   const work = links.slice();
-  async function lookup(id) {
-    const url = `https://open.spotify.com/oembed?url=${encodeURIComponent('https://open.spotify.com/track/' + id)}`;
-    for (let attempt = 0; ; attempt++) {
-      const r = await fetch(url, { signal: AbortSignal.timeout(10000) });
-      if (r.status === 429 && attempt < 3) { await new Promise(res => setTimeout(res, 1000 * 2 ** attempt)); continue; }
-      return r.ok ? r.json() : null;
-    }
-  }
   async function worker() {
     while (work.length) {
       const id = work.shift();
       try {
-        const j = await lookup(id);
+        const j = await spotifyLink(id);
         if (j && j.title) tracks.push({ key: 'sp:' + id, title: j.title, artist: '', uri: 'spotify:track:' + id, query: linkSearchTitle(j.title), titleOnly: true, thumb: j.thumbnail_url || '', linkTitle: j.title });
         else failed++;
       } catch { failed++; unreachable++; }
@@ -501,6 +515,67 @@ async function playlistFromPaste(name, text, progress) {
   await Promise.all(Array.from({ length: Math.min(6, links.length) }, worker));
   if (links.length && unreachable && !tracks.some(t => t.key.startsWith('sp:'))) throw new Error(NO_NETWORK);
   return { playlist: newPlaylist(name, tracks), failed, skippedLinks: lines.filter(l => /^https?:\/\//.test(l) && !trackId(l)).length };
+}
+
+/* ---------- reprocessing playlists imported before the better link matching ----------
+   Link songs saved before it lack the original Spotify title and cover the matching now relies on
+   (a wrong first match overwrote the title), so they're re-read from Spotify and matched again. */
+function needsReprocess(pl) {
+  return !!pl && pl.tracks.some(t => t.titleOnly && t.key.startsWith('sp:') && !t.linkTitle);
+}
+async function reprocessPlaylist(pl, progress) {
+  const links = pl.tracks.filter(t => t.titleOnly && t.key.startsWith('sp:'));
+  const work = links.slice();
+  let done = 0, failed = 0, unreachable = 0;
+  async function worker() {
+    while (work.length) {
+      const t = work.shift();
+      try {
+        const j = await spotifyLink(t.key.slice(3));
+        if (j && j.title) {
+          Object.assign(t, { title: j.title, linkTitle: j.title, artist: '', thumb: j.thumbnail_url || '', query: linkSearchTitle(j.title), _hay: null });
+          delete cache[t.key];
+          retried.delete(t.key);
+        } else failed++;
+      } catch { failed++; unreachable++; }
+      progress && progress(++done, links.length);
+      if (unreachable >= 6 && unreachable === done) work.length = 0;
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(6, links.length) }, worker));
+  if (links.length && unreachable === done) throw new Error(NO_NETWORK.replace(', then paste again', ''));
+  save(LS.cache, cache);
+  save(LS.retried, [...retried]);
+  savePlaylists();
+  track('reprocess', { failed: failed ? 'some' : 'none' });
+  return { songs: links.length, failed };
+}
+const reprocessDismissed = new Set(load(LS.reprocessDismissed, []));
+function offerReprocess() {
+  const pl = activePlaylist();
+  if (!needsReprocess(pl) || reprocessDismissed.has(pl.id) || $('reprocessDlg').open) return;
+  $('reprocessName').textContent = pl.name;
+  $('reprocessMsg').textContent = '';
+  $('reprocessGo').disabled = false;
+  $('reprocessDlg').showModal();
+}
+async function runReprocess() {
+  const pl = activePlaylist();
+  if (!pl) return;
+  const msg = $('reprocessMsg');
+  $('reprocessGo').disabled = true;
+  msg.className = 'small muted';
+  try {
+    const { songs, failed } = await reprocessPlaylist(pl, (d, n) => { msg.textContent = `Reading the links from Spotify… ${d}/${n}`; });
+    msg.textContent = failed ? `Matching ${songs - failed} songs again. ${failed} link${failed === 1 ? '' : 's'} couldn't be read.` : `Matching ${songs} songs again.`;
+    $('settingsDlg').open && $('settingsDlg').close();
+    setTimeout(() => $('reprocessDlg').close(), failed ? 2500 : 900);
+    startGame();   // fresh shuffle with the new matches; the background lookup picks up from here
+  } catch (e) {
+    msg.className = 'small err';
+    msg.textContent = e.message || String(e);
+    $('reprocessGo').disabled = false;
+  }
 }
 
 function savePlaylists() {
@@ -1156,6 +1231,7 @@ function renderSettings() {
   const pl = activePlaylist();
   $('historyOpts').classList.toggle('hidden', !!pl);
   $('topDetails').classList.toggle('hidden', !!pl);
+  $('reprocessRow').classList.toggle('hidden', !needsReprocess(pl));
   $('exp').value = settings.exp;
   $('minPlays').value = settings.minPlays;
   $('country').value = settings.country;
@@ -1221,6 +1297,7 @@ function startGame() {
   $('topBtns').classList.remove('hidden');
   newRound();
   scheduleResolve(BG_INTERVAL);
+  offerReprocess();
 }
 async function handleFiles(files) {
   const msg = $('loadMsg');
@@ -1334,6 +1411,13 @@ $('resetData').onclick = () => {
 };
 $('statsBtn').onclick = () => { renderStats(); $('statsDlg').showModal(); };
 $('closeStats').onclick = () => $('statsDlg').close();
+$('reprocessGo').onclick = runReprocess;
+$('reprocessLater').onclick = () => {
+  const pl = activePlaylist();
+  if (pl) { reprocessDismissed.add(pl.id); save(LS.reprocessDismissed, [...reprocessDismissed]); }
+  $('reprocessDlg').close();
+};
+$('reprocessFromSettings').onclick = () => { $('settingsDlg').close(); reprocessDismissed.delete((activePlaylist() || {}).id); offerReprocess(); };
 
 // Resume with what this browser already has.
 const saved = load(LS.lib, null);

@@ -408,6 +408,69 @@ test.describe('matching Spotify links', () => {
   });
 });
 
+// Playlists imported before the better link matching are stored without the original Spotify title and
+// cover, and may hold wrong matches. The game offers to reprocess them.
+test.describe('reprocessing a playlist imported before the better matching', () => {
+  const id = n => String(n).padStart(22, 'y');
+  test.use({ netOptions: { scenario: {
+    links: { [id(1)]: { title: 'Overtime', cover: 1 }, [id(2)]: { title: 'River Song', cover: 2 } },
+    songs: [scenarioTrack('Overtime', 'Popular Act', 9), scenarioTrack('Overtime', 'Right Artist', 1), scenarioTrack('River Song', 'Right Artist', 2)],
+  } } });
+  // The old saved format: [title, artist, uri, query, titleOnly, key], with "Overtime" matched to the wrong artist.
+  async function seedOldPlaylist(page) {
+    await page.addInitScript(([a, b]) => {
+      if (localStorage.getItem('test.seeded')) return;
+      localStorage.setItem('test.seeded', '1');
+      localStorage.setItem('pc.playlists.v1', JSON.stringify([{ id: 'pl:old', name: 'Old Mix', tracks: [
+        ['Overtime', 'Popular Act', 'spotify:track:' + a, 'Overtime', 1, 'sp:' + a],
+        ['River Song', 'Right Artist', 'spotify:track:' + b, 'River Song', 1, 'sp:' + b],
+      ] }]));
+      const hit = (t, ar) => ({ preview: `https://audio-ssl.itunes.apple.com/test/${encodeURIComponent(ar + ' ' + t)}.m4a`, art: '', title: t, artist: ar });
+      localStorage.setItem('pc.cache.v1', JSON.stringify({ ['sp:' + a]: hit('Overtime', 'Popular Act'), ['sp:' + b]: hit('River Song', 'Right Artist') }));
+      localStorage.setItem('pc.settings.v1', JSON.stringify({ source: 'pl:old', country: 'US' }));
+    }, [id(1), id(2)]);
+    await page.addInitScript(() => { window.__PC_BG_INTERVAL__ = 20; });
+  }
+  const matchedArtist = (page, n) => page.evaluate(k => (JSON.parse(localStorage.getItem('pc.cache.v1') || '{}')[k] || {}).artist, 'sp:' + id(n));
+
+  test('offers it, and reprocessing fixes wrong matches', async ({ page }) => {
+    await seedOldPlaylist(page);
+    await page.goto(APP_URL);
+    await expect(page.locator('#reprocessDlg')).toBeVisible();
+    await expect(page.locator('#reprocessName')).toHaveText('Old Mix');
+    await page.click('#reprocessGo');
+    await expect(page.locator('#reprocessDlg')).toBeHidden({ timeout: 10000 });
+    await expect.poll(() => matchedArtist(page, 1), { timeout: 15000 }).toBe('Right Artist');
+    await expect.poll(() => matchedArtist(page, 2), { timeout: 15000 }).toBe('Right Artist');
+    await page.reload();   // reprocessed playlists aren't offered again
+    await expect(page.locator('#board')).toBeVisible();
+    await expect(page.locator('#reprocessDlg')).toBeHidden();
+    await page.click('#settingsBtn');
+    await expect(page.locator('#reprocessRow')).toBeHidden();
+  });
+
+  test('"Not now" stops the pop-up, and Settings still offers it', async ({ page }) => {
+    await seedOldPlaylist(page);
+    await page.goto(APP_URL);
+    await page.click('#reprocessLater');
+    await page.reload();
+    await expect(page.locator('#board')).toBeVisible();
+    await expect(page.locator('#reprocessDlg')).toBeHidden();
+    await page.click('#settingsBtn');
+    await page.click('#reprocessFromSettings');
+    await expect(page.locator('#reprocessDlg')).toBeVisible();
+  });
+
+  test("isn't offered for a playlist imported with the new matching", async ({ page }) => {
+    await page.addInitScript(() => { window.__PC_BG_INTERVAL__ = 20; });
+    await page.goto(APP_URL);
+    await pasteSongs(page, 'New Mix', ['https://open.spotify.com/track/' + id(1), 'https://open.spotify.com/track/' + id(2)].join('\n'));
+    await play(page, 'New Mix');
+    await expect.poll(() => matchedArtist(page, 1), { timeout: 15000 }).toBe('Right Artist');
+    await expect(page.locator('#reprocessDlg')).toBeHidden();
+  });
+});
+
 test.describe('layout', () => {
   test.use({ viewport: { width: 390, height: 844 } });
   test('fits a phone screen without sideways scrolling', async ({ page }) => {
