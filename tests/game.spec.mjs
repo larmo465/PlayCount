@@ -125,6 +125,19 @@ test.describe('listening history', () => {
     expect(await slotKinds(page)).toEqual(['skip', 'skip', 'skip', 'skip', 'skip', 'skip']);
   });
 
+  test('the next song starts with an empty progress bar, even if the last round ended mid-clip', async ({ page }) => {
+    await loadFiles(page, historyFile());
+    await play(page, 'My listening history');
+    await expect(page.locator('#playBtn')).toBeEnabled();
+    for (let i = 0; i < 5; i++) await page.click('#skipBtn');   // each skip plays the longer clip
+    await expect.poll(() => page.$eval('#fill', el => el.getBoundingClientRect().width)).toBeGreaterThan(0);
+    await page.click('#skipBtn');                                // give up while the clip is still playing
+    await expect(page.locator('#resultPanel')).toBeVisible();
+    await nextSong(page);
+    expect(await page.$eval('#fill', el => el.getBoundingClientRect().width)).toBe(0);
+    await expect(page.locator('#tNow')).toHaveText('0:00');
+  });
+
   test('picks are spread across songs, and none repeats back to back', async ({ page }) => {
     await loadFiles(page, historyFile());
     await play(page, 'My listening history');

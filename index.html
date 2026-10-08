@@ -989,8 +989,12 @@ function tick() {
 function stopAudio() {
   audio.pause();
   cancelAnimationFrame(rafId);
-  if (round && !round.over) $('fill').style.width = '0';
+  if (round && !round.over) resetBar();
   updatePlayBtn();
+}
+function resetBar() {
+  $('fill').style.width = '0';
+  $('tNow').textContent = fmt(0);
 }
 function fmt(s) { s = Math.max(0, s); return `0:${String(Math.floor(s)).padStart(2, '0')}`; }
 function updatePlayBtn() {
@@ -1018,6 +1022,7 @@ async function newRound() {
       return;
     }
     round = { track: pick.track, info: pick.info, step: 0, guesses: [], over: false, won: false };
+    resetBar();   // the last round may have ended mid-clip (a right guess or giving up while it played)
     if (!activePlaylist()) {
       recent = [pick.track.key, ...recent.filter(k => k !== pick.track.key)].slice(0, RECENT_LIMIT);
       save(LS.recent, recent);
