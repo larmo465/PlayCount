@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="build" content="dev">
 <!-- Anonymous, cookie-free usage stats (Umami). Only counted on the live site, not in tests or downloaded copies. -->
+<script>
+  // Testers: open the game once with ?notrack to stop counting this browser in the stats (?track to undo).
+  // Umami skips sending anything while localStorage has umami.disabled set.
+  try {
+    const q = new URLSearchParams(location.search);
+    if (q.has('notrack')) localStorage.setItem('umami.disabled', '1');
+    if (q.has('track')) localStorage.removeItem('umami.disabled');
+  } catch { /* storage unavailable: nothing to remember */ }
+</script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="dc305b4f-66f6-435c-aea1-b1ded9f696ef" data-domains="larmo465.github.io"></script>
 <title>PlayCount</title>
 <style>
