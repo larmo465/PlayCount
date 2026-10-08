@@ -1,6 +1,6 @@
-# Playcount
+# PlayCount
 
-A Songless-style "guess the song" game built from your own Spotify music.
+Personalized song guessing: a Songless-style game built from your own Spotify music.
 
 You hear the first half-second of a song. Every wrong guess or skip unlocks more
 (0.5 → 1 → 2 → 4 → 8 → 16 s). You get six tries.
