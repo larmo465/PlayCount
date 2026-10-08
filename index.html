@@ -189,7 +189,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
       <div id="guessArea">
         <div class="guessrow">
           <ul id="sugg" class="hidden" role="listbox"></ul>
-          <input id="guess" type="text" placeholder="Know it? Search for the title or artist" autocomplete="off" spellcheck="false">
+          <input id="guess" type="text" placeholder="Know it? Search by title or artist" autocomplete="off" spellcheck="false">
         </div>
         <div class="actions">
           <button id="skipBtn">Skip</button>
@@ -283,6 +283,7 @@ let playlists = [];                           // [{id,name,tracks:[{key,title,ar
 let pool = [], cum = [], total = 0;           // history mode
 let queue = [];                               // playlist mode: shuffled, consumed from the end
 let round = null, nextUp = null;
+let knownArtists = new Set();                 // artists seen in your history and resolved playlist songs
 let candidates = [];                          // what the guess box searches
 
 function guessCountry() {
@@ -497,8 +498,12 @@ function rebuildPool() {
   for (const t of pool) { total += Math.pow(t.plays, settings.exp); cum.push(total); }
   queue = [];
   const seen = new Map();
-  for (const t of [...(activePlaylist() ? activePlaylist().tracks : []), ...lib]) if (!seen.has(t.key)) seen.set(t.key, t);
+  for (const t of [...(activePlaylist() ? activePlaylist().tracks : []), ...lib]) {
+    if (t.key in cache) applyInfo(t, cache[t.key]);
+    if (!seen.has(t.key)) seen.set(t.key, t);
+  }
   candidates = [...seen.values()];
+  knownArtists = new Set(candidates.filter(t => t.artist).map(t => primaryArtist(t.artist)));
 }
 function weightedPick(exclude) {
   if (!pool.length) return null;
@@ -611,7 +616,9 @@ function matchScore(t, r) {
 }
 function baseScore(t, r) {
   const gotT = norm(r.trackName), gotA = norm(r.artistName), gotPA = primaryArtist(r.artistName);
-  if (t.titleOnly) return gotT === norm(t.title) ? 1 : 0;   // trust iTunes' ranking among same-titled songs
+  // Title-only (pasted Spotify link): among same-titled songs, prefer artists already in your music,
+  // then trust iTunes' ranking.
+  if (t.titleOnly) return gotT === norm(t.title) ? (knownArtists.has(gotPA) ? 2 : 1) : 0;
   if (!t.artist) {
     // Pasted "Artist - Title" line: both the title and the artist must appear in it.
     const hay = ' ' + norm(t.query) + ' ';
@@ -625,7 +632,44 @@ function baseScore(t, r) {
 }
 // Pasted entries only know a rough title until iTunes resolves them; fill in the real names.
 function applyInfo(t, info) {
-  if (info && !t.artist && info.artist) { t.title = info.title; t.artist = info.artist; t._hay = null; }
+  if (info && !t.artist && info.artist) {
+    t.title = info.title; t.artist = info.artist; t._hay = null;
+    knownArtists.add(primaryArtist(t.artist));
+  }
+}
+
+/* ---------- background artist lookup ----------
+   Pasted Spotify links only come with a title, so their artists can't be searched in the guess box
+   until iTunes resolves them. Resolve the active playlist slowly in the background (about 15 a minute,
+   under iTunes' limit of about 20), and save the names so it only happens once. */
+const BG_INTERVAL = 4000, BG_BACKOFF = 60000;
+let bgTimer = 0, bgBusy = false, saveTimer = 0;
+function unresolved(pl) { return pl ? pl.tracks.filter(t => !t.artist && !(t.key in cache)) : []; }
+function scheduleResolve(delay) {
+  clearTimeout(bgTimer);
+  if (unresolved(activePlaylist()).length) bgTimer = setTimeout(resolveNext, delay);
+}
+async function resolveNext() {
+  const pl = activePlaylist();
+  const t = unresolved(pl)[0];
+  if (!t) return;
+  if (bgBusy || document.hidden) { scheduleResolve(BG_INTERVAL); return; }
+  bgBusy = true;
+  let delay = BG_INTERVAL;
+  try { await findPreview(t); }
+  catch { delay = BG_BACKOFF; }    // rate-limited or offline: back off, the game's own lookups come first
+  bgBusy = false;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(savePlaylists, 2000);
+  renderSourceTag();
+  scheduleResolve(delay);
+}
+function renderSourceTag() {
+  const pl = activePlaylist();
+  let text = pl ? `Shuffling ${pl.name}` : 'Your listening history';
+  const left = unresolved(pl).length;
+  if (left) text += ` · finding artists, ${pl.tracks.length - left} of ${pl.tracks.length} done`;
+  $('sourceTag').textContent = text;
 }
 function overlap(a, b) {
   const A = new Set(a.split(' ')), B = new Set(b.split(' '));
@@ -768,7 +812,7 @@ function renderRound() {
   document.querySelector('.barlabels').classList.toggle('hidden', r.over);
   bar.classList.toggle('hidden', r.over);
   $('resultPanel').classList.toggle('hidden', !r.over);
-  $('sourceTag').textContent = activePlaylist() ? `Shuffling ${activePlaylist().name}` : 'Your listening history';
+  renderSourceTag();
   if (r.over) renderResult();
   updatePlayBtn();
 }
@@ -846,9 +890,10 @@ function updateSugg() {
     if (words.every(w => hay.includes(w))) hits.push(t);
   }
   // Order by text relevance only: sorting by play count would give the answer away.
-  const nt = t => norm(t.title);
-  hits.sort((a, b) => (nt(b).startsWith(q) - nt(a).startsWith(q)) || a.title.localeCompare(b.title));
-  suggItems = hits.slice(0, 8);
+  // Title matches first, then artist matches (typing an artist lists their songs), then the rest.
+  const rank = t => norm(t.title).startsWith(q) ? 0 : norm(t.artist).startsWith(q) ? 1 : 2;
+  hits.sort((a, b) => (rank(a) - rank(b)) || a.title.localeCompare(b.title));
+  suggItems = hits.slice(0, 12);
   suggIdx = 0;
   const ul = $('sugg');
   ul.innerHTML = '';
@@ -984,6 +1029,7 @@ function startGame() {
   $('game').classList.remove('hidden');
   $('topBtns').classList.remove('hidden');
   newRound();
+  scheduleResolve(BG_INTERVAL);
 }
 async function handleFiles(files) {
   const msg = $('loadMsg');

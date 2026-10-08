@@ -43,7 +43,9 @@ A play counts when you listened for 30 seconds or more, matching Spotify's own r
   Songs iTunes can't find drop out of the pool. The matcher prefers the original
   recording over live, acoustic, remix, cover and karaoke versions.
 - Pasted Spotify track links are resolved to titles with Spotify's public oEmbed
-  endpoint. Playlist and album *links* can't be read without a Spotify login, which
+  endpoint, which doesn't give the artist. The game looks the artists up on iTunes in
+  the background while you play (about 15 songs a minute) and saves them, so you can
+  search the guess box by artist. Playlist and album *links* can't be read without a Spotify login, which
   is why you paste the tracks instead.
 - iTunes allows about 20 lookups a minute. Results are cached, so this only matters
   on a fresh library.
