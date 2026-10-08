@@ -274,6 +274,17 @@ function norm(s) {
     .replace(/[^a-z0-9]+/g, ' ').trim();
 }
 function cleanTitle(s) { return String(s || '').replace(/\s*[\(\[].*?[\)\]]/g, '').replace(/\s+-\s+.*$/, '').trim(); }
+// Search text for a Spotify link's title: drop "(feat. …)" and version suffixes like "- Remastered 2011",
+// but keep real parts of the title such as "- Part One".
+function linkSearchTitle(s) {
+  return String(s || '').replace(/\s*[\(\[][^\)\]]*[\)\]]/g, '')
+    .replace(/\s+-\s+.*\b(remaster(ed)?|version|edit|mix|live|mono|stereo|from|acoustic|radio)\b.*$/i, '').trim();
+}
+// Featured artists named in a title: "Better Days (feat. John Mayer)" -> ['john mayer'].
+function featuredArtists(s) {
+  const m = String(s || '').match(/[\(\[]\s*(?:feat\.?|ft\.?|featuring|with)\s+([^\)\]]+)[\)\]]/i);
+  return m ? m[1].split(/,|&|\band\b/i).map(norm).filter(Boolean) : [];
+}
 function primaryArtist(a) { return norm(String(a || '').split(/,|;|&| x | feat\.? | ft\.? /i)[0]); }
 function songKey(title, artist) { return norm(title) + '|' + primaryArtist(artist); }
 function trackId(uri) { const m = String(uri || '').match(/track[:/]([A-Za-z0-9]{22})/); return m ? m[1] : null; }
@@ -479,7 +490,7 @@ async function playlistFromPaste(name, text, progress) {
       const id = work.shift();
       try {
         const j = await lookup(id);
-        if (j && j.title) tracks.push({ key: 'sp:' + id, title: j.title, artist: '', uri: 'spotify:track:' + id, query: cleanTitle(j.title), titleOnly: true, thumb: j.thumbnail_url || '' });
+        if (j && j.title) tracks.push({ key: 'sp:' + id, title: j.title, artist: '', uri: 'spotify:track:' + id, query: linkSearchTitle(j.title), titleOnly: true, thumb: j.thumbnail_url || '' });
         else failed++;
       } catch { failed++; unreachable++; }
       progress && progress(++done, links.length);
@@ -493,12 +504,12 @@ async function playlistFromPaste(name, text, progress) {
 }
 
 function savePlaylists() {
-  save(LS.playlists, playlists.map(p => ({ id: p.id, name: p.name, tracks: p.tracks.map(t => [t.title, t.artist, t.uri, t.query || '', t.titleOnly ? 1 : 0, t.key]) })));
+  save(LS.playlists, playlists.map(p => ({ id: p.id, name: p.name, tracks: p.tracks.map(t => [t.title, t.artist, t.uri, t.query || '', t.titleOnly ? 1 : 0, t.key, t.thumb || '']) })));
 }
 function loadPlaylists() {
   return (load(LS.playlists, []) || []).map(p => ({
     id: p.id, name: p.name,
-    tracks: p.tracks.map(([title, artist, uri, query, titleOnly, key]) => ({ key, title, artist, uri, query: query || undefined, titleOnly: !!titleOnly }))
+    tracks: p.tracks.map(([title, artist, uri, query, titleOnly, key, thumb]) => ({ key, title, artist, uri, query: query || undefined, titleOnly: !!titleOnly, thumb: thumb || '' }))
   }));
 }
 function addPlaylists(list) {
@@ -602,15 +613,61 @@ function jsonp(url, timeoutMs) {
   });
 }
 
+// Album cover comparison. Both Spotify's and Apple's image servers allow pages to read image pixels, so
+// each cover is shrunk to a 64-bit difference hash; covers that differ in only a few bits are the same artwork.
+const COVER_MAX_BITS = 10;
+const coverHashes = new Map();
+function coverHash(url) {
+  if (!url) return Promise.resolve(null);
+  if (!coverHashes.has(url)) coverHashes.set(url, new Promise(resolve => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    const timer = setTimeout(() => resolve(null), 8000);
+    img.onload = () => { clearTimeout(timer); try { resolve(differenceHash(img)); } catch { resolve(null); } };
+    img.onerror = () => { clearTimeout(timer); resolve(null); };
+    img.src = url;
+  }));
+  return coverHashes.get(url);
+}
+function differenceHash(img) {
+  const c = document.createElement('canvas');
+  c.width = 9; c.height = 8;
+  const g = c.getContext('2d', { willReadFrequently: true });
+  g.imageSmoothingQuality = 'high';
+  g.drawImage(img, 0, 0, 9, 8);
+  const d = g.getImageData(0, 0, 9, 8).data;
+  const lum = (x, y) => { const i = (y * 9 + x) * 4; return d[i] * 0.299 + d[i + 1] * 0.587 + d[i + 2] * 0.114; };
+  const bits = [];
+  for (let y = 0; y < 8; y++) for (let x = 0; x < 8; x++) bits.push(lum(x, y) > lum(x + 1, y) ? 1 : 0);
+  return bits;
+}
+function hammingDistance(a, b) { let n = 0; for (let i = 0; i < a.length; i++) n += a[i] !== b[i]; return n; }
+// Spotify's 300px cover URL has a 64px sibling; the small one is enough for a hash.
+function smallSpotifyCover(url) { return String(url || '').replace('ab67616d00001e02', 'ab67616d00004851'); }
+// The candidates (same title as the link) whose album cover matches the Spotify track's cover.
+async function sameCoverAs(t, results) {
+  const sameTitle = results.filter(r => norm(r.trackName) === norm(t.title)).slice(0, 25);
+  if (sameTitle.length < 2 || !t.thumb) return new Set();   // nothing to choose between
+  const want = await coverHash(smallSpotifyCover(t.thumb));
+  if (!want) return new Set();
+  const hashes = await Promise.all(sameTitle.map(r => coverHash(r.artworkUrl60 || r.artworkUrl100)));
+  return new Set(sameTitle.filter((r, i) => hashes[i] && hammingDistance(want, hashes[i]) <= COVER_MAX_BITS));
+}
+
 async function findPreview(t) {
   if (t.key in cache) { applyInfo(t, cache[t.key]); return cache[t.key]; }
-  const term = t.query || `${cleanTitle(t.title)} ${t.artist}`;
-  const url = `https://itunes.apple.com/search?media=music&entity=song&limit=15&country=${encodeURIComponent(settings.country || 'US')}&term=${encodeURIComponent(term)}`;
+  // A Spotify link only gives a title (plus any featured artists in it), and popular titles are shared
+  // by many songs, so search with the featured artists and ask for more candidates.
+  const feats = t.titleOnly ? featuredArtists(t.title) : [];
+  const term = t.titleOnly ? [linkSearchTitle(t.title), ...feats].join(' ') : t.query || `${cleanTitle(t.title)} ${t.artist}`;
+  const limit = t.titleOnly ? 50 : 15;
+  const url = `https://itunes.apple.com/search?media=music&entity=song&limit=${limit}&country=${encodeURIComponent(settings.country || 'US')}&term=${encodeURIComponent(term)}`;
   const data = await itunesSearch(url);
+  const results = (data.results || []).filter(r => r.previewUrl);
+  const ctx = { feats, sameCover: t.titleOnly ? await sameCoverAs(t, results) : new Set() };
   let best = null, bestScore = 0;
-  for (const r of data.results || []) {
-    if (!r.previewUrl) continue;
-    const s = matchScore(t, r);
+  for (const r of results) {
+    const s = matchScore(t, r, ctx);
     if (s > bestScore) { bestScore = s; best = r; }
   }
   const info = best ? {
@@ -625,18 +682,27 @@ async function findPreview(t) {
 }
 // Prefer the original recording over live/acoustic/remix versions, covers and karaoke, unless that's what was asked for.
 const VERSION_RE = /\b(live|acoustic|remix|rmx|demo|instrumental|karaoke|cover|tribute|re-?recorded|sped up|slowed)\b/i;
-function matchScore(t, r) {
-  const s = baseScore(t, r);
+function matchScore(t, r, ctx = {}) {
+  const s = baseScore(t, r, ctx);
   if (!s) return 0;
   const wanted = (t.title + ' ' + (t.query || '')).toLowerCase();
   const m = (r.trackName + ' ' + (r.collectionName || '')).match(VERSION_RE);
   return m && !wanted.includes(m[1].toLowerCase()) ? s * 0.5 : s;
 }
-function baseScore(t, r) {
+function baseScore(t, r, ctx = {}) {
   const gotT = norm(r.trackName), gotA = norm(r.artistName), gotPA = primaryArtist(r.artistName);
-  // Title-only (pasted Spotify link): among same-titled songs, prefer artists already in your music,
-  // then trust iTunes' ranking.
-  if (t.titleOnly) return gotT === norm(t.title) ? (knownArtists.has(gotPA) ? 2 : 1) : 0;
+  // Title-only (pasted Spotify link): among same-titled songs, the one with the same album cover is
+  // almost certainly it; then prefer the featured artists named in the title and artists already in
+  // your music, then trust iTunes' ranking.
+  if (t.titleOnly) {
+    if (gotT !== norm(t.title)) return 0;
+    let s = 1;
+    if (ctx.sameCover && ctx.sameCover.has(r)) s += 10;
+    const credits = ' ' + norm(r.artistName + ' ' + r.trackName.replace(/[()\[\]]/g, ' ')) + ' ';
+    if (ctx.feats && ctx.feats.length && ctx.feats.some(f => credits.includes(' ' + f + ' '))) s += 3;
+    if (knownArtists.has(gotPA)) s += 1;
+    return s;
+  }
   if (!t.artist) {
     // Pasted "Artist - Title" line: both the title and the artist must appear in it.
     const hay = ' ' + norm(t.query) + ' ';
