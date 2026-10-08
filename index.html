@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Playcount</title>
+<style>
+:root{
+  --bg:#0f1115; --panel:#181b22; --panel2:#20242d; --line:#2c313c;
+  --text:#eef0f4; --muted:#9aa1ad; --accent:#1ed760; --accent-ink:#06210f;
+  --wrong:#e5484d; --close:#f5a524; --skip:#4b5260; --radius:12px;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#f6f7f9; --panel:#ffffff; --panel2:#eef0f3; --line:#dde1e7;
+    --text:#14171c; --muted:#5c6470; --accent:#139c47; --accent-ink:#ffffff;
+    --skip:#a3aab5;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+main{max-width:560px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+h1{font-size:22px;margin:0;letter-spacing:-.02em}
+h1 span{color:var(--accent)}
+h2{font-size:16px;margin:0 0 8px}
+p{margin:0 0 10px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:14px}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:999px;padding:8px 16px}
+button:hover{filter:brightness(1.12)}
+button:disabled{opacity:.45;cursor:not-allowed;filter:none}
+button.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent;font-weight:600}
+button.icon{padding:6px 10px;border-radius:8px}
+.hidden{display:none!important}
+#drop{border:2px dashed var(--line);border-radius:var(--radius);padding:28px 16px;text-align:center;cursor:pointer;transition:border-color .15s}
+#drop.over{border-color:var(--accent)}
+ol.steps{padding-left:20px;margin:6px 0 0}
+ol.steps li{margin-bottom:4px}
+label.row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0}
+input[type=number],input[type=text],select{font:inherit;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+input[type=number]{width:80px}
+input[type=range]{flex:1;max-width:220px;accent-color:var(--accent)}
+
+/* guesses */
+#slots{display:grid;gap:6px;margin-bottom:14px}
+.slot{min-height:38px;border:1px solid var(--line);border-radius:8px;padding:8px 10px;display:flex;align-items:center;gap:8px;font-size:14px;background:var(--panel)}
+.slot .tag{width:10px;height:10px;border-radius:3px;flex:none;background:var(--line)}
+.slot.wrong .tag{background:var(--wrong)}
+.slot.close .tag{background:var(--close)}
+.slot.skip .tag{background:var(--skip)}
+.slot.right .tag{background:var(--accent)}
+.slot.skip{color:var(--muted)}
+.slot.current{border-color:var(--muted)}
+
+/* bar */
+#bar{position:relative;height:14px;border-radius:7px;background:var(--panel2);overflow:hidden;margin:4px 0 6px}
+#unlocked{position:absolute;inset:0 auto 0 0;background:color-mix(in srgb,var(--accent) 28%,transparent)}
+#fill{position:absolute;inset:0 auto 0 0;background:var(--accent);width:0}
+.tick{position:absolute;top:0;bottom:0;width:2px;background:var(--bg)}
+.barlabels{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.controls{display:flex;align-items:center;justify-content:center;gap:12px;margin:14px 0}
+#playBtn{width:64px;height:64px;border-radius:50%;font-size:24px;padding:0;display:grid;place-items:center}
+
+/* guess box */
+.guessrow{position:relative;display:flex;gap:8px}
+#guess{flex:1;min-width:0;padding:10px 12px;border-radius:999px}
+#sugg{position:absolute;left:0;right:0;bottom:calc(100% + 6px);background:var(--panel);border:1px solid var(--line);border-radius:10px;list-style:none;margin:0;padding:4px;max-height:280px;overflow:auto;z-index:5;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+#sugg li{padding:7px 10px;border-radius:7px;cursor:pointer;font-size:14px}
+#sugg li .ar{color:var(--muted)}
+#sugg li.active,#sugg li:hover{background:var(--panel2)}
+.actions{display:flex;justify-content:space-between;margin-top:10px}
+
+/* reveal */
+#reveal{display:flex;gap:14px;align-items:center}
+#art{width:96px;height:96px;border-radius:8px;object-fit:cover;background:var(--panel2);flex:none}
+#revTitle{font-weight:700;font-size:17px}
+#outcome{font-size:18px;font-weight:700;margin-bottom:10px}
+.revbtns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+a{color:var(--accent)}
+
+/* stats & library */
+.statgrid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:6px;margin-bottom:12px}
+.statgrid b{display:block;font-size:22px}
+.dist div{display:flex;align-items:center;gap:6px;margin:3px 0;font-size:13px}
+.dist .b{background:var(--panel2);border-radius:4px;padding:1px 6px;min-width:20px;text-align:right}
+.dist .b.hi{background:var(--accent);color:var(--accent-ink)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+td{padding:4px 2px;border-top:1px solid var(--line);vertical-align:top}
+td.n{text-align:right;white-space:nowrap;color:var(--muted)}
+details summary{cursor:pointer;font-weight:600}
+#status{text-align:center;padding:24px 0}
+.err{color:var(--wrong)}
+kbd{font:12px ui-monospace,monospace;background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+.srcrow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.srcrow:first-child{border-top:0}
+.srcrow .sn{font-weight:600}
+.srcbtns{display:flex;gap:6px;flex:none}
+dialog{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:var(--radius);max-width:min(480px,calc(100vw - 32px));width:100%}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Play<span>count</span></h1>
+    <div id="topBtns" class="hidden">
+      <button class="icon" id="statsBtn" title="Stats">Stats</button>
+      <button class="icon" id="settingsBtn" title="Settings">Settings</button>
+    </div>
+  </header>
+
+  <!-- SETUP -->
+  <section id="setup">
+    <div class="panel">
+      <h2>Guess the song from your own Spotify music</h2>
+      <p class="muted">Like Songless: you hear half a second of a song, then a little more after every miss or skip. Play from your listening history, where the songs you've played most come up most often, or shuffle through a playlist.</p>
+    </div>
+
+    <div id="sources" class="panel hidden">
+      <h2>Choose what to play</h2>
+      <div id="sourceList"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Listening history</h2>
+      <div id="drop" tabindex="0" role="button">
+        <strong>Drop your Spotify data here</strong><br>
+        <span class="muted small">the .zip Spotify emails you, or the <code>Streaming_History_Audio_*.json</code> / <code>StreamingHistory_music_*.json</code> files inside it. Playlists and Liked Songs in the zip are imported too, and so are playlist CSVs.</span>
+        <input id="file" type="file" accept=".zip,.json,.csv,application/json,application/zip,text/csv" multiple hidden>
+      </div>
+      <label class="row small"><span>Only count a play when you listened for at least 30 seconds (Spotify's own rule)</span><input type="checkbox" id="thirty" checked></label>
+      <p id="loadMsg" class="small"></p>
+    </div>
+
+    <div class="panel">
+      <h2>Import a playlist</h2>
+      <p class="small muted">Paste Spotify track links, or one song per line as <em>Artist - Title</em>. To copy a whole playlist in the Spotify desktop app, open it, click a track, press <kbd>Ctrl/Cmd+A</kbd> then <kbd>Ctrl/Cmd+C</kbd>. You can also drop a CSV from <a href="https://exportify.net" target="_blank" rel="noopener">Exportify</a> in the box above.</p>
+      <input id="plName" type="text" placeholder="Playlist name" style="width:100%;margin-bottom:8px">
+      <textarea id="plText" rows="5" placeholder="https://open.spotify.com/track/…&#10;The Killers - Mr. Brightside" style="width:100%;font:inherit;font-size:13px;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px;resize:vertical"></textarea>
+      <div class="actions"><span id="plMsg" class="small muted"></span><button class="primary" id="plAdd">Add playlist</button></div>
+    </div>
+    <div class="panel small">
+      <h2>Getting your data</h2>
+      <p class="muted">Spotify's API doesn't share play counts, but your privacy export does:</p>
+      <ol class="steps muted">
+        <li>Go to <a href="https://www.spotify.com/account/privacy/" target="_blank" rel="noopener">spotify.com/account/privacy</a>.</li>
+        <li>Tick <strong>Extended streaming history</strong> for your whole history (takes up to 30 days), or <strong>Account data</strong> for the last year (about 5 days).</li>
+        <li>Download the zip from the email and drop it above.</li>
+      </ol>
+      <p class="muted">Everything stays in your browser. The only network calls are song lookups on the public iTunes Search API, which supplies the 30-second previews.</p>
+    </div>
+  </section>
+
+  <!-- GAME -->
+  <section id="game" class="hidden">
+    <div id="status" class="muted">Loading…</div>
+    <div id="board" class="hidden">
+      <div id="sourceTag" class="small muted" style="text-align:center;margin-bottom:8px"></div>
+      <div id="slots"></div>
+
+      <div id="resultPanel" class="panel hidden">
+        <div id="outcome"></div>
+        <div id="reveal">
+          <img id="art" alt="">
+          <div>
+            <div id="revTitle"></div>
+            <div id="revArtist" class="muted"></div>
+            <div id="revPlays" class="small" style="margin-top:6px"></div>
+          </div>
+        </div>
+        <div class="revbtns">
+          <button class="primary" id="nextBtn">Next song</button>
+          <button id="fullBtn">Play preview</button>
+          <a id="spLink" target="_blank" rel="noopener"><button tabindex="-1">Open in Spotify</button></a>
+          <button id="shareBtn">Copy result</button>
+        </div>
+      </div>
+
+      <div id="bar"><div id="unlocked"></div><div id="fill"></div></div>
+      <div class="barlabels"><span id="tNow">0:00</span><span>0:16</span></div>
+
+      <div class="controls">
+        <button id="playBtn" class="primary" aria-label="Play">▶</button>
+      </div>
+
+      <div id="guessArea">
+        <div class="guessrow">
+          <ul id="sugg" class="hidden" role="listbox"></ul>
+          <input id="guess" type="text" placeholder="Know it? Search for the title or artist" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="actions">
+          <button id="skipBtn">Skip</button>
+          <button id="submitBtn" class="primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog id="settingsDlg">
+  <h2>Settings</h2>
+  <label class="row"><span>Playing from</span><select id="sourceSel" style="max-width:60%"></select></label>
+  <div id="historyOpts">
+    <label class="row"><span>Weighting<br><span class="muted small" id="expLabel"></span></span><input type="range" id="exp" min="0" max="2" step="0.25"></label>
+    <label class="row"><span>Only songs with at least this many plays</span><input type="number" id="minPlays" min="1" step="1"></label>
+  </div>
+  <label class="row"><span>iTunes store country <span class="muted small">(for previews)</span></span><input type="text" id="country" maxlength="2" style="width:56px;text-transform:uppercase"></label>
+  <p class="small muted" id="poolInfo"></p>
+  <details id="topDetails">
+    <summary>Your most likely songs</summary>
+    <table id="topTable"></table>
+  </details>
+  <div class="revbtns">
+    <button class="primary" id="closeSettings">Done</button>
+    <button id="importMore">Import more</button>
+    <button id="resetData">Clear all data</button>
+  </div>
+</dialog>
+
+<dialog id="statsDlg">
+  <h2>Stats</h2>
+  <div class="statgrid">
+    <div><b id="sPlayed">0</b><span class="small muted">Played</span></div>
+    <div><b id="sWin">0%</b><span class="small muted">Won</span></div>
+    <div><b id="sStreak">0</b><span class="small muted">Streak</span></div>
+    <div><b id="sMax">0</b><span class="small muted">Best</span></div>
+  </div>
+  <div class="dist" id="dist"></div>
+  <div class="revbtns"><button class="primary" id="closeStats">Close</button></div>
+</dialog>
+
+<script>
+(() => {
+'use strict';
+
+const SNIPPETS = [0.5, 1, 2, 4, 8, 16];   // seconds unlocked at each step
+const MAX_CLIP = SNIPPETS[SNIPPETS.length - 1];
+const RECENT_LIMIT = 30;                   // history mode: don't repeat a song within this many rounds
+const LS = { lib: 'pc.lib.v1', playlists: 'pc.playlists.v1', cache: 'pc.cache.v1', settings: 'pc.settings.v1', stats: 'pc.stats.v1', recent: 'pc.recent.v1' };
+
+const $ = id => document.getElementById(id);
+
+/* ---------- storage (every call can fail: private mode, quota, previews) ---------- */
+function load(key, fallback) {
+  try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch { return fallback; }
+}
+function save(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* best effort */ }
+}
+
+/* ---------- text normalisation for matching ---------- */
+function norm(s) {
+  return String(s || '').toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/\s*[\(\[][^\)\]]*[\)\]]/g, ' ')          // (feat. x), [Remastered]
+    .replace(/\s+-\s+.*(remaster|version|edit|mix|live|mono|stereo|from|acoustic|radio).*$/, '')
+    .replace(/\bfeat\.?\b.*$|\bft\.?\b.*$/, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, ' ').trim();
+}
+function cleanTitle(s) { return String(s || '').replace(/\s*[\(\[].*?[\)\]]/g, '').replace(/\s+-\s+.*$/, '').trim(); }
+function primaryArtist(a) { return norm(String(a || '').split(/,|;|&| x | feat\.? | ft\.? /i)[0]); }
+function songKey(title, artist) { return norm(title) + '|' + primaryArtist(artist); }
+function trackId(uri) { const m = String(uri || '').match(/track[:/]([A-Za-z0-9]{22})/); return m ? m[1] : null; }
+// Same song even when the two entries came from different sources.
+function sameSong(a, b) {
+  if (a.key === b.key) return true;
+  if (trackId(a.uri) && trackId(a.uri) === trackId(b.uri)) return true;
+  return !!a.artist && !!b.artist && norm(a.title) === norm(b.title) && primaryArtist(a.artist) === primaryArtist(b.artist);
+}
+function label(t) { return t.artist ? `${t.title} — ${t.artist}` : t.title; }
+
+/* ---------- state ---------- */
+const settings = Object.assign({ exp: 1, minPlays: 1, country: guessCountry(), source: 'history' }, load(LS.settings, {}));
+let stats = Object.assign({ played: 0, won: 0, streak: 0, max: 0, dist: [0, 0, 0, 0, 0, 0, 0] }, load(LS.stats, {}));
+let cache = load(LS.cache, {});              // key -> preview info, or null if iTunes has no match
+let recent = load(LS.recent, []);
+let lib = [];                                 // listening history: [{key,title,artist,plays,uri}]
+let playlists = [];                           // [{id,name,tracks:[{key,title,artist,uri,query,titleOnly}]}]
+let pool = [], cum = [], total = 0;           // history mode
+let queue = [];                               // playlist mode: shuffled, consumed from the end
+let round = null, nextUp = null;
+let candidates = [];                          // what the guess box searches
+
+function guessCountry() {
+  const m = (navigator.language || '').match(/-([A-Za-z]{2})$/);
+  return m ? m[1].toUpperCase() : 'US';
+}
+function activePlaylist() { return playlists.find(p => p.id === settings.source) || null; }
+function historyPlays(t) {
+  const h = lib.find(x => sameSong(x, t));
+  return h ? h.plays : 0;
+}
+
+/* ---------- reading files ---------- */
+async function readFiles(fileList) {
+  const out = [];
+  for (const f of fileList) {
+    if (/\.zip$/i.test(f.name) || f.type.includes('zip')) {
+      const JSZip = await loadJSZip();
+      const zip = await JSZip.loadAsync(f);
+      const entries = Object.values(zip.files).filter(e => !e.dir && /\.(json|csv)$/i.test(e.name) && /stream|playlist|yourlibrary/i.test(e.name) && !/video/i.test(e.name));
+      for (const e of entries) out.push({ name: e.name.split('/').pop(), text: await e.async('string') });
+    } else if (/\.(json|csv)$/i.test(f.name)) {
+      out.push({ name: f.name, text: await f.text() });
+    }
+  }
+  for (const f of out) f.data = /\.csv$/i.test(f.name) ? null : safeParse(f.text);
+  return out;
+}
+function safeParse(s) { try { return JSON.parse(s); } catch { return null; } }
+let jszipPromise;
+function loadJSZip() {
+  if (window.JSZip) return Promise.resolve(window.JSZip);
+  jszipPromise = jszipPromise || new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+    s.onload = () => res(window.JSZip);
+    s.onerror = () => { jszipPromise = null; rej(new Error('Could not load the zip reader. Unzip the file and drop the files inside instead.')); };
+    document.head.appendChild(s);
+  });
+  return jszipPromise;
+}
+
+/* ---------- listening history ---------- */
+function buildLibrary(files, minMs) {
+  // Extended history uses snake_case keys; the 1-year "Account data" export uses camelCase.
+  // If both are present they overlap, so prefer the extended one.
+  const ext = [], basic = [];
+  for (const f of files) {
+    if (!Array.isArray(f.data)) continue;
+    const s = f.data.find(r => r && typeof r === 'object');
+    if (!s) continue;
+    if ('ms_played' in s) ext.push(f.data); else if ('msPlayed' in s) basic.push(f.data);
+  }
+  const isExt = ext.length > 0;
+  const map = new Map();
+  let streams = 0, counted = 0;
+  for (const arr of (isExt ? ext : basic)) {
+    for (const r of arr) {
+      if (!r) continue;
+      const title = isExt ? r.master_metadata_track_name : r.trackName;
+      const artist = isExt ? r.master_metadata_album_artist_name : r.artistName;
+      const ms = isExt ? r.ms_played : r.msPlayed;
+      if (!title || !artist) continue;           // podcasts, audiobooks
+      streams++;
+      if ((ms || 0) < minMs) continue;
+      counted++;
+      const key = songKey(title, artist);
+      let t = map.get(key);
+      if (!t) { t = { key, title, artist, plays: 0, uri: null }; map.set(key, t); }
+      t.plays++;
+      if (!t.uri && r.spotify_track_uri) t.uri = r.spotify_track_uri;
+    }
+  }
+  return { tracks: [...map.values()].sort((a, b) => b.plays - a.plays), streams, counted, isExt };
+}
+
+/* ---------- playlists ---------- */
+function mkTrack(title, artist, uri) {
+  title = String(title || '').trim(); artist = String(artist || '').trim();
+  return title ? { key: songKey(title, artist), title, artist, uri: uri || null } : null;
+}
+function dedupe(tracks) {
+  const seen = new Set();
+  return tracks.filter(t => t && !seen.has(t.key) && seen.add(t.key));
+}
+function newPlaylist(name, tracks) {
+  tracks = dedupe(tracks);
+  return tracks.length ? { id: 'pl:' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), name: name || 'Playlist', tracks } : null;
+}
+
+// Playlist1.json / Playlists*.json and YourLibrary.json from the Spotify "Account data" export.
+function playlistsFromExport(files) {
+  const out = [];
+  for (const f of files) {
+    const d = f.data;
+    if (!d || Array.isArray(d)) continue;
+    if (Array.isArray(d.playlists)) {
+      for (const p of d.playlists) {
+        const tracks = (p.items || []).map(it => it && it.track && mkTrack(it.track.trackName, it.track.artistName, it.track.trackUri));
+        const pl = newPlaylist(p.name, tracks);
+        if (pl) out.push(pl);
+      }
+    }
+    if (Array.isArray(d.tracks) && /library/i.test(f.name)) {
+      const pl = newPlaylist('Liked Songs', d.tracks.map(t => t && mkTrack(t.track, t.artist, t.uri)));
+      if (pl) out.push(pl);
+    }
+  }
+  return out;
+}
+
+// Exportify (and most other playlist exporters) write a CSV with a header row.
+function parseCSV(text) {
+  const rows = []; let row = [], field = '', q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) {
+      if (c === '"' && text[i + 1] === '"') { field += '"'; i++; }
+      else if (c === '"') q = false;
+      else field += c;
+    } else if (c === '"') q = true;
+    else if (c === ',') { row.push(field); field = ''; }
+    else if (c === '\n' || c === '\r') {
+      if (c === '\r' && text[i + 1] === '\n') i++;
+      row.push(field); rows.push(row); row = []; field = '';
+    } else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows.filter(r => r.some(x => x.trim()));
+}
+function playlistFromCSV(name, text) {
+  const rows = parseCSV(text.replace(/^﻿/, ''));
+  if (rows.length < 2) return null;
+  const head = rows[0].map(h => h.toLowerCase().trim());
+  const find = res => { for (const re of res) { const i = head.findIndex(h => re.test(h)); if (i >= 0) return i; } return -1; };
+  const ti = find([/^track name$/, /^(song|track|title|name)$/, /track|title|song/]);
+  const ai = find([/^artist name\(s\)$/, /^artists?( name)?$/, /artist/]);
+  const ui = find([/track uri|spotify uri|^uri$/]);
+  if (ti < 0) return null;
+  const tracks = rows.slice(1).map(r => mkTrack(r[ti], ai >= 0 ? r[ai] : '', ui >= 0 ? r[ui] : null));
+  return newPlaylist(name.replace(/\.csv$/i, '').replace(/_/g, ' '), tracks);
+}
+
+// Pasted text: Spotify track links (titles come from Spotify's public oEmbed endpoint) or "Artist - Title" lines.
+async function playlistFromPaste(name, text, progress) {
+  const lines = text.split(/\r?\n|\s+(?=https?:\/\/)/).map(s => s.trim()).filter(Boolean);
+  const tracks = [];
+  const links = [];
+  for (const line of lines) {
+    const id = trackId(line);
+    if (id) { links.push(id); continue; }
+    if (/^https?:\/\//.test(line)) continue;      // album/playlist links can't be read without a Spotify login
+    const parts = line.split(/\s+[-–—]\s+|\t/);
+    if (parts.length >= 2) {
+      // Order is ambiguous ("Artist - Title" or "Title - Artist"), so match against the whole line.
+      tracks.push({ key: 'q:' + norm(line), title: line, artist: '', uri: null, query: parts.join(' ') });
+    } else {
+      tracks.push({ key: 'q:' + norm(line), title: line, artist: '', uri: null, query: line, titleOnly: true });
+    }
+  }
+  let done = 0, failed = 0;
+  const work = links.slice();
+  async function worker() {
+    while (work.length) {
+      const id = work.shift();
+      try {
+        const r = await fetch(`https://open.spotify.com/oembed?url=${encodeURIComponent('https://open.spotify.com/track/' + id)}`);
+        const j = r.ok ? await r.json() : null;
+        if (j && j.title) tracks.push({ key: 'sp:' + id, title: j.title, artist: '', uri: 'spotify:track:' + id, query: cleanTitle(j.title), titleOnly: true, thumb: j.thumbnail_url || '' });
+        else failed++;
+      } catch { failed++; }
+      progress && progress(++done, links.length);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(6, links.length) }, worker));
+  return { playlist: newPlaylist(name, tracks), failed, skippedLinks: lines.filter(l => /^https?:\/\//.test(l) && !trackId(l)).length };
+}
+
+function savePlaylists() {
+  save(LS.playlists, playlists.map(p => ({ id: p.id, name: p.name, tracks: p.tracks.map(t => [t.title, t.artist, t.uri, t.query || '', t.titleOnly ? 1 : 0, t.key]) })));
+}
+function loadPlaylists() {
+  return (load(LS.playlists, []) || []).map(p => ({
+    id: p.id, name: p.name,
+    tracks: p.tracks.map(([title, artist, uri, query, titleOnly, key]) => ({ key, title, artist, uri, query: query || undefined, titleOnly: !!titleOnly }))
+  }));
+}
+function addPlaylists(list) {
+  for (const p of list) {
+    const i = playlists.findIndex(x => x.name === p.name && x.tracks.length === p.tracks.length);
+    if (i >= 0) playlists[i] = Object.assign(p, { id: playlists[i].id }); else playlists.push(p);
+  }
+  savePlaylists();
+}
+
+/* ---------- choosing the next song ---------- */
+function rebuildPool() {
+  pool = lib.filter(t => t.plays >= settings.minPlays && cache[t.key] !== null);
+  cum = []; total = 0;
+  for (const t of pool) { total += Math.pow(t.plays, settings.exp); cum.push(total); }
+  queue = [];
+  const seen = new Map();
+  for (const t of [...(activePlaylist() ? activePlaylist().tracks : []), ...lib]) if (!seen.has(t.key)) seen.set(t.key, t);
+  candidates = [...seen.values()];
+}
+function weightedPick(exclude) {
+  if (!pool.length) return null;
+  for (let tries = 0; tries < 40; tries++) {
+    const r = Math.random() * total;
+    let lo = 0, hi = cum.length - 1;
+    while (lo < hi) { const mid = (lo + hi) >> 1; if (cum[mid] > r) hi = mid; else lo = mid + 1; }
+    const t = pool[lo];
+    if (!exclude.has(t.key)) return t;
+  }
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+function chance(t) { return Math.pow(t.plays, settings.exp) / total; }
+
+// Playlist mode is a true shuffle: every song once, in random order, then reshuffle.
+function shufflePick(avoid) {
+  const pl = activePlaylist();
+  const playable = pl.tracks.filter(t => cache[t.key] !== null);
+  if (!playable.length) return null;
+  if (!queue.length) {
+    queue = playable.slice();
+    for (let i = queue.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [queue[i], queue[j]] = [queue[j], queue[i]]; }
+    // Don't start the new cycle with the song that just ended the last one.
+    if (queue.length > 1 && queue[queue.length - 1].key === avoid) [queue[0], queue[queue.length - 1]] = [queue[queue.length - 1], queue[0]];
+  }
+  return queue.pop();
+}
+function pickNext(avoid) {
+  if (activePlaylist()) return shufflePick(avoid);
+  return weightedPick(excludeSet(avoid));
+}
+function excludeSet(extra) {
+  const s = new Set(recent);
+  if (extra) s.add(extra);
+  // When the pool is small, allow repeats rather than stalling.
+  if (pool.length <= s.size + 1) return new Set(extra ? [extra] : []);
+  return s;
+}
+function remainingInCycle() { return activePlaylist() ? queue.length : null; }   // read before prefetch pops the next one
+
+/* ---------- preview lookup (iTunes Search API, CORS-enabled, no key) ---------- */
+async function findPreview(t) {
+  if (t.key in cache) { applyInfo(t, cache[t.key]); return cache[t.key]; }
+  const term = t.query || `${cleanTitle(t.title)} ${t.artist}`;
+  const url = `https://itunes.apple.com/search?media=music&entity=song&limit=15&country=${encodeURIComponent(settings.country || 'US')}&term=${encodeURIComponent(term)}`;
+  let res;
+  try { res = await fetch(url, { signal: AbortSignal.timeout(12000) }); }
+  catch { throw new Error('Song lookup timed out. Check your connection, or wait a moment if you\'ve been playing fast (iTunes allows about 20 lookups a minute).'); }
+  if (!res.ok) throw new Error(`Song lookup failed (${res.status}). iTunes allows about 20 lookups a minute. Wait a moment and try again.`);
+  const data = await res.json();
+  let best = null, bestScore = 0;
+  for (const r of data.results || []) {
+    if (!r.previewUrl) continue;
+    const s = matchScore(t, r);
+    if (s > bestScore) { bestScore = s; best = r; }
+  }
+  const info = best ? {
+    preview: best.previewUrl,
+    art: (best.artworkUrl100 || '').replace('100x100bb', '400x400bb'),
+    title: best.trackName, artist: best.artistName
+  } : null;
+  cache[t.key] = info;
+  save(LS.cache, cache);
+  applyInfo(t, info);
+  return info;
+}
+// Prefer the original recording over live/acoustic/remix versions, covers and karaoke, unless that's what was asked for.
+const VERSION_RE = /\b(live|acoustic|remix|rmx|demo|instrumental|karaoke|cover|tribute|re-?recorded|sped up|slowed)\b/i;
+function matchScore(t, r) {
+  const s = baseScore(t, r);
+  if (!s) return 0;
+  const wanted = (t.title + ' ' + (t.query || '')).toLowerCase();
+  const m = (r.trackName + ' ' + (r.collectionName || '')).match(VERSION_RE);
+  return m && !wanted.includes(m[1].toLowerCase()) ? s * 0.5 : s;
+}
+function baseScore(t, r) {
+  const gotT = norm(r.trackName), gotA = norm(r.artistName), gotPA = primaryArtist(r.artistName);
+  if (t.titleOnly) return gotT === norm(t.title) ? 1 : 0;   // trust iTunes' ranking among same-titled songs
+  if (!t.artist) {
+    // Pasted "Artist - Title" line: both the title and the artist must appear in it.
+    const hay = ' ' + norm(t.query) + ' ';
+    return gotT && gotPA && hay.includes(' ' + gotT + ' ') && hay.includes(' ' + gotPA + ' ') ? 1 + gotT.length / 100 : 0;
+  }
+  const wantT = norm(t.title), wantA = primaryArtist(t.artist);
+  if (!(gotA.includes(wantA) || wantA.includes(gotPA))) return 0;
+  let s = gotT === wantT ? 3 : (gotT.startsWith(wantT) || wantT.startsWith(gotT)) ? 2 : overlap(gotT, wantT) >= 0.6 ? 1 : 0;
+  if (s && gotA === wantA) s += 0.5;
+  return s;
+}
+// Pasted entries only know a rough title until iTunes resolves them; fill in the real names.
+function applyInfo(t, info) {
+  if (info && !t.artist && info.artist) { t.title = info.title; t.artist = info.artist; t._hay = null; }
+}
+function overlap(a, b) {
+  const A = new Set(a.split(' ')), B = new Set(b.split(' '));
+  let n = 0; for (const w of A) if (B.has(w)) n++;
+  return n / Math.max(A.size, B.size);
+}
+
+// Pick songs until one has a preview. Songs without one drop out.
+async function drawPlayable(avoid) {
+  for (let i = 0; i < 12; i++) {
+    const t = pickNext(avoid);
+    if (!t) return null;
+    const info = await findPreview(t);
+    if (info) return { track: t, info, source: settings.source };
+    if (!activePlaylist()) { const q = queue; rebuildPool(); queue = q; }
+  }
+  return null;
+}
+function prefetchNext() {
+  const current = round && round.track.key;
+  nextUp = drawPlayable(current).catch(() => null);
+}
+
+/* ---------- audio ---------- */
+const audio = new Audio();
+audio.preload = 'auto';
+let stopAt = 0, rafId = 0, ready = false;
+audio.addEventListener('canplaythrough', () => { ready = true; updatePlayBtn(); });
+audio.addEventListener('ended', stopAudio);
+audio.addEventListener('error', () => {
+  if (!round || !audio.src) return;
+  if (!audio.canPlayType('audio/mp4; codecs="mp4a.40.2"')) {
+    setStatus('This browser can\'t play the AAC previews. Open the game in Chrome, Edge, Safari or Firefox.', true);
+    $('board').classList.add('hidden');
+  } else if (!round.over) {
+    newRound();   // a preview that won't load: move on to another song
+  }
+});
+
+function playClip(limit) {
+  if (!audio.paused) { stopAudio(); return; }
+  stopAt = limit;
+  audio.currentTime = 0;
+  audio.play().then(() => { cancelAnimationFrame(rafId); rafId = requestAnimationFrame(tick); updatePlayBtn(); })
+    .catch(() => {});
+}
+function tick() {
+  const t = audio.currentTime;
+  if (!round.over) $('fill').style.width = Math.min(100, t / MAX_CLIP * 100) + '%';
+  $('tNow').textContent = fmt(t);
+  if (t >= stopAt) { stopAudio(); return; }
+  rafId = requestAnimationFrame(tick);
+}
+function stopAudio() {
+  audio.pause();
+  cancelAnimationFrame(rafId);
+  if (round && !round.over) $('fill').style.width = '0';
+  updatePlayBtn();
+}
+function fmt(s) { s = Math.max(0, s); return `0:${String(Math.floor(s)).padStart(2, '0')}`; }
+function updatePlayBtn() {
+  const b = $('playBtn');
+  b.disabled = !ready;
+  b.textContent = audio.paused ? '▶' : '■';
+  b.setAttribute('aria-label', audio.paused ? 'Play' : 'Stop');
+}
+
+/* ---------- rounds ---------- */
+async function newRound() {
+  stopAudio();
+  $('board').classList.add('hidden');
+  setStatus('Picking a song…');
+  try {
+    let pick = nextUp ? await nextUp : null;
+    nextUp = null;
+    if (pick && pick.source !== settings.source) pick = null;
+    if (!pick) pick = await drawPlayable(round && round.track.key);
+    if (!pick) {
+      setStatus(activePlaylist() ? 'Couldn\'t find previews for any song in this playlist. Try another store country in Settings.'
+        : pool.length || !lib.length ? 'Couldn\'t find previews for your songs. Try another store country in Settings.'
+        : 'No songs match your settings. Lower the minimum play count.', true);
+      return;
+    }
+    round = { track: pick.track, info: pick.info, step: 0, guesses: [], over: false, won: false };
+    if (!activePlaylist()) {
+      recent = [pick.track.key, ...recent.filter(k => k !== pick.track.key)].slice(0, RECENT_LIMIT);
+      save(LS.recent, recent);
+    }
+    ready = false;
+    audio.src = pick.info.preview;
+    audio.load();
+    $('status').classList.add('hidden');
+    $('board').classList.remove('hidden');
+    $('guess').value = '';
+    round.left = remainingInCycle();
+    renderRound();
+    prefetchNext();
+  } catch (e) {
+    setStatus(e.message || String(e), true);
+    const retry = document.createElement('div');
+    retry.innerHTML = '<br><button class="primary">Try again</button>';
+    retry.querySelector('button').onclick = newRound;
+    $('status').appendChild(retry);
+  }
+}
+function setStatus(msg, isErr) {
+  const s = $('status');
+  s.classList.remove('hidden');
+  s.className = isErr ? 'err' : 'muted';
+  s.textContent = msg;
+}
+
+function renderRound() {
+  const r = round;
+  const slots = $('slots');
+  slots.innerHTML = '';
+  for (let i = 0; i < SNIPPETS.length; i++) {
+    const g = r.guesses[i];
+    const d = document.createElement('div');
+    d.className = 'slot' + (g ? ' ' + g.kind : (i === r.guesses.length && !r.over ? ' current' : ''));
+    d.innerHTML = '<span class="tag"></span>';
+    const txt = document.createElement('span');
+    txt.textContent = g ? (g.kind === 'skip' ? `Skipped (+${SNIPPETS[i + 1] ? SNIPPETS[i + 1] - SNIPPETS[i] : 0}s)` : g.label + (g.kind === 'close' ? '  · right artist' : '')) : '';
+    d.appendChild(txt);
+    slots.appendChild(d);
+  }
+  const bar = $('bar');
+  bar.querySelectorAll('.tick').forEach(n => n.remove());
+  for (const s of SNIPPETS.slice(0, -1)) {
+    const tk = document.createElement('div');
+    tk.className = 'tick';
+    tk.style.left = (s / MAX_CLIP * 100) + '%';
+    bar.appendChild(tk);
+  }
+  $('unlocked').style.width = (r.over ? 100 : SNIPPETS[r.step] / MAX_CLIP * 100) + '%';
+  const nextGain = SNIPPETS[r.step + 1] ? SNIPPETS[r.step + 1] - SNIPPETS[r.step] : 0;
+  $('skipBtn').textContent = nextGain ? `Skip (+${nextGain}s)` : 'Give up';
+  $('guessArea').classList.toggle('hidden', r.over);
+  $('playBtn').parentElement.classList.toggle('hidden', r.over);
+  document.querySelector('.barlabels').classList.toggle('hidden', r.over);
+  bar.classList.toggle('hidden', r.over);
+  $('resultPanel').classList.toggle('hidden', !r.over);
+  $('sourceTag').textContent = activePlaylist() ? `Shuffling ${activePlaylist().name}` : 'Your listening history';
+  if (r.over) renderResult();
+  updatePlayBtn();
+}
+
+function submitGuess(t) {
+  if (!round || round.over || !t) return;
+  if (sameSong(t, round.track)) {
+    round.guesses.push({ kind: 'right', label: label(t) });
+    endRound(true);
+    return;
+  }
+  const close = !!t.artist && !!round.track.artist && primaryArtist(t.artist) === primaryArtist(round.track.artist);
+  round.guesses.push({ kind: close ? 'close' : 'wrong', label: label(t) });
+  advance();
+}
+function skip() {
+  if (!round || round.over) return;
+  round.guesses.push({ kind: 'skip' });
+  advance();
+}
+function advance() {
+  $('guess').value = '';
+  hideSugg();
+  if (round.guesses.length >= SNIPPETS.length) { endRound(false); return; }
+  round.step = round.guesses.length;
+  renderRound();
+  // Play the newly unlocked length straight away, like the original.
+  if (ready) { stopAudio(); playClip(SNIPPETS[round.step]); }
+}
+function endRound(won) {
+  round.over = true; round.won = won;
+  stats.played++;
+  if (won) { stats.won++; stats.streak++; stats.max = Math.max(stats.max, stats.streak); stats.dist[round.guesses.length - 1]++; }
+  else { stats.streak = 0; stats.dist[6]++; }
+  save(LS.stats, stats);
+  stopAudio();
+  renderRound();
+  playClip(30);
+}
+function renderResult() {
+  const r = round, t = r.track;
+  const n = r.guesses.length;
+  $('outcome').textContent = r.won ? (n === 1 ? 'First try. You really know this one.' : `Got it in ${n}.`) : 'Out of guesses.';
+  $('outcome').style.color = r.won ? 'var(--accent)' : 'var(--wrong)';
+  $('art').src = r.info.art || t.thumb || '';
+  $('revTitle').textContent = t.title;
+  $('revArtist').textContent = t.artist;
+  const plays = t.plays || historyPlays(t);
+  const playsText = plays ? `You've played this ${plays.toLocaleString()} time${plays === 1 ? '' : 's'}` : '';
+  if (activePlaylist()) {
+    const left = r.left;
+    $('revPlays').textContent = [playsText, left ? `${left} song${left === 1 ? '' : 's'} left in this shuffle` : 'Last song of this shuffle. The next one reshuffles'].filter(Boolean).join('. ') + '.';
+  } else {
+    const rank = lib.indexOf(t) + 1;
+    $('revPlays').textContent = `${playsText}: #${rank.toLocaleString()} of ${lib.length.toLocaleString()} songs, a ${(chance(t) * 100).toFixed(chance(t) < 0.001 ? 3 : 2)}% chance each round.`;
+  }
+  const id = trackId(t.uri);
+  $('spLink').href = id ? `https://open.spotify.com/track/${id}` : `https://open.spotify.com/search/${encodeURIComponent(t.title + ' ' + t.artist)}`;
+}
+function shareText() {
+  const sq = { right: '🟩', close: '🟨', wrong: '🟥', skip: '⬛' };
+  const row = SNIPPETS.map((_, i) => round.guesses[i] ? sq[round.guesses[i].kind] : '⬜').join('');
+  return `Playcount 🎵 ${round.won ? round.guesses.length : 'X'}/${SNIPPETS.length}\n${row}`;
+}
+
+/* ---------- autocomplete ---------- */
+let suggItems = [], suggIdx = 0;
+function updateSugg() {
+  const q = norm($('guess').value);
+  if (q.length < 2) { hideSugg(); return; }
+  const words = q.split(' ');
+  const hits = [];
+  for (const t of candidates) {
+    const hay = t._hay || (t._hay = norm(t.title) + ' ' + norm(t.artist));
+    if (words.every(w => hay.includes(w))) hits.push(t);
+  }
+  // Order by text relevance only: sorting by play count would give the answer away.
+  const nt = t => norm(t.title);
+  hits.sort((a, b) => (nt(b).startsWith(q) - nt(a).startsWith(q)) || a.title.localeCompare(b.title));
+  suggItems = hits.slice(0, 8);
+  suggIdx = 0;
+  const ul = $('sugg');
+  ul.innerHTML = '';
+  if (!suggItems.length) { ul.innerHTML = '<li class="muted">No match in your songs</li>'; ul.classList.remove('hidden'); return; }
+  suggItems.forEach(t => {
+    const li = document.createElement('li');
+    li.setAttribute('role', 'option');
+    li.innerHTML = '<span class="ti"></span> <span class="ar"></span>';
+    li.querySelector('.ti').textContent = t.title;
+    li.querySelector('.ar').textContent = t.artist ? '— ' + t.artist : '';
+    li.onmousedown = e => { e.preventDefault(); submitGuess(t); };
+    ul.appendChild(li);
+  });
+  ul.classList.remove('hidden');
+  paintSugg();
+}
+function paintSugg() { [...$('sugg').children].forEach((li, i) => li.classList.toggle('active', i === suggIdx)); }
+function hideSugg() { $('sugg').classList.add('hidden'); suggItems = []; }
+
+/* ---------- source chooser, settings, stats ---------- */
+function sourceOptions() {
+  const out = [];
+  if (lib.length) out.push({ id: 'history', name: 'My listening history', detail: `${lib.length.toLocaleString()} songs, weighted by how often you played them` });
+  for (const p of playlists) out.push({ id: p.id, name: p.name, detail: `${p.tracks.length.toLocaleString()} songs, shuffled`, removable: true });
+  return out;
+}
+function renderSources() {
+  const opts = sourceOptions();
+  $('sources').classList.toggle('hidden', !opts.length);
+  const list = $('sourceList');
+  list.innerHTML = '';
+  for (const o of opts) {
+    const row = document.createElement('div');
+    row.className = 'srcrow';
+    row.innerHTML = '<div><div class="sn"></div><div class="small muted sd"></div></div><div class="srcbtns"></div>';
+    row.querySelector('.sn').textContent = o.name;
+    row.querySelector('.sd').textContent = o.detail;
+    const play = document.createElement('button');
+    play.className = 'primary'; play.textContent = 'Play';
+    play.onclick = () => { setSource(o.id); startGame(); };
+    if (o.removable) {
+      const rm = document.createElement('button');
+      rm.className = 'icon'; rm.textContent = '✕'; rm.title = 'Remove playlist';
+      rm.onclick = () => { playlists = playlists.filter(p => p.id !== o.id); savePlaylists(); renderSources(); };
+      row.querySelector('.srcbtns').appendChild(rm);
+    }
+    row.querySelector('.srcbtns').appendChild(play);
+    list.appendChild(row);
+  }
+}
+function setSource(id) {
+  if (id !== 'history' && !playlists.some(p => p.id === id)) id = lib.length ? 'history' : (playlists[0] && playlists[0].id);
+  settings.source = id;
+  save(LS.settings, settings);
+  nextUp = null;
+  rebuildPool();
+}
+
+const EXP_LABELS = { 0: 'Every song equally likely', 1: 'Proportional to plays', 2: 'Strongly favours your top songs' };
+function renderSettings() {
+  const sel = $('sourceSel');
+  sel.innerHTML = '';
+  for (const o of sourceOptions()) {
+    const op = document.createElement('option');
+    op.value = o.id; op.textContent = o.id === 'history' ? 'My listening history' : `${o.name} (shuffle)`;
+    sel.appendChild(op);
+  }
+  sel.value = settings.source;
+  const pl = activePlaylist();
+  $('historyOpts').classList.toggle('hidden', !!pl);
+  $('topDetails').classList.toggle('hidden', !!pl);
+  $('exp').value = settings.exp;
+  $('minPlays').value = settings.minPlays;
+  $('country').value = settings.country;
+  $('expLabel').textContent = EXP_LABELS[settings.exp] || (settings.exp < 1 ? 'Flatter than play counts' : 'Steeper than play counts');
+  $('poolInfo').textContent = pl
+    ? `${pl.tracks.filter(t => cache[t.key] !== null).length.toLocaleString()} of ${pl.tracks.length.toLocaleString()} songs playable.`
+    : `${pool.length.toLocaleString()} of ${lib.length.toLocaleString()} songs in the pool.`;
+  const tb = $('topTable');
+  tb.innerHTML = '';
+  if (!pl) [...pool].sort((a, b) => b.plays - a.plays).slice(0, 15).forEach(t => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<td></td><td class="n"></td><td class="n"></td>';
+    tr.children[0].textContent = label(t);
+    tr.children[1].textContent = t.plays.toLocaleString() + ' plays';
+    tr.children[2].textContent = (chance(t) * 100).toFixed(2) + '%';
+    tb.appendChild(tr);
+  });
+}
+function onSettingsChange() {
+  settings.exp = parseFloat($('exp').value);
+  settings.minPlays = Math.max(1, parseInt($('minPlays').value, 10) || 1);
+  const c = $('country').value.trim().toUpperCase();
+  if (/^[A-Z]{2}$/.test(c) && c !== settings.country) {
+    settings.country = c;
+    for (const k in cache) if (cache[k] === null) delete cache[k];  // retry misses in the new store
+    save(LS.cache, cache);
+  }
+  save(LS.settings, settings);
+  rebuildPool();
+  nextUp = null;
+  renderSettings();
+}
+function renderStats() {
+  $('sPlayed').textContent = stats.played;
+  $('sWin').textContent = stats.played ? Math.round(stats.won / stats.played * 100) + '%' : '0%';
+  $('sStreak').textContent = stats.streak;
+  $('sMax').textContent = stats.max;
+  const max = Math.max(1, ...stats.dist);
+  const d = $('dist');
+  d.innerHTML = '';
+  stats.dist.forEach((n, i) => {
+    const row = document.createElement('div');
+    const last = round && round.over && (round.won ? round.guesses.length - 1 : 6) === i;
+    row.innerHTML = `<span style="width:14px">${i < 6 ? i + 1 : '✕'}</span><span class="b${last ? ' hi' : ''}" style="width:${8 + n / max * 85}%">${n}</span>`;
+    d.appendChild(row);
+  });
+}
+
+/* ---------- wiring ---------- */
+function showSetup() {
+  stopAudio();
+  $('settingsDlg').open && $('settingsDlg').close();
+  $('game').classList.add('hidden');
+  $('setup').classList.remove('hidden');
+  renderSources();
+}
+function startGame() {
+  setSource(settings.source);
+  if (!settings.source) { showSetup(); return; }
+  round = null;
+  $('setup').classList.add('hidden');
+  $('game').classList.remove('hidden');
+  $('topBtns').classList.remove('hidden');
+  newRound();
+}
+async function handleFiles(files) {
+  const msg = $('loadMsg');
+  msg.className = 'small muted';
+  msg.textContent = 'Reading your files…';
+  try {
+    const parsed = await readFiles(files);
+    const found = [];
+    const { tracks, streams, counted, isExt } = buildLibrary(parsed, $('thirty').checked ? 30000 : 1);
+    if (tracks.length) {
+      lib = tracks;
+      save(LS.lib, lib.map(t => [t.title, t.artist, t.plays, t.uri]));
+      found.push(`${counted.toLocaleString()} plays of ${tracks.length.toLocaleString()} songs (${streams.toLocaleString()} streams, ${isExt ? 'extended' : 'last-year'} history)`);
+    }
+    const pls = playlistsFromExport(parsed);
+    for (const f of parsed) if (/\.csv$/i.test(f.name)) { const p = playlistFromCSV(f.name, f.text); if (p) pls.push(p); }
+    if (pls.length) { addPlaylists(pls); found.push(`${pls.length} playlist${pls.length === 1 ? '' : 's'}`); }
+    if (!found.length) throw new Error('Found no listening history or playlists. Pick the Streaming_History_Audio_… / StreamingHistory_music_… files, Playlist1.json, or a playlist CSV.');
+    msg.textContent = 'Loaded ' + found.join(' and ') + '.';
+    if (tracks.length) settings.source = 'history';
+    else if (pls.length) settings.source = pls[0].id;
+    renderSources();
+    $('sources').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } catch (e) {
+    msg.className = 'small err';
+    msg.textContent = e.message || String(e);
+  }
+}
+async function handlePaste() {
+  const text = $('plText').value.trim();
+  const msg = $('plMsg');
+  if (!text) { msg.textContent = 'Paste some songs first.'; return; }
+  $('plAdd').disabled = true;
+  msg.className = 'small muted';
+  msg.textContent = 'Reading…';
+  try {
+    const name = $('plName').value.trim() || `Playlist ${playlists.length + 1}`;
+    const { playlist, failed, skippedLinks } = await playlistFromPaste(name, text, (d, n) => { msg.textContent = `Looking up links… ${d}/${n}`; });
+    if (!playlist) throw new Error(skippedLinks ? 'Playlist and album links can\'t be read without a Spotify login. Open the playlist, select all tracks and copy them instead.' : 'No songs found in what you pasted.');
+    addPlaylists([playlist]);
+    const notes = [`Added ${playlist.tracks.length} songs.`];
+    if (failed) notes.push(`${failed} link${failed === 1 ? '' : 's'} couldn't be looked up.`);
+    if (skippedLinks) notes.push(`Skipped ${skippedLinks} non-track link${skippedLinks === 1 ? '' : 's'}.`);
+    msg.textContent = notes.join(' ');
+    $('plText').value = ''; $('plName').value = '';
+    settings.source = playlist.id;
+    renderSources();
+    $('sources').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } catch (e) {
+    msg.className = 'small err';
+    msg.textContent = e.message || String(e);
+  } finally {
+    $('plAdd').disabled = false;
+  }
+}
+
+const drop = $('drop'), fileInput = $('file');
+drop.onclick = () => fileInput.click();
+drop.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); } };
+fileInput.onchange = () => { if (fileInput.files.length) handleFiles([...fileInput.files]); fileInput.value = ''; };
+drop.ondragover = e => { e.preventDefault(); drop.classList.add('over'); };
+drop.ondragleave = () => drop.classList.remove('over');
+drop.ondrop = e => { e.preventDefault(); drop.classList.remove('over'); handleFiles([...e.dataTransfer.files]); };
+$('plAdd').onclick = handlePaste;
+
+$('playBtn').onclick = () => round && playClip(SNIPPETS[round.step]);
+$('skipBtn').onclick = skip;
+$('submitBtn').onclick = () => suggItems.length ? submitGuess(suggItems[suggIdx]) : $('guess').focus();
+$('guess').oninput = updateSugg;
+$('guess').onblur = () => setTimeout(hideSugg, 100);
+$('guess').onkeydown = e => {
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+    if (!suggItems.length) return;
+    e.preventDefault();
+    suggIdx = (suggIdx + (e.key === 'ArrowDown' ? 1 : -1) + suggItems.length) % suggItems.length;
+    paintSugg();
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    if (suggItems.length) submitGuess(suggItems[suggIdx]);
+  } else if (e.key === 'Escape') hideSugg();
+};
+$('nextBtn').onclick = newRound;
+$('fullBtn').onclick = () => playClip(30);
+$('shareBtn').onclick = async () => {
+  try { await navigator.clipboard.writeText(shareText()); $('shareBtn').textContent = 'Copied'; }
+  catch { $('shareBtn').textContent = 'Copy failed'; }
+  setTimeout(() => $('shareBtn').textContent = 'Copy result', 1500);
+};
+document.addEventListener('keydown', e => {
+  if (/INPUT|TEXTAREA|SELECT/.test(e.target.tagName) || !round || $('game').classList.contains('hidden') || document.querySelector('dialog[open]')) return;
+  if (e.key === ' ') { e.preventDefault(); round.over ? playClip(30) : playClip(SNIPPETS[round.step]); }
+  if (e.key === 'Enter' && round.over) newRound();
+});
+
+$('settingsBtn').onclick = () => { renderSettings(); $('settingsDlg').showModal(); };
+$('closeSettings').onclick = () => $('settingsDlg').close();
+['exp', 'minPlays', 'country'].forEach(id => $(id).addEventListener('change', onSettingsChange));
+$('exp').addEventListener('input', onSettingsChange);
+$('sourceSel').onchange = () => { setSource($('sourceSel').value); renderSettings(); $('settingsDlg').close(); startGame(); };
+$('importMore').onclick = showSetup;
+$('resetData').onclick = () => {
+  if (!confirm('Remove your listening history, playlists and stats from this browser?')) return;
+  try { Object.values(LS).forEach(k => localStorage.removeItem(k)); } catch {}
+  location.reload();
+};
+$('statsBtn').onclick = () => { renderStats(); $('statsDlg').showModal(); };
+$('closeStats').onclick = () => $('statsDlg').close();
+
+// Resume with what this browser already has.
+const saved = load(LS.lib, null);
+if (Array.isArray(saved)) lib = saved.map(([title, artist, plays, uri]) => ({ key: songKey(title, artist), title, artist, plays, uri }));
+playlists = loadPlaylists();
+if (lib.length || playlists.length) startGame();
+})();
+</script>
+</body>
+</html>
