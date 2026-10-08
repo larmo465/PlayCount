@@ -1,0 +1,113 @@
+{
+ "status": 200,
+ "body": {
+  "resultCount": 15,
+  "results": [
+   {
+    "trackName": "Go Your Own Way",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d1/37/68/d1376853-ec1e-cce0-4ac9-2e98fc9d9c51/mzaf_7672022765745493173.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/33/06/ac/3306ac52-ebe0-ff34-408b-1438a56c082f/mzaf_6620066072328403857.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Early Take)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cd/6a/73/cd6a73d8-91fd-07e3-a518-56e3177604e5/mzaf_10839672256205524984.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Live at the Fabulous Forum, Inglewood, CA, 08/29/77)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9f/b4/d7/9fb4d7c7-6e14-2586-6609-d7eb3960689d/mzaf_5587120399042666596.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/e6/1b/fd/e61bfdc9-955d-58b5-21a7-5aab89c5726a/603497833979.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Sessions, Roughs & Outtakes)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/81/ad/cb/81adcb57-ed6a-1d7c-b38a-ea67ac543a3b/mzaf_6536399458016199570.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Live In Boston",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/03/82/af/0382aff5-e15c-1628-7aa3-ebe222d89fd9/mzaf_12219137987728671778.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/26/4e/ef/264eef1f-fcd6-4b3e-391b-828e585565b1/dj.cgxlkzjn.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac: Live",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/93/5e/33/935e334f-cd38-551d-534f-4505af6c580b/mzaf_14322075075594486735.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e5/2c/f1/e52cf16b-d163-a320-63a4-93ffa4b003b7/dj.bvttcfgp.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2a/46/50/2a46502a-00c8-8fda-0150-82fb0b348c29/mzaf_9932577228144049502.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/45/bb/8745bbd0-1e5b-8ab5-ad67-1c2a67326f48/mzaf_15565258972193198147.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4f/20/a2/4f20a23d-f6b5-3685-d295-d3451e03eec6/mzaf_2748452027387596269.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d2/a6/5f/d2a65f64-545f-c5bb-5bbd-39c847f1a9f6/mzaf_9652988180435594040.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Single Version)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b2/d4/29/b2d42996-27e0-b6e3-1213-db55ba34024e/mzaf_1087715952233049764.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4d/e7/93/4de79341-dec4-1beb-55c3-fd8286397135/mzaf_2240684441350405624.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (2001 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (2001 Remaster)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/9b/ad/0c/9bad0c23-2204-1d51-38b4-1c5016e31bbf/mzaf_15907905914454634322.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d3/94/13/d39413b7-f646-e6a6-17b6-de58e899ddc2/603497848416.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0e/d5/f1/0ed5f18f-f0ac-747a-b408-908f63b74434/mzaf_1501057355473889955.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   }
+  ]
+ }
+}

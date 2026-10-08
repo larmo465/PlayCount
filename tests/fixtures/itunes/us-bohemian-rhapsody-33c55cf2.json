@@ -1,0 +1,113 @@
+{
+ "status": 200,
+ "body": {
+  "resultCount": 15,
+  "results": [
+   {
+    "trackName": "Bohemian Rhapsody",
+    "artistName": "Queen",
+    "collectionName": "A Night At The Opera (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/fc/1e/17fc1eba-946d-84a9-710b-a0e88ea64209/mzaf_3049006317693088799.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8b/0a/ea/8b0aea60-6f4a-195b-5958-cdf459c2333b/602527644271.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody",
+    "artistName": "Panic! At the Disco",
+    "collectionName": "Suicide Squad: The Album",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/b8/38/42b8387d-b677-2e64-70c4-bfbf2158b5a9/mzaf_1969269726161221373.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2f/76/c0/2f76c0c7-5aaf-eb97-2002-f40c9ecde722/075679910486.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody",
+    "artistName": "Queen",
+    "collectionName": "The Platinum Collection",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/91/df/1591df73-dd8a-ee42-bfb8-51c8cdda7078/mzaf_9819305553372065518.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/15/c7/55/15c755bc-7603-3ce3-e243-e59f1f9863ea/602527724171.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody",
+    "artistName": "Pentatonix",
+    "collectionName": "PTX, Vol. IV: Classics - EP",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3e/0d/a9/3e0da9d0-4136-af5d-7cc5-ee676ec584e6/mzaf_150540499437548195.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/71/0f/6e/710f6ebb-156d-f04c-a935-79ed81f4351a/886446401423.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody",
+    "artistName": "Angelina Jordan",
+    "collectionName": "Bohemian Rhapsody - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d8/bc/6b/d8bc6baa-b7d4-680e-eaf5-f47172ce97c8/mzaf_1367681983083121379.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7d/aa/96/7daa96d6-cee9-7eab-4a44-803093adc9c9/464.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody (Live Aid)",
+    "artistName": "Queen",
+    "collectionName": "Bohemian Rhapsody (The Original Soundtrack)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/34/dd/3c/34dd3cdf-d69e-6829-e354-562ecb4086f9/mzaf_14389586962439152911.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/62/2e/97/622e97c4-d620-2ae1-2a47-a32e16a01492/602567988847.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody",
+    "artistName": "Queen",
+    "collectionName": "Bohemian Rhapsody (The Original Soundtrack)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cd/9f/c5/cd9fc5f8-4979-d79e-abf4-883e54f717d1/mzaf_15408639854395137008.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/62/2e/97/622e97c4-d620-2ae1-2a47-a32e16a01492/602567988847.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody (Live)",
+    "artistName": "P!nk",
+    "collectionName": "Funhouse Tour: Live In Australia",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/21/9b/36/219b36ec-3ab7-385d-a69e-1f13631d554e/mzaf_9032799400329365605.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/73/dd/82/73dd826b-18be-20e4-e5d3-43dc34d1980d/884977399042.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody (Operatic Section / 2011 A Cappella Mix)",
+    "artistName": "Queen",
+    "collectionName": "A Night At The Opera (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/02/02/6e/02026e83-3539-a382-1336-1aa23c0a9a08/mzaf_5131491009747817275.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8b/0a/ea/8b0aea60-6f4a-195b-5958-cdf459c2333b/602527644271.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody (Live At Wembley Stadium / July 1986)",
+    "artistName": "Queen",
+    "collectionName": "Live at Wembley Stadium",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/10/d7/1e/10d71e49-a6ef-13a3-e0b5-945c83eb4f80/mzaf_14807069157090035092.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0b/37/48/0b374857-3ff1-809b-73f9-5bdd717fc4f2/602527584355.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody (feat. Jonathan Groff) [Cover of Queen]",
+    "artistName": "Glee Cast",
+    "collectionName": "Glee: The Music, Journey To Regionals - EP",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/c9/81/ecc98102-4d87-699f-5aec-9e37c2c245c7/mzaf_1438102187768321865.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ce/5b/fa/ce5bfa48-806d-fd5e-933e-a2c97871cac2/884977631524.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody (Live, European Tour / 1979)",
+    "artistName": "Queen",
+    "collectionName": "Live Killers",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bb/f9/dd/bbf9ddc0-52f0-4e84-75b8-92975be30225/mzaf_17707148525395274032.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/f4/42/ae/f442aeba-0de2-f4b5-e5a0-75286bef1f6e/602527584232.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody",
+    "artistName": "Queen",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c3/29/40/c3294027-644c-ca9d-ea2a-68a498431c8f/mzaf_1930657702308615235.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b0/ca/05/b0ca05aa-29c9-4e01-5a16-f6fa06bce05c/602527594347.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody",
+    "artistName": "Rockabye Baby!",
+    "collectionName": "Lullaby Renditions of Queen",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/65/59/3b/65593b8b-12d7-7e0b-786c-659c6a803aba/mzaf_9581183091546631214.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/7a/a8/6d/mzi.otenlvuy.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bohemian Rhapsody",
+    "artistName": "Queen",
+    "collectionName": "A Night At The Opera",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7d/14/18/7d1418e4-64c0-b06f-8837-fbba23749dd2/mzaf_14988402499380729715.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/dd/86/92/dd86925d-484d-8ee7-3985-ef3264214269/602527644264.jpg/100x100bb.jpg"
+   }
+  ]
+ }
+}

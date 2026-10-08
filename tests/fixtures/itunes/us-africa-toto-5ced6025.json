@@ -1,0 +1,92 @@
+{
+ "status": 200,
+ "body": {
+  "resultCount": 12,
+  "results": [
+   {
+    "trackName": "Africa",
+    "artistName": "Toto",
+    "collectionName": "Toto IV",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bb/3d/07/bb3d07a3-b3af-2c99-5c9f-eb72796268c2/mzaf_11871467005041854011.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/69/ce/d2/69ced240-07a7-2a04-bbab-2afbacf30809/074643772822.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africa (Live)",
+    "artistName": "Toto",
+    "collectionName": "40 Tours Around the Sun (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/40/cb/df/40cbdf80-2e52-c4e0-952b-ede4f09832d5/mzaf_16822821323583972621.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/9e/cd/63/9ecd6378-cab8-74e7-3293-eabb1178b7bd/00670211041408.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africa (Live)",
+    "artistName": "Toto",
+    "collectionName": "Absolutely Live",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/4e/72/44/4e7244f6-8440-7db3-47d9-0bbddd28bb82/mzaf_14880740166893592659.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/1b/36/8d/mzi.hjqdtqku.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africa",
+    "artistName": "Toto",
+    "collectionName": "Anos 80 - Nostalgia Internacionais",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/82/3b/ef/823befea-4e40-913d-30dd-d82b6a5db5cd/mzaf_7381137644599439173.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3a/b3/ab/3ab3ab0d-269c-b5b9-f056-8586abc4b4bd/196872869484.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africa (Toto)",
+    "artistName": "Asunción Blues",
+    "collectionName": "Recordando Las Mejores Músicas Retro CD 2",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/85/10/cf/8510cf20-d40a-c851-bb2e-1ae501fbd822/mzaf_12568702516108633200.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/d0/03/d2/d003d2e7-b3ab-b99f-ab6f-4b16ea95cd1b/cover.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africa",
+    "artistName": "Lullaby Rock!",
+    "collectionName": "Lullaby Versions of 80s Hits (Volume 2)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/be/5a/38/be5a3809-483c-dd3c-9b83-1873b4c682cf/mzaf_15853818583711595809.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/24/6c/16/246c165c-9fcd-28a3-7c94-55d6f5142411/5060781951002.png/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africa",
+    "artistName": "Toto",
+    "collectionName": "Soft Rock 80's",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/0c/68/c3/0c68c3d1-5154-40ce-1d3c-4ee974eed461/mzaf_10468356029127886010.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/56/03/91/56039103-9d79-45e6-d5da-640f8dd8dce0/888880430656.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africa",
+    "artistName": "Toto",
+    "collectionName": "Greatest Hits: 40 Trips Around the Sun",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/da/1f/5dda1f4a-0062-2014-f05d-1392eb6d19a8/mzaf_16516567296929119437.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/85/65/e9/8565e9ca-4962-c8c6-88b1-b8044492c1a5/886446754260.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africa",
+    "artistName": "Toto",
+    "collectionName": "The Essential Toto",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/89/8d/b5898d8c-0f52-4acd-a576-a9c3b507bc09/mzaf_10191774094070390638.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/7e/80/d4/7e80d4f5-4784-a9b7-c1fa-2f92890a5e15/886444641500.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africa",
+    "artistName": "Weezer",
+    "collectionName": "Weezer (Teal Album)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bb/07/8d/bb078d98-5a8b-e333-c577-e477f7e3d75f/mzaf_17806462988562209796.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/97/e6/70/97e670f6-361b-a23d-617a-52bafcd631cd/075679854247.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africa",
+    "artistName": "Toto",
+    "collectionName": "Stranger Things (Soundtrack from the Netflix Original Series)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/64/3c/14/643c145a-81ab-1641-7d0d-e03b95d4dbda/mzaf_4583602402355337094.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ce/c4/c5/cec4c56d-8805-7416-301c-cc225d952bfe/886446724089.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Africa (Toto)",
+    "artistName": "Squadra Risonante",
+    "collectionName": "Squadra Risonante poprvé",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/be/6a/1d/be6a1dbc-f3cb-79da-2539-6f98358c2885/mzaf_3962423532973008708.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d2/ca/4d/d2ca4df8-e54a-47b6-e2e7-ef617e124676/1963623516947_cover.jpg/100x100bb.jpg"
+   }
+  ]
+ }
+}

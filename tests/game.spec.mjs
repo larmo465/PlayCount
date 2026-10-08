@@ -38,7 +38,7 @@ async function pasteSongs(page, name, text) {
   await expect(page.locator('#plMsg')).toContainText(/Added|Couldn't/);
 }
 async function giveUp(page) {
-  for (let i = 0; i < 6; i++) await page.click('#skipBtn');
+  while (!(await page.isVisible('#resultPanel'))) await page.click('#skipBtn');
   await expect(page.locator('#resultPanel')).toBeVisible();
   return { title: await page.textContent('#revTitle'), artist: await page.textContent('#revArtist'), info: await page.textContent('#revPlays') };
 }
@@ -74,11 +74,16 @@ test.describe('listening history', () => {
     await loadFiles(page, historyFile());
     await play(page, 'My listening history');
     await page.click('#settingsBtn');
-    const first = page.locator('#topTable tr').first();
-    await expect(first).toContainText('Mr. Brightside — The Killers');
-    await expect(first).toContainText(`${(60 / TOTAL_PLAYS * 100).toFixed(2)}%`);
+    const rows = page.locator('#topTable tr');
+    await expect(rows.first()).toContainText('Mr. Brightside — The Killers60 plays');
+    await expect(rows.nth(1)).toContainText('Bohemian Rhapsody - Remastered 2011 — Queen25 plays');
+    // The pool can shrink while we look (a background lookup may drop a song with no preview), so check
+    // proportions rather than exact totals: chance is proportional to plays.
+    const pct = async i => parseFloat((await rows.nth(i).locator('td').last().textContent()));
+    expect((await pct(0)) / (await pct(1))).toBeCloseTo(60 / 25, 1);
     await setRange(page, '#exp', 0);
-    await expect(first).toContainText(`${(100 / SONGS.length).toFixed(2)}%`);
+    const poolSize = parseInt(await page.textContent('#poolInfo'), 10);
+    await expect(rows.first()).toContainText(`${(100 / poolSize).toFixed(2)}%`);
     await expect(page.locator('#expLabel')).toHaveText('Every song equally likely');
     await page.fill('#minPlays', '10');
     await page.locator('#minPlays').dispatchEvent('change');

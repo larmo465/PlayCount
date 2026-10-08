@@ -1,0 +1,99 @@
+{
+ "status": 200,
+ "body": {
+  "resultCount": 13,
+  "results": [
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "The Killers",
+    "collectionName": "Direct Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c3/a0/30/c3a03008-17c5-aa29-6c6a-5e757ccdbaa5/mzaf_6073120660767081787.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/11/64/9c/11649c80-2066-dba8-77a9-df7eecae26c1/17UM1IM06937.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "The Killers",
+    "collectionName": "Hot Fuss",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5b/17/4e/5b174e80-1047-7214-1077-d822ba1f9520/mzaf_5975692497663881329.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/07/1a/5a/071a5aee-6e42-060c-35b9-6a6e45b9ea59/06UMGIM10441.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (Original Demo)",
+    "artistName": "The Killers",
+    "collectionName": "Direct Hits (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bd/48/4a/bd484a2a-fb28-eb25-8ef2-7923f2128f22/mzaf_4497001467019739952.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/5b/82/0f/5b820fbd-2fe4-c816-8564-6397e46a93de/17UM1IM06938.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (The Lindbergh Palace Dub)",
+    "artistName": "The Killers",
+    "collectionName": "Mr. Brightside (Remixes)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/7e/72/787e72df-998c-5013-5b14-8c67081c0951/mzaf_13836012188760276977.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/19/0b/4b/190b4b8b-e2de-57bf-4a59-bc162e2b674c/19UMGIM33009.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (Jacques Lu Cont's Thin White Duke Mix)",
+    "artistName": "The Killers",
+    "collectionName": "Sawdust",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/84/5d/be/845dbeb3-dd7c-6848-3dbb-a6022be4cc61/mzaf_10611902107956663573.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a3/11/78/a3117879-7226-ca32-2629-dbc862b81b77/00602557606256.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (The Lindbergh Palace Club Remix)",
+    "artistName": "The Killers",
+    "collectionName": "Mr. Brightside (Remixes)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/22/7c/64/227c64c9-660f-e5be-276c-7b77ffd0ed92/mzaf_14645221905293119667.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/19/0b/4b/190b4b8b-e2de-57bf-4a59-bc162e2b674c/19UMGIM33009.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "The Killers",
+    "collectionName": "Rebel Diamonds",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7b/d7/8a/7bd78a98-2668-3e52-9c15-f07d538051ba/mzaf_12576475984247297585.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c7/30/5f/c7305f48-f332-4be8-2ead-3fbc0908ffb9/23UM1IM52006.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (The Lindbergh Palace Radio Remix)",
+    "artistName": "The Killers",
+    "collectionName": "Mr. Brightside (Remixes)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0e/6e/87/0e6e8759-d688-8c36-4516-4c391a99a109/mzaf_6161001301552916118.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/19/0b/4b/190b4b8b-e2de-57bf-4a59-bc162e2b674c/19UMGIM33009.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (Jacques Lu Cont's Thin White Duke Mix)",
+    "artistName": "The Killers",
+    "collectionName": "Mr. Brightside (Remixes)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c8/d7/29/c8d729d1-45d7-8802-5010-9143a131c2db/mzaf_8414314648927805261.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/19/0b/4b/190b4b8b-e2de-57bf-4a59-bc162e2b674c/19UMGIM33009.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside (Live from The Royal Albert Hall / 2009)",
+    "artistName": "The Killers",
+    "collectionName": "Live from the Royal Albert Hall",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/33/e5/d3/33e5d39f-fd1c-90dc-083e-b90ec46a1f3d/mzaf_7129892176147747995.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/be/cc/31/becc31ff-3d71-4751-c333-a4cd91318bf8/00602567726388.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "The Killers",
+    "collectionName": "Direct Hits (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/99/19/82/9919821c-754c-c106-76f4-d5973d771318/mzaf_13486487224994580415.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/5b/82/0f/5b820fbd-2fe4-c816-8564-6397e46a93de/17UM1IM06938.rgb.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Mr. Brightside",
+    "artistName": "Pickin' On Series",
+    "collectionName": "Bluegrass Brightside: The Bluegrass Tribute To the Killers",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2c/5e/b5/2c5eb552-7fdc-da3f-bae2-e85d1c6eb8c6/mzaf_8935216655264337904.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/d4/7a/e8/d47ae851-09df-32d5-978e-e366b4c23710/9000_300dpi.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Brightside",
+    "artistName": "The Lumineers",
+    "collectionName": "Brightside",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5d/10/e4/5d10e4c2-00d9-5a40-fd42-3e53fb624bb5/mzaf_720408598963565935.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d1/67/92/d16792c4-dde9-3e95-ca51-ed30a24c6bb6/18680.jpg/100x100bb.jpg"
+   }
+  ]
+ }
+}

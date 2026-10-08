@@ -48,7 +48,7 @@ const trimItunes = d => ({
 const trimOembed = d => ({ title: d.title, thumbnail_url: d.thumbnail_url });
 
 let wav;
-function toneWav(seconds = 30, rate = 8000) {
+export function toneWav(seconds = 30, rate = 8000) {
   if (wav) return wav;
   const n = seconds * rate;
   const buf = Buffer.alloc(44 + n * 2);
@@ -71,6 +71,7 @@ export async function mockNetwork(page, { itunesFetch = 'ok', offline = false } 
   await page.route('**/*', async route => {
     const req = route.request();
     const url = new URL(req.url());
+    if (url.protocol === 'file:') return route.continue();   // the game opened as a downloaded file
     if (url.host === 'playcount.test') {
       return route.fulfill({ status: 200, contentType: 'text/html; charset=utf-8', body: readFileSync(INDEX) });
     }

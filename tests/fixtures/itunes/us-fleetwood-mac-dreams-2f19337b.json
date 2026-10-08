@@ -1,0 +1,113 @@
+{
+ "status": 200,
+ "body": {
+  "resultCount": 15,
+  "results": [
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b6/5a/4b/b65a4b6f-54dd-ee99-0b36-98e27d5b5dd8/mzaf_13813391014293209258.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/20/91/202091c1-da20-2a3e-af08-f8f7922772c6/mzaf_303294880395415807.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d4/37/e7/d437e72a-c41b-332c-f196-bee295a9d673/mzaf_11574904347171701919.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6e/65/24/6e65249a-6249-d60f-a826-09f0575bd7eb/mzaf_1946366880625937275.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7f/24/1e/7f241e94-b9bc-d288-9e6b-be6b71a21b93/mzaf_15483149253884242101.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/60/28/58/602858d9-2a10-d550-d089-7bab2204120a/mzaf_14567143477954039538.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (Take 2)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f0/53/d3/f053d31f-f501-11bc-6630-b77c7b05bf9a/mzaf_12414027032494760340.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (2004 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac 1975 to 1987",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f2/44/8e/f2448e3b-5edd-0aa4-0419-f5cee0d3e6bb/mzaf_17305748011946564217.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/96/2d/4a/962d4a9b-db1b-fcbb-ced6-e8e1d149dd0b/603497813698.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/39/fc/d1/39fcd180-ce95-b190-5cc5-5fd90005bc3c/mzaf_12371363768704947739.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (Sessions, Roughs & Outtakes)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/91/8b/b1/918bb170-5b2a-21f1-5bdd-f1af4f84d8c2/mzaf_14928865335576816067.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/90/9f/b7909f76-de40-5350-0561-7dc95a2bbf6d/mzaf_8805702250746464027.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac: Live",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/30/0b/5a/300b5aec-9f09-672f-3b98-8ffd893633c1/mzaf_4901065296561172885.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e5/2c/f1/e52cf16b-d163-a320-63a4-93ffa4b003b7/dj.bvttcfgp.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (Live at the Fabulous Forum, Inglewood, CA, 08/29/77)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f0/81/a6/f081a6ba-47d8-59e8-0878-65564e2a83d6/mzaf_11984165266700127696.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/e6/1b/fd/e61bfdc9-955d-58b5-21a7-5aab89c5726a/603497833979.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (Take 2)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9e/e4/11/9ee41149-d6fd-9d59-63bf-18de155915cb/mzaf_726217419220160080.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (with Deep Dish)",
+    "artistName": "Stevie Nicks",
+    "collectionName": "Crystal Visions... The Very Best of Stevie Nicks (Bonus Version)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/00/62/ce/0062ce03-6647-5f86-7ea5-ffb356ee0dd6/mzaf_1381660603466448260.plus.aac.p.m4a",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/8f/84/9f/8f849f4f-87e5-ca68-5512-ff0770332f25/dj.lfupbdzm.jpg/100x100bb.jpg"
+   }
+  ]
+ }
+}
