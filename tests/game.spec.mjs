@@ -1,5 +1,5 @@
 import { test as base, expect } from '@playwright/test';
-import { mockNetwork, APP_URL, FILE_URL } from './support/network.mjs';
+import { mockNetwork, scenarioTrack, APP_URL, FILE_URL } from './support/network.mjs';
 import { SONGS, TOTAL_PLAYS, ROAD_TRIP, historyFile, basicHistoryFile, exportZip, csvFile, PASTE } from './support/data.mjs';
 
 // Every test gets the mocked network, a seeded Math.random (so song picks, and therefore the
@@ -313,6 +313,98 @@ test.describe('analytics opt-out for testers', () => {
     expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBe('1');
     await page.goto(APP_URL + '?track');
     expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBeNull();
+  });
+});
+
+// Pasted Spotify links only give a title and a cover. These made-up scenarios check how the game picks
+// the right song when other songs share the title.
+test.describe('matching Spotify links', () => {
+  const id = n => String(n).padStart(22, 'x');            // a valid-looking Spotify track ID
+  const link = n => 'https://open.spotify.com/track/' + id(n);
+  async function resolve(page, links) {
+    await page.addInitScript(() => { window.__PC_BG_INTERVAL__ = 20; });
+    await page.goto(APP_URL);
+    await pasteSongs(page, 'Links', links.join('\n'));
+    await play(page, 'Links');
+  }
+  const matched = (page, n) => page.evaluate(k => {
+    const info = JSON.parse(localStorage.getItem('pc.cache.v1') || '{}')[k];
+    return info === undefined ? undefined : info && `${info.title} — ${info.artist}`;
+  }, 'sp:' + id(n));
+
+  test.describe('several songs share the title', () => {
+    test.use({ netOptions: { scenario: {
+      links: { [id(1)]: { title: 'Overtime', cover: 1 } },
+      songs: [scenarioTrack('Overtime', 'Popular Act', 2), scenarioTrack('Overtime', 'Other Band', 3), scenarioTrack('Overtime', 'Right Artist', 1)],
+    } } });
+    test('picks the one with the same album cover', async ({ page }) => {
+      await resolve(page, [link(1)]);
+      await expect.poll(() => matched(page, 1)).toBe('Overtime — Right Artist');
+    });
+  });
+
+  test.describe("the title search doesn't include the right song", () => {
+    // Like a common title with 50+ songs: "Overtime" by Right Artist only turns up in an artist search.
+    // It resolves first, before the playlist's artist is known, so this also covers the second try.
+    test.use({ netOptions: { scenario: {
+      links: { [id(1)]: { title: 'Overtime', cover: 11 }, [id(2)]: { title: 'River Song', cover: 12 }, [id(3)]: { title: 'Night Drive', cover: 13 } },
+      songs: [scenarioTrack('Overtime', 'Popular Act', 2), scenarioTrack('Overtime', 'Right Artist', 11),
+        scenarioTrack('River Song', 'Right Artist', 12), scenarioTrack('Night Drive', 'Right Artist', 13)],
+      titleSearch: term => [scenarioTrack('Overtime', 'Popular Act', 2), scenarioTrack('River Song', 'Right Artist', 12), scenarioTrack('Night Drive', 'Right Artist', 13)]
+        .filter(t => term.startsWith(t.trackName)),
+    } } });
+    test("finds it in the songs of the playlist's main artist", async ({ page, net }) => {
+      await resolve(page, [link(1), link(2), link(3)]);
+      await expect.poll(() => matched(page, 1), { timeout: 15000 }).toBe('Overtime — Right Artist');
+      expect(net.itunes.filter(r => r.byArtist).map(r => r.term)).toContain('Right Artist');
+      await expect.poll(() => matched(page, 2)).toBe('River Song — Right Artist');
+      await expect.poll(() => matched(page, 3)).toBe('Night Drive — Right Artist');
+      await page.fill('#guess', 'right artist');
+      await expect(page.locator('#sugg li')).toHaveText(['Night Drive — Right Artist', 'Overtime — Right Artist', 'River Song — Right Artist']);
+    });
+  });
+
+  test.describe('no song with the same cover exists', () => {
+    // "Tourniquet" by Right Artist isn't on iTunes; only other artists' songs with that title are.
+    // "Lantern" is, but with different artwork than on Spotify (say, a single vs the album).
+    test.use({ netOptions: { scenario: {
+      links: { [id(1)]: { title: 'River Song', cover: 31 }, [id(2)]: { title: 'Tourniquet', cover: 32 }, [id(3)]: { title: 'Lantern', cover: 33 } },
+      songs: [scenarioTrack('River Song', 'Right Artist', 31), scenarioTrack('Tourniquet', 'Stranger Band', 34),
+        scenarioTrack('Lantern', 'Right Artist', 35)],
+    } } });
+    test("skips a stranger's song rather than playing the wrong one, but trusts an artist from the playlist", async ({ page }) => {
+      await resolve(page, [link(1), link(2), link(3)]);
+      await expect.poll(() => matched(page, 1)).toBe('River Song — Right Artist');
+      await expect.poll(() => matched(page, 2), { timeout: 15000 }).toBeNull();
+      await expect.poll(() => matched(page, 3), { timeout: 15000 }).toBe('Lantern — Right Artist');
+      await page.click('#settingsBtn');
+      await expect(page.locator('#poolInfo')).toHaveText('2 of 3 songs playable.');
+    });
+  });
+
+  test.describe('the title names a featured artist', () => {
+    test.use({ netOptions: { scenario: {
+      links: { [id(1)]: { title: 'Better Days (feat. Guest Star)', cover: null } },
+      songs: [scenarioTrack('Better Days', 'Popular Act', 2), scenarioTrack('Better Days (feat. Guest Star)', 'Main Act & Guest Star', 4)],
+    } } });
+    test('searches with it and picks that version', async ({ page, net }) => {
+      await resolve(page, [link(1)]);
+      await expect.poll(() => matched(page, 1)).toBe('Better Days (feat. Guest Star) — Main Act & Guest Star');
+      expect(net.itunes[0].term).toBe('Better Days Guest Star');   // featured artist added to the search
+    });
+  });
+
+  test.describe('the title has a part after a dash', () => {
+    test.use({ netOptions: { scenario: {
+      links: { [id(1)]: { title: 'Codeine Pills - Part One', cover: 5 }, [id(2)]: { title: 'Old Song - Remastered 2011', cover: 6 } },
+      songs: [scenarioTrack('Codeine Pills - Part One', 'Right Artist', 5), scenarioTrack('Old Song', 'Classic Band', 6)],
+    } } });
+    test('keeps real title parts in the search but drops version labels', async ({ page, net }) => {
+      await resolve(page, [link(1), link(2)]);
+      await expect.poll(() => matched(page, 1)).toBe('Codeine Pills - Part One — Right Artist');
+      await expect.poll(() => matched(page, 2)).toBe('Old Song — Classic Band');
+      expect(net.itunes.map(r => r.term)).toEqual(expect.arrayContaining(['Codeine Pills - Part One', 'Old Song']));
+    });
   });
 });
 

@@ -44,10 +44,19 @@ A play counts when you listened for 30 seconds or more, matching Spotify's own r
 - Audio is the 30-second preview from the public iTunes Search API (no key needed).
   Songs iTunes can't find drop out of the pool. The matcher prefers the original
   recording over live, acoustic, remix, cover and karaoke versions.
-- Pasted Spotify track links are resolved to titles with Spotify's public oEmbed
-  endpoint, which doesn't give the artist. The game looks the artists up on iTunes in
-  the background while you play (about 15 songs a minute) and saves them, so you can
-  search the guess box by artist. Playlist and album *links* can't be read without a Spotify login, which
+- Pasted Spotify track links are resolved with Spotify's public oEmbed endpoint,
+  which gives the title and album cover but not the artist. To find the right song
+  among same-titled ones, the game:
+  - compares album covers (a small image hash): a matching cover is a sure match;
+  - uses featured artists named in the title ("feat. …") in the search;
+  - looks in the song lists of the artists the playlist has most, when the title
+    search doesn't include the right song;
+  - gives unconfirmed songs a second try once the whole playlist has been looked at.
+
+  A song without a matching cover is only used if it's by an artist you already have
+  (in the playlist or your history) or one named in the title. Otherwise the song is
+  skipped instead of playing a same-titled song by someone else. This runs in the
+  background while you play (about 15 songs a minute), and the results are saved. Playlist and album *links* can't be read without a Spotify login, which
   is why you paste the tracks instead.
 - iTunes allows about 20 lookups a minute. Results are cached, so this only matters
   on a fresh library.

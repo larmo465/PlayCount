@@ -1,0 +1,1608 @@
+{
+ "status": 200,
+ "body": {
+  "resultCount": 200,
+  "results": [
+   {
+    "trackName": "The Chain",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/15/9f/31/159f3139-16ab-6ccf-813f-86d4adffcf61/mzaf_17361308171774933378.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Silver Springs",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/14/cf/aa/14cfaaaa-c128-0f63-b76d-64a5978c7c1b/mzaf_14581219167880327479.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7f/24/1e/7f241e94-b9bc-d288-9e6b-be6b71a21b93/mzaf_15483149253884242101.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Landslide",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7a/93/b4/7a93b4f8-39e2-cca6-ae46-2303d39a2a91/mzaf_3272523244028296988.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Rhiannon",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ca/9b/9f/ca9b9f4f-e02f-3158-7126-390f043c3ccd/mzaf_5764742672591641015.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gypsy",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1f/87/ef/1f87efad-6c62-6578-850d-081d9110fd1f/mzaf_7138901192250313696.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Everywhere",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/5d/9f/385d9f8f-90b5-504e-70ba-a65f70f6a34f/mzaf_10597868418401072662.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d2/a6/5f/d2a65f64-545f-c5bb-5bbd-39c847f1a9f6/mzaf_9652988180435594040.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You Make Loving Fun",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f8/32/2c/f8322c0d-d3d9-7fa9-5a6c-31ad0a3692b0/mzaf_17498791595329250667.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gold Dust Woman",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e3/a1/bc/e3a1bce0-47bc-f6be-1e18-bf1253d0e7e9/mzaf_4082174660549720233.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Everywhere",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b4/88/89/b48889cc-2325-4969-bd6b-92bb999b96b1/mzaf_1300241890398530136.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b6/5a/4b/b65a4b6f-54dd-ee99-0b36-98e27d5b5dd8/mzaf_13813391014293209258.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Landslide (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c2/88/e5/c288e5f6-d8dc-d8a7-8d90-f8a609b3249e/mzaf_11381701045348127730.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4d/e7/93/4de79341-dec4-1beb-55c3-fd8286397135/mzaf_2240684441350405624.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gypsy",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/08/cc/81/08cc81a0-68b9-6fdc-fa05-2061bf9ed56d/mzaf_2825033422216031261.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/60/28/58/602858d9-2a10-d550-d089-7bab2204120a/mzaf_14567143477954039538.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Little Lies",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/db/db/ae/dbdbaec7-49b9-41f9-bb0a-8c9750c2d4a2/mzaf_2510177077998670269.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gypsy",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Mirage (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9e/47/01/9e470171-94ed-1e65-e846-7ce38c69edb2/mzaf_8168409245960002310.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Seven Wonders (2017 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tango in the Night (2017 Remaster) [Deluxe Edition]",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/08/24/b6/0824b6ba-7bbf-cb35-55a7-3d5b7f6b07eb/mzaf_6731478896689587208.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/0e/d5/f1/0ed5f18f-f0ac-747a-b408-908f63b74434/mzaf_1501057355473889955.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Little Lies",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8d/27/98/8d279869-e404-afc0-088b-54f859649756/mzaf_12580679900567659327.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Rhiannon",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/10/8f/8c/108f8cf8-a414-53a6-94fc-0f6187f4d6b8/mzaf_9354339013232719807.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Everywhere (2017 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tango in the Night (2017 Remaster) [Deluxe Edition]",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d9/99/d8/d999d8b6-dbd7-a418-23b7-205b9b284392/mzaf_13069957188222082320.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Rhiannon (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/38/17/18381745-9189-f9e8-8063-b4e8d1cbf79a/mzaf_16998426666674148154.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/90/9f/b7909f76-de40-5350-0561-7dc95a2bbf6d/mzaf_8805702250746464027.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You Make Loving Fun",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/40/14/f8/4014f82a-41b1-fdc2-d11b-0f69a857ca89/mzaf_13974581277654429591.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4f/20/a2/4f20a23d-f6b5-3685-d295-d3451e03eec6/mzaf_2748452027387596269.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Little Lies (2017 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tango in the Night (2017 Remaster) [Deluxe Edition]",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6f/b9/8e/6fb98ecf-6cb9-2127-b171-0fc7e0db5229/mzaf_14043629361759092347.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Silver Springs",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/12/ac/1f/12ac1f8a-a3ca-8e49-4d5a-b0e5460938f3/mzaf_6633595999647848631.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Say You Love Me (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/21/9e/b7219ece-693c-466a-f9ad-d1839642b21a/mzaf_3144015994835204648.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sara",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/78/00/3e/78003e4f-1059-080f-50d9-3cba67379ab7/mzaf_1548192833138332515.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Silver Springs (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e4/22/40/e4224082-edbd-079f-f531-67ef21b433c6/mzaf_1610916575224738253.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The Chain",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a2/07/77/a207776e-bc5c-ab38-f099-7b3dc5e6eb33/mzaf_1792371124466278195.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You Make Loving Fun",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7f/dc/6d/7fdc6d78-f1a2-f9d7-3717-a353405e9809/mzaf_587298611308145650.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I Don't Want to Know",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/69/25/ac/6925ace9-292e-5ed5-03c8-1d35960b9128/mzaf_17637781828509885786.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Don't Stop",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c8/be/b4/c8beb490-9901-0666-663a-34f039881ceb/mzaf_13418413526043417370.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Seven Wonders",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b7/43/21/b74321df-5b72-e331-7ab0-541a136f651b/mzaf_6929952918465657633.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Second Hand News",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3b/24/23/3b242322-ab83-c39c-1a8a-ec28f2171587/mzaf_17232593838711776255.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Never Going Back Again",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8c/0f/c4/8c0fc445-02e6-2659-f73f-bbca448cf4dd/mzaf_3866874333061149720.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Hold Me",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Mirage (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/7f/f8/5e7ff878-4d89-a219-c7d6-a66744993b60/mzaf_13733513109564347542.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Tusk",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cf/d9/35/cfd935d7-3f1b-1f35-4bb2-b341f1a26da4/mzaf_10994252267009179201.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Songbird",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/68/f9/94/68f9941e-63f4-5257-11af-e2a2b86f6927/mzaf_6075263649956030009.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Over My Head",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/66/91/89/669189ea-3a12-4b8a-680c-adca26681334/mzaf_17753530846017040320.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Landslide",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0e/72/1e/0e721ea4-4995-762f-5417-10a9075c7b81/mzaf_2858880938438849542.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Black Magic Woman (2018 Master)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Pious Bird of Good Omen",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/77/7d/e4/777de4ff-5eee-9172-1f57-a780aed2a1ed/mzaf_16397375440080011656.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/87/b3/01/87b301e4-2bcb-61ff-37cf-70577f09f887/184719000367.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/87/b3/01/87b301e4-2bcb-61ff-37cf-70577f09f887/184719000367.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Monday Morning (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/75/d8/44/75d844d9-49d1-45a0-f5eb-a50af52a7ebf/mzaf_3424065049892961344.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d1/37/68/d1376853-ec1e-cce0-4ac9-2e98fc9d9c51/mzaf_7672022765745493173.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Don't Stop (Sessions, Roughs & Outtakes)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/19/70/fd/1970fd1e-0007-303c-7e43-b2ba161da852/mzaf_608583707185783289.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Storms",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/12/48/c7/1248c733-11c5-134f-2511-ab61b79433d7/mzaf_167040066402681944.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Say You Love Me",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a8/d1/cd/a8d1cd6a-732e-7c05-93fc-8de06c3b7a84/mzaf_4842028278297039189.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Landslide (Early Version)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cf/76/02/cf76026a-651b-3734-3fac-5d7265ee8883/mzaf_9050718699734396320.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The Chain",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9e/f8/31/9ef83126-c5cf-f526-c26d-0c25895e4d9b/mzaf_9883179573566934970.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Hypnotized",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Mystery To Me",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a1/27/d4/a127d493-cacc-dfd8-a67e-a8474d74bde7/mzaf_9791723737382566628.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/e6/0d/a3/e60da31e-47ae-4a1f-5dec-63175337ddc0/603497869893.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/e6/0d/a3/e60da31e-47ae-4a1f-5dec-63175337ddc0/603497869893.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (Sessions, Roughs & Outtakes)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/91/8b/b1/918bb170-5b2a-21f1-5bdd-f1af4f84d8c2/mzaf_14928865335576816067.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Over My Head (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/84/af/6d/84af6d51-4a6f-e6a7-b375-645a413673c4/mzaf_103297334994307579.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d4/37/e7/d437e72a-c41b-332c-f196-bee295a9d673/mzaf_11574904347171701919.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Tusk",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/23/da/46/23da460c-213c-326c-5006-6fa5a84fc8e7/mzaf_12130455649150749701.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Landslide (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9b/f5/de/9bf5de7e-179d-2876-0880-7bcadd77f06b/mzaf_5583299345439529619.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Don't Stop",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/16/9d/e5/169de5ee-d1bf-e446-19ec-d52aa38e9460/mzaf_8421173046114051478.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Don't Stop",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/98/0f/b6/980fb634-98f8-8a24-71ba-b600ccbdd4d5/mzaf_5085770774221100961.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Say You Love Me",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1a/95/49/1a9549ea-e2c2-b20e-2a71-81357a061d2b/mzaf_12660455817421634705.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Hold Me",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/76/be/e5/76bee5c6-2cd4-8228-e777-ba6e749bcbce/mzaf_1191719108634989888.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Don't Stop",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e4/ca/f0/e4caf07f-d12b-798a-8575-955769b944c8/mzaf_15645522731642409606.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "As Long As You Follow",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7d/4f/10/7d4f1014-92b6-caa4-ec64-bec49d01d73b/mzaf_3712898837313257371.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Silver Springs",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ae/bb/3c/aebb3c62-f545-3614-9eb0-2e9f586915d1/mzaf_9637996832003226779.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Say You Love Me",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4f/ad/5d/4fad5d52-53ef-e53a-b7b1-4a991419b61a/mzaf_15638742826273928034.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sara",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fe/da/23/feda23d3-87db-9141-6a97-2977347ff77a/mzaf_16767346698256206667.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Big Love (2017 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tango in the Night (2017 Remaster) [Deluxe Edition]",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/38/07/12/380712d6-58c8-06fb-f575-f185c6b7e162/mzaf_4476636700671964091.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gold Dust Woman",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/53/23/d4/5323d4b8-7736-dd6b-8f3f-c917f42f0dc4/mzaf_3259637922559041669.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sara",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/01/93/c1/0193c1c9-472b-eee2-2df9-7d7070cd01fb/mzaf_14671622874111847899.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Landslide",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c3/ef/3a/c3ef3af9-c1bd-6c59-8c43-b5ca5398b928/mzaf_7314623142360207399.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sara",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/9a/c3/429ac331-5e68-61b2-bddf-7475c50e2377/mzaf_12478844881917495566.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Rhiannon (Single Version)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c9/5c/ce/c95cce3b-74a4-2e8a-eac3-ca0906a5816c/mzaf_2739184746080741546.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I Don't Want to Know",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fc/25/17/fc2517ca-af33-0270-ec21-38f9e337716c/mzaf_12026291331578309195.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Never Going Back Again",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1e/f2/01/1ef20172-eaea-2293-1fde-3b774cbc7302/mzaf_16438889089000153439.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Songbird",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/84/ce/57/84ce57d5-035b-47c5-5de2-da657f1e39ac/mzaf_10569049774577491061.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Say You Will",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Say You Will",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/13/7a/6f/137a6ffe-ab38-fb36-8292-cd131a3751c1/mzaf_9499184422721463824.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/85/77/ca/8577ca24-ec4c-a34e-8605-7301a81f170c/dj.whbpbill.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/85/77/ca/8577ca24-ec4c-a34e-8605-7301a81f170c/dj.whbpbill.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Second Hand News",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/81/4b/c9/814bc99c-83c7-ef30-58f8-4027d33a7028/mzaf_11219099586625913218.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Big Love",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a7/c0/2a/a7c02a4f-a361-54b4-48d4-106989799263/mzaf_10579389730247611815.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "World Turning (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e0/97/2e/e0972ef7-8d50-7359-6d53-68f807913be1/mzaf_12694912402228755830.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Tusk",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5b/87/e0/5b87e017-d45d-3f4a-5d1d-94f246e3ed76/mzaf_8302633416976846470.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Don't Stop",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d0/eb/cc/d0ebcc02-7325-3ca4-e133-84546bbeaf88/mzaf_17371390484506739152.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Rhiannon",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d2/63/c1/d263c19e-781e-a557-cfad-4f8965174338/mzaf_15825347800662956043.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5c/5e/36/5c5e36a2-9b92-f355-ce55-522b57e9d2df/603497802128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Second Hand News",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4f/69/e6/4f69e68c-224c-39ce-e80c-6015940fb338/mzaf_8292619002307513028.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "No Questions Asked",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Greatest Hits",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d5/82/af/d582afc1-a3ed-68e1-2cf9-7380d240a0d0/mzaf_17083862597986964740.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d2/48/f4/d248f4ae-a7e4-a48e-1588-6617de3e8d76/mzi.izeorbmm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Never Going Back Again",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cc/40/a3/cc40a34c-abd6-9d92-0550-334961e8d97f/mzaf_3772783327912029759.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gold Dust Woman",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/66/53/04/6653043a-1f8f-24c0-5b34-d0ecc585a290/mzaf_16896501534090061915.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I Don't Want to Know",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d1/6d/dd/d16ddd16-e59d-de98-16ff-fce9f76e446b/mzaf_751351688993656337.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You Make Loving Fun",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cb/f1/5e/cbf15e46-6ec5-3ece-c618-cc89cf782d81/mzaf_16883027089202369242.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Everywhere",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/7c/cc/527ccc7b-803e-f110-8147-d18c69f6c9bc/mzaf_3226450946368349657.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Everywhere (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tango In the Night (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/dc/54/09/dc5409dc-6dc4-f076-ec2b-4a23854c61b1/mzaf_13331019227135688717.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a3/71/ee/a371eea6-b148-0e47-9170-baf2147c8f7b/603497870066.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a3/71/ee/a371eea6-b148-0e47-9170-baf2147c8f7b/603497870066.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Oh Daddy",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/42/d9/90/42d990a6-4023-fb55-eb59-c47896a5d820/mzaf_12880710936737965445.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Warm Ways (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/97/4e/36/974e3664-1874-7020-375d-396a7079eedf/mzaf_2703883611635868988.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Little Lies (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tango In the Night (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/51/5e/bb/515ebbd2-65c1-f8e9-1d4f-28fbe567780f/mzaf_416612706714448530.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a3/71/ee/a371eea6-b148-0e47-9170-baf2147c8f7b/603497870066.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a3/71/ee/a371eea6-b148-0e47-9170-baf2147c8f7b/603497870066.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Crystal (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c9/61/f4/c961f4dc-ebb7-17f0-e3a4-993a928081e4/mzaf_5922099443746922965.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Peacekeeper",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Say You Will",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/34/79/9c/34799c7b-e2cd-670e-f3cf-0faedf8f59c3/mzaf_9948468804521362883.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/85/77/ca/8577ca24-ec4c-a34e-8605-7301a81f170c/dj.whbpbill.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/85/77/ca/8577ca24-ec4c-a34e-8605-7301a81f170c/dj.whbpbill.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The Chain",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/80/d6/0a/80d60ad0-9101-1b27-1595-e0a2aad0e8b1/mzaf_11046247726828935303.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Songbird",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e2/e3/ed/e2e3edd6-396e-af02-2f25-a1d782a3c9ad/mzaf_17496093408504582747.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Albatross (2018 Master)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Pious Bird of Good Omen",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e6/59/83/e65983c3-0266-16b1-6cb6-16c834d0daea/mzaf_9094278280968207126.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/87/b3/01/87b301e4-2bcb-61ff-37cf-70577f09f887/184719000367.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/87/b3/01/87b301e4-2bcb-61ff-37cf-70577f09f887/184719000367.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gypsy",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/26/a4/65/26a465bd-8d67-d4ec-cdc3-66f727c3721d/mzaf_12021298772163974930.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/39/fc/d1/39fcd180-ce95-b190-5cc5-5fd90005bc3c/mzaf_12371363768704947739.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Storms",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ee/5c/f4/ee5cf46d-519f-8832-aa5c-38a13a65f296/mzaf_4608009722367705974.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Oh Daddy",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/19/ef/b6/19efb6a6-7ae2-a223-f94d-926a96972b61/mzaf_4427680510731131816.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/4d/13/ba/4d13bac3-d3d5-7581-2c74-034219eadf2b/081227970949.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Thrown Down",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Say You Will",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/af/1f/18/af1f1835-ac21-d346-cbbf-5a92d038d8d0/mzaf_4835471410881434350.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/85/77/ca/8577ca24-ec4c-a34e-8605-7301a81f170c/dj.whbpbill.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/85/77/ca/8577ca24-ec4c-a34e-8605-7301a81f170c/dj.whbpbill.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Rhiannon (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c3/ef/2a/c3ef2a01-cc0d-289b-f947-4c6d7da4c2e2/mzaf_5634252641783524654.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The Chain (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cf/77/7b/cf777b09-5625-9a6f-d85d-f9d740d9b49f/mzaf_502147765358824084.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Monday Morning",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/af/c0/33/afc0331f-4bb2-e588-e754-b3a8d4ae2129/mzaf_12710261622762890327.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Single Version)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b2/d4/29/b2d42996-27e0-b6e3-1213-db55ba34024e/mzaf_1087715952233049764.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sisters of the Moon",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9a/78/7f/9a787feb-7eca-427b-6bea-af6cdefb51b5/mzaf_14525758715149666611.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Family Man (2017 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tango in the Night (2017 Remaster) [Deluxe Edition]",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/79/51/f6/7951f667-515d-c2a4-392d-e4ac08d009fa/mzaf_10702285967387172858.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Love In Store",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Mirage (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7d/a1/42/7da1429c-1d99-2d0c-4e18-7e28c32549ae/mzaf_1380332178079175844.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Silver Springs (Advanced Resolution Stereo Version)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Crystal Visions... The Very Best of Stevie Nicks (Bonus Version)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/14/cb/cb14cb2e-e416-4b22-248c-0583e4816c7b/mzaf_9852170366802332663.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/8f/84/9f/8f849f4f-87e5-ca68-5512-ff0770332f25/dj.lfupbdzm.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/8f/84/9f/8f849f4f-87e5-ca68-5512-ff0770332f25/dj.lfupbdzm.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bleed to Love Her (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/bf/7e/3dbf7e29-c1c3-cc3c-bb6c-0d6d634029a6/mzaf_9194341848212001395.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/33/06/ac/3306ac52-ebe0-ff34-408b-1438a56c082f/mzaf_6620066072328403857.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Only Over You",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Mirage (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f7/09/44/f70944af-0a26-0d6e-b91f-3427da1947e8/mzaf_13799044493309575214.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Oh Daddy",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/20/ae/a5/20aea562-a51f-7ff9-ed4c-7e6976d19614/mzaf_7703047520787845799.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gold Dust Woman",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/44/30/2f/44302ff1-f351-c3dc-2265-7c145c0f24e1/mzaf_2835107420737567755.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The Chain (2001 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (2001 Remaster)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/38/dd/f2/38ddf2f4-7ede-2975-b711-13cbd8b56f53/mzaf_15734029675355038362.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d3/94/13/d39413b7-f646-e6a6-17b6-de58e899ddc2/603497848416.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d3/94/13/d39413b7-f646-e6a6-17b6-de58e899ddc2/603497848416.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "What Makes You Think You're the One",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9e/45/3a/9e453a87-94c2-2a0d-1adb-a6e6919c9593/mzaf_2514925681388573577.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6e/65/24/6e65249a-6249-d60f-a826-09f0575bd7eb/mzaf_1946366880625937275.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Little Lies",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ca/70/b6/ca70b62d-a43e-003a-80c1-3fa69d9b3b71/mzaf_10890866924379432045.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (2001 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (2001 Remaster)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/61/ec/7f/61ec7f3c-7870-4c61-6ce4-4b1b3638ac58/mzaf_5114795784287909395.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d3/94/13/d39413b7-f646-e6a6-17b6-de58e899ddc2/603497848416.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d3/94/13/d39413b7-f646-e6a6-17b6-de58e899ddc2/603497848416.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Seven Wonders (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tango In the Night (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8e/fc/60/8efc6062-8126-4b28-4758-65ef0f80e4c1/mzaf_16286515255404637093.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a3/71/ee/a371eea6-b148-0e47-9170-baf2147c8f7b/603497870066.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a3/71/ee/a371eea6-b148-0e47-9170-baf2147c8f7b/603497870066.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Intro (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4b/f7/15/4bf7156c-0057-6a46-2f01-347db98486d4/mzaf_8114353387391417988.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sara",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/63/3b/6d/633b6dab-0912-c8eb-8e9a-53f4f617a813/mzaf_10865288715117501072.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You Make Loving Fun",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8a/68/39/8a683923-f816-8c18-4b96-01a9a9b06970/mzaf_10946618785648613113.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (2001 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (2001 Remaster)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/9b/ad/0c/9bad0c23-2204-1d51-38b4-1c5016e31bbf/mzaf_15907905914454634322.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d3/94/13/d39413b7-f646-e6a6-17b6-de58e899ddc2/603497848416.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d3/94/13/d39413b7-f646-e6a6-17b6-de58e899ddc2/603497848416.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Storms",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/32/ce/95/32ce95e6-017f-c9b1-1ac4-d6325c85b57b/mzaf_5611660368866718337.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Don't Stop",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8e/d4/19/8ed419de-bc49-314f-6d7e-d2787141f12c/mzaf_6746112522104794099.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Big Love (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/06/2d/0f/062d0fd2-5f29-128a-a30c-0d17fd3cf3fc/mzaf_3876848752010277449.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sisters of the Moon",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d6/09/02/d6090271-12bb-fc60-5316-6addd85aab5f/mzaf_2475733503488600876.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Say You Love Me",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/80/89/b1/8089b1d9-dbab-312a-f7f3-86e01ef2fe2c/mzaf_13367073551374532991.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Monday Morning",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ac/bb/3e/acbb3ebd-1f6e-6ef8-9842-f37f0c5848bb/mzaf_1518986675782295450.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Everywhere (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/69/53/ca/6953ca74-9812-1880-b73b-ca43e336cbbe/mzaf_13866092718243848878.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Never Going Back Again",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5b/bc/bb/5bbcbbe2-a9b2-1d5f-5e92-9640b250f7af/mzaf_12689279362349293258.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Over My Head",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a8/5d/66/a85d6604-7d96-bff1-7133-81afbcad4234/mzaf_16157729670101036773.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Tusk (7/19/79 Version)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4b/11/70/4b117007-af3d-d7ef-1a85-c7eca2d0da1e/mzaf_4929014233088148458.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Tusk (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/61/6e/67/616e6715-af2d-1dcc-f232-4bd539de00a1/mzaf_766157175099102231.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Rhiannon (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d6/fd/73/d6fd7304-d92c-9145-d485-e81c7745f028/mzaf_15501725321895003254.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sunny Side of Heaven",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Bare Trees",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/f2/88/18f2885d-539a-249b-c024-933a651f1a48/mzaf_7683581266408394174.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9e/56/33/9e56338a-e402-22f5-dd2c-a0942536205b/603497869930.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9e/56/33/9e56338a-e402-22f5-dd2c-a0942536205b/603497869930.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Second Hand News",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f4/38/a3/f438a342-1b84-44c5-3d42-470f8058c5a3/mzaf_15455842539497147730.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "As Long As You Follow",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/76/87/387687eb-e88d-a365-32fb-2dd65cbdb792/mzaf_5239735234239588696.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Tusk",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7e/82/dd/7e82dd67-f828-dcc6-27b5-70595512c303/mzaf_15223441221065377872.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Hold Me",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/34/0e/af/340eaf35-c7d4-acac-ada9-26d335878f2c/mzaf_11925297990326749393.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/20/91/202091c1-da20-2a3e-af08-f8f7922772c6/mzaf_303294880395415807.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gold Dust Woman (Early Demo)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Super Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/90/3b/33/903b339f-90d3-213a-e8ff-a993f31ee712/mzaf_13823643284003769343.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2a/eb/dc/2aebdc18-c2c0-0fdd-fb85-07538a925700/603497925766.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Oh Diane",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Mirage (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/c4/42/abc4421a-de0a-eff6-14f5-4a40993e4a72/mzaf_2289860622797288315.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Insane",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ac/98/e7/ac98e707-7e4c-0399-f063-2cdf6a500d37/mzaf_11552065289760067838.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Songbird",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1a/6e/ff/1a6effb9-2475-3b7e-9090-ab4a7ddd60b6/mzaf_11692411743950827847.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Monday Morning (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/03/46/38/03463831-4efc-cdf3-b0af-d84ab2227a09/mzaf_6776123304501088419.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Over My Head (Single Version)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4b/2f/00/4b2f0077-f959-4834-2b98-8e7193ca4e26/mzaf_2302695015307221553.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Think About Me",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5c/12/e4/5c12e4c8-90ec-5599-eb84-d66e94dc5fad/mzaf_1590613363409005103.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Save Me",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Behind the Mask",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9f/f6/52/9ff65236-3770-937d-2864-a6b4646e78fc/mzaf_14254860296081416421.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music/1b/ab/97/mzi.xbpiiuoe.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music/1b/ab/97/mzi.xbpiiuoe.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "World Turning",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/87/50/06/875006a1-3839-f462-e17c-b6013fc6dfa4/mzaf_14243885103896340851.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Landslide (Acoustic)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Landslide (Sessions@AOL) - Single",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/3c/92/5f/3c925fd0-040e-4425-1d20-ee6c6d29b40b/mzaf_6911475824433094272.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/8f/b0/3f/8fb03f00-ce50-d5b8-0b9c-2cd2ee50b216/dj.sxrnjrfc.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/8f/b0/3f/8fb03f00-ce50-d5b8-0b9c-2cd2ee50b216/dj.sxrnjrfc.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Rhiannon (Will You Ever Win) [Single Version] [Remastered]",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cd/91/63/cd91637b-9173-757b-01a3-8a95f73599a7/mzaf_7327215530705863045.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Don't Stop (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/05/65/e8/0565e881-927a-35e9-63fe-5fb156ace5e7/mzaf_18087598996599917116.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I'm So Afraid",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e0/dc/57/e0dc57a4-7d33-00d3-c2f3-93fa38428d0d/mzaf_13316027995213994318.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I'm So Afraid (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/31/7c/ba317c92-2298-4c83-83e1-70fdef09156d/mzaf_2920399822789805000.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Angel",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/18/d3/58/18d35883-9fe5-2127-8feb-0cf2ffce2086/mzaf_2490014032982734223.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The Chain (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/eb/0e/42eb0e9b-54d5-151d-eddc-f89ed712eabf/mzaf_11400713532770164372.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sisters of the Moon",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d0/10/eb/d010ebff-2ad0-5496-9aef-8c9ad34f3a43/mzaf_1974603026066072556.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Oh Well (Pt. 1) [Bonus Track]",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Then Play On (Expanded Edition) [2013 Remaster]",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/97/21/50/9721503d-c3bb-f31d-da10-a7378a15a252/mzaf_17105983226355488964.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f3/72/2c/f3722cd0-8cc9-f988-ad8d-cd4102543867/603497854103.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f3/72/2c/f3722cd0-8cc9-f988-ad8d-cd4102543867/603497854103.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Big Love",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8b/f8/5e/8bf85ed2-3d77-9c2d-b5ea-a5c00d843468/mzaf_7564328441852828540.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You Make Loving Fun (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d3/07/ce/d307ce5c-8214-88d8-98ed-ba108712bc10/mzaf_585828198340590991.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Dreams (Take 2)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9e/e4/11/9ee41149-d6fd-9d59-63bf-18de155915cb/mzaf_726217419220160080.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Sweet Girl (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1e/4f/af/1e4faf71-af82-0b1f-b90b-92536e8355de/mzaf_4992131820949315499.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Goodbye Baby",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Say You Will",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/27/d4/c5/27d4c5a5-7a19-72ee-7ddf-38038f227d85/mzaf_6279870995490619922.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/85/77/ca/8577ca24-ec4c-a34e-8605-7301a81f170c/dj.whbpbill.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/85/77/ca/8577ca24-ec4c-a34e-8605-7301a81f170c/dj.whbpbill.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Warm Ways",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/1d/74/b91d7436-174a-7799-d62f-b24b2c3d866d/mzaf_4996099509857037594.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Never Going Back Again (Instrumental)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/64/70/9c/64709c8b-bfbc-bdff-df1f-054c36415f69/mzaf_3979464091258971895.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Tango in the Night (2017 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tango in the Night (2017 Remaster) [Deluxe Edition]",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/49/15/12/49151283-8ea2-535d-be13-5fcab1a3e6e5/mzaf_782820043269429941.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/07/7a/2f/077a2f8e-d348-34be-fd5f-f7b655e1dc7c/603497872893.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "That's Alright",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Mirage (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a5/ac/de/a5acde66-1ad2-58e7-836b-444ccb9a5def/mzaf_11629893951908602595.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/cf/39/a1cf3997-0227-2235-2eee-0585e757dbfe/603497876129.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Say You Love Me (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/84/cd/9f/84cd9fda-29be-70a4-4f1a-71fc1b147f70/mzaf_18282351311802765033.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Over & Over",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c4/07/d7/c407d71d-a628-aa40-8849-261c38962127/mzaf_15166489818062655446.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Silver Springs (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Live In Boston",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/13/12/eb/1312eba6-700a-7f99-7807-181f763d017b/mzaf_11629796470084915247.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/26/4e/ef/264eef1f-fcd6-4b3e-391b-828e585565b1/dj.cgxlkzjn.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features/v4/26/4e/ef/264eef1f-fcd6-4b3e-391b-828e585565b1/dj.cgxlkzjn.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Black Magic Woman",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Blue Horizon Story (1965-1970)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b0/70/21/b0702115-01da-fe66-7342-0648a799e5de/mzaf_6684956226730900526.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/35/8a/86/358a860c-989e-f449-8960-258baf7b1c7f/195497315130.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/35/8a/86/358a860c-989e-f449-8960-258baf7b1c7f/195497315130.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Emerald Eyes",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Mystery To Me",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ab/3d/2c/ab3d2ceb-a7f5-c91f-f088-ffa6c577b94c/mzaf_10563679333286216115.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/e6/0d/a3/e60da31e-47ae-4a1f-5dec-63175337ddc0/603497869893.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/e6/0d/a3/e60da31e-47ae-4a1f-5dec-63175337ddc0/603497869893.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Think About Me (Single Version)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8a/1f/8e/8a1f8ed9-d54a-45d0-ea4a-e48bf1eb3071/mzaf_9835116213157652897.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Temporary One (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6c/7a/0d/6c7a0d61-c442-99d9-52de-3ac04d622c55/mzaf_1588666200033335871.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Need Your Love so Bad (Take 3)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Pious Bird of Good Omen",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5f/9e/ee/5f9eee1d-2692-6485-f598-2f04eca3ac2f/mzaf_9205691827381734305.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/87/b3/01/87b301e4-2bcb-61ff-37cf-70577f09f887/184719000367.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/87/b3/01/87b301e4-2bcb-61ff-37cf-70577f09f887/184719000367.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Don't Stop (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/11/44/9c/11449c93-8c2f-325f-23ea-edc6ea6aa545/mzaf_12874986881015576847.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Go Your Own Way (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/45/bb/8745bbd0-1e5b-8ab5-ad67-1c2a67326f48/mzaf_15565258972193198147.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "You Make Loving Fun (2001 Remaster)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (2001 Remaster)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/22/7f/cb/227fcbb2-d4a7-d6b1-cb5a-9e71c50f608d/mzaf_1191947649475790469.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d3/94/13/d39413b7-f646-e6a6-17b6-de58e899ddc2/603497848416.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d3/94/13/d39413b7-f646-e6a6-17b6-de58e899ddc2/603497848416.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Crystal",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fc/bc/fa/fcbcfa33-33ec-a0b4-0962-4791e6b1eb2e/mzaf_7594936941933734052.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Gold Dust Woman (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fa/05/21/fa0521d9-0a79-298a-535b-baecb7ecced9/mzaf_10596270834210774937.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "World Turning",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/17/1f/09/171f09d0-1540-1799-74d7-756cbb100ad4/mzaf_14283247466764731205.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I'm So Afraid (Remastered)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/fd/5c/a5/fd5ca570-18b4-7a3b-41b5-688dae348274/mzaf_9876606621700875642.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/64/cc/0b/64cc0b3b-92fb-66cf-1240-e2afba504e4b/603497863105.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Bleed to Love Her",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Say You Will",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/79/13/4d/79134d3d-8eac-c1a8-e8d5-ef7bd739701c/mzaf_13814460463885092647.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/85/77/ca/8577ca24-ec4c-a34e-8605-7301a81f170c/dj.whbpbill.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/85/77/ca/8577ca24-ec4c-a34e-8605-7301a81f170c/dj.whbpbill.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Blue Letter",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/98/a8/a0/98a8a080-ada8-ac10-04d3-805fcacc4a07/mzaf_11916209295234352953.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "The Ledge",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/48/ee/a8/48eea853-a0d0-d3a0-7cb3-1422ab44da96/mzaf_14053632826715140800.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Love In Store",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Very Best of Fleetwood Mac (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ff/94/a3/ff94a395-6520-801a-bb44-55921ed25596/mzaf_8204794989897673611.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/5b/04/7d5b0401-b944-b628-8eb2-d0cb49fb6ca5/603497925599.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I Loved Another Woman",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Peter Green's Fleetwood Mac (Deluxe)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/40/7f/1c/407f1cca-5f52-9324-bca5-301f481d05ea/mzaf_3040229318569884450.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/26/43/85/2643857c-a68c-d6bd-a846-705116417359/184719000169.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/26/43/85/2643857c-a68c-d6bd-a846-705116417359/184719000169.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Never Going Back Again (Acoustic Duet)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/27/1a/52/271a5262-c70a-c9e5-d6a6-7dbcf6a1ade5/mzaf_1199721606881314012.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Never Going Back Again (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Rumours (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2d/a2/63/2da26388-7151-42a6-706a-6f50a1c6e80d/mzaf_2664515748353974080.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/77/35/dd773533-06a7-4566-bef4-2c43c24d08f6/603497925759.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "I'm So Afraid",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Fleetwood Mac",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/df/0e/90/df0e904c-13e8-7616-2469-52af349b3337/mzaf_10681366829729693058.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/82/3a/d1/823ad171-70ec-63af-48e0-8d0eae935999/075992724128.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Brown Eyes",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/9c/cc/c1/9cccc15e-b5c7-81f9-5c6a-1bdca777a279/mzaf_12408141119256238601.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Think About Me",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Deluxe Edition)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bb/e8/2a/bbe82a80-37d0-4f7b-6647-961c8fba9ec4/mzaf_11851337977730512708.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music22/v4/40/0b/3a/400b3a82-aede-24ee-3ccf-5dd87ae9e246/mzm.pezktmdt.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "My Little Demon (Live)",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "The Dance (Live)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2e/17/0f/2e170f0c-d1ec-cc28-d92c-538d42a92fa9/mzaf_6101061209086937043.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0c/73/fc/0c73fcc7-0d61-d994-af89-2909a39ea097/mzi.bfzyhzca.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Beautiful Child",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Tusk (Remastered)",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3f/ed/53/3fed535b-1379-1c70-1b11-60b8ae8d044d/mzaf_13724397057753147076.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0c/80/b2/0c80b2a3-9409-d7ea-9044-c0c0c6eb00e3/mzm.ezalkqov.jpg/100x100bb.jpg"
+   },
+   {
+    "trackName": "Future Games",
+    "artistName": "Fleetwood Mac",
+    "collectionName": "Future Games",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/87/67/71/8767710e-5755-0376-5fbf-bd84be8ac393/mzaf_16565229267797150294.plus.aac.p.m4a",
+    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d8/18/4f/d8184f47-7f05-53b6-67c3-b3d238489ab9/603497869923.jpg/60x60bb.jpg",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d8/18/4f/d8184f47-7f05-53b6-67c3-b3d238489ab9/603497869923.jpg/100x100bb.jpg"
+   }
+  ]
+ }
+}
