@@ -72,6 +72,19 @@ If a change makes the game look up a song that has no recording yet, the test fa
 with "No recorded … response". Run `npm run test:record` and commit the new files in
 `tests/fixtures/`.
 
+## Analytics and testing
+
+The live site sends anonymous, cookie-free usage stats to Umami. Internal traffic is kept out:
+
+- **Playtesters and you:** open the game once with
+  <https://larmo465.github.io/PlayCount/?notrack>. That browser is no longer counted, even on
+  later visits without `?notrack`. Use `?track` to be counted again. Do it once per browser and
+  device.
+- **Automated tests** never reach Umami: the script is stubbed, the game runs on a fake address that
+  Umami ignores (`data-domains`), and every test also sets the opt-out.
+- **The post-deploy smoke test** opens the live site with `?notrack` and fails if anything is sent to
+  Umami.
+
 ## CI/CD
 
 `.github/workflows/ci-cd.yml`:

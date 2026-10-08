@@ -7,10 +7,14 @@ import { SONGS, TOTAL_PLAYS, ROAD_TRIP, historyFile, basicHistoryFile, exportZip
 const test = base.extend({
   netOptions: [{}, { option: true }],
   randomSeq: [[], { option: true }],     // values Math.random returns first, before the seeded sequence
-  net: [async ({ page, netOptions, randomSeq }, use) => {
+  analyticsOptOut: [true, { option: true }],
+  net: [async ({ page, netOptions, randomSeq, analyticsOptOut }, use) => {
     const errors = [];
     page.on('pageerror', e => errors.push(e.message));
     page.on('dialog', d => d.accept());
+    // Internal traffic is always opted out of analytics (the Umami script is also stubbed, and the real
+    // collection endpoint isn't mocked, so any request to it would fail the test).
+    if (analyticsOptOut) await page.addInitScript(() => { try { localStorage.setItem('umami.disabled', '1'); } catch {} });
     await page.addInitScript(seq => {
       let a = 20261008;
       const prng = () => { a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
@@ -295,6 +299,20 @@ test.describe('analytics', () => {
       await pasteSongs(page, 'Offline', PASTE);
       expect(await events(page)).toEqual([{ name: 'error', data: { kind: 'spotify-unreachable' } }]);
     });
+  });
+});
+
+test.describe('analytics opt-out for testers', () => {
+  test.use({ analyticsOptOut: false });   // test the switch itself, starting from a counted browser
+  test('?notrack turns counting off for this browser and ?track turns it back on', async ({ page }) => {
+    await page.goto(APP_URL);
+    expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBeNull();
+    await page.goto(APP_URL + '?notrack');
+    expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBe('1');
+    await page.goto(APP_URL);   // remembered without the parameter
+    expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBe('1');
+    await page.goto(APP_URL + '?track');
+    expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBeNull();
   });
 });
 
