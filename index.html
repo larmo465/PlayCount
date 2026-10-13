@@ -79,6 +79,8 @@ input[type=range]{flex:1;max-width:220px;accent-color:var(--accent)}
 /* guess box */
 .guessrow{position:relative;display:flex;gap:8px}
 #guess{flex:1;min-width:0;padding:10px 12px;border-radius:999px}
+.albumtoggle{display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none}
+.albumtoggle input{accent-color:var(--accent);margin:0}
 #sugg{position:absolute;left:0;right:0;bottom:calc(100% + 6px);background:var(--panel);border:1px solid var(--line);border-radius:10px;list-style:none;margin:0;padding:4px;max-height:280px;overflow:auto;z-index:5;box-shadow:0 8px 24px rgba(0,0,0,.35)}
 #sugg li{padding:7px 10px;border-radius:7px;cursor:pointer;font-size:14px}
 #sugg li .ar{color:var(--muted)}
@@ -205,6 +207,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
         </div>
         <div class="actions">
           <button id="skipBtn">Skip</button>
+          <label class="small muted albumtoggle hidden" id="albumToggle"><input type="checkbox" id="albumSearch"> Search by album</label>
           <button id="submitBtn" class="primary">Submit</button>
         </div>
       </div>
@@ -395,7 +398,8 @@ function buildLibrary(files, minMs) {
       counted++;
       const key = songKey(title, artist);
       let t = map.get(key);
-      if (!t) { t = { key, title, artist, plays: 0, uri: null }; map.set(key, t); }
+      if (!t) { t = { key, title, artist, plays: 0, uri: null, album: '' }; map.set(key, t); }
+      if (!t.album && isExt && r.master_metadata_album_album_name) t.album = r.master_metadata_album_album_name;
       t.plays++;
       if (!t.uri && r.spotify_track_uri) t.uri = r.spotify_track_uri;
     }
@@ -404,9 +408,9 @@ function buildLibrary(files, minMs) {
 }
 
 /* ---------- playlists ---------- */
-function mkTrack(title, artist, uri) {
+function mkTrack(title, artist, uri, album) {
   title = String(title || '').trim(); artist = String(artist || '').trim();
-  return title ? { key: songKey(title, artist), title, artist, uri: uri || null } : null;
+  return title ? { key: songKey(title, artist), title, artist, uri: uri || null, album: String(album || '').trim() } : null;
 }
 function dedupe(tracks) {
   const seen = new Set();
@@ -425,13 +429,13 @@ function playlistsFromExport(files) {
     if (!d || Array.isArray(d)) continue;
     if (Array.isArray(d.playlists)) {
       for (const p of d.playlists) {
-        const tracks = (p.items || []).map(it => it && it.track && mkTrack(it.track.trackName, it.track.artistName, it.track.trackUri));
+        const tracks = (p.items || []).map(it => it && it.track && mkTrack(it.track.trackName, it.track.artistName, it.track.trackUri, it.track.albumName));
         const pl = newPlaylist(p.name, tracks);
         if (pl) out.push(pl);
       }
     }
     if (Array.isArray(d.tracks) && /library/i.test(f.name)) {
-      const pl = newPlaylist('Liked Songs', d.tracks.map(t => t && mkTrack(t.track, t.artist, t.uri)));
+      const pl = newPlaylist('Liked Songs', d.tracks.map(t => t && mkTrack(t.track, t.artist, t.uri, t.album)));
       if (pl) out.push(pl);
     }
   }
@@ -465,8 +469,9 @@ function playlistFromCSV(name, text) {
   const ti = find([/^track name$/, /^(song|track|title|name)$/, /track|title|song/]);
   const ai = find([/^artist name\(s\)$/, /^artists?( name)?$/, /artist/]);
   const ui = find([/track uri|spotify uri|^uri$/]);
+  const bi = find([/^album name$/, /^album$/, /^album title$/]);   // exact names: not the album artist column
   if (ti < 0) return null;
-  const tracks = rows.slice(1).map(r => mkTrack(r[ti], ai >= 0 ? r[ai] : '', ui >= 0 ? r[ui] : null));
+  const tracks = rows.slice(1).map(r => mkTrack(r[ti], ai >= 0 ? r[ai] : '', ui >= 0 ? r[ui] : null, bi >= 0 ? r[bi] : ''));
   return newPlaylist(name.replace(/\.csv$/i, '').replace(/_/g, ' '), tracks);
 }
 
@@ -579,12 +584,12 @@ async function runReprocess() {
 }
 
 function savePlaylists() {
-  save(LS.playlists, playlists.map(p => ({ id: p.id, name: p.name, tracks: p.tracks.map(t => [t.title, t.artist, t.uri, t.query || '', t.titleOnly ? 1 : 0, t.key, t.thumb || '', t.linkTitle || '']) })));
+  save(LS.playlists, playlists.map(p => ({ id: p.id, name: p.name, tracks: p.tracks.map(t => [t.title, t.artist, t.uri, t.query || '', t.titleOnly ? 1 : 0, t.key, t.thumb || '', t.linkTitle || '', t.album || '']) })));
 }
 function loadPlaylists() {
   return (load(LS.playlists, []) || []).map(p => ({
     id: p.id, name: p.name,
-    tracks: p.tracks.map(([title, artist, uri, query, titleOnly, key, thumb, linkTitle]) => ({ key, title, artist, uri, query: query || undefined, titleOnly: !!titleOnly, thumb: thumb || '', linkTitle: linkTitle || '' }))
+    tracks: p.tracks.map(([title, artist, uri, query, titleOnly, key, thumb, linkTitle, album]) => ({ key, title, artist, uri, query: query || undefined, titleOnly: !!titleOnly, thumb: thumb || '', linkTitle: linkTitle || '', album: album || '' }))
   }));
 }
 function addPlaylists(list) {
@@ -1083,6 +1088,7 @@ function renderRound() {
   bar.classList.toggle('hidden', r.over);
   $('resultPanel').classList.toggle('hidden', !r.over);
   renderSourceTag();
+  renderAlbumToggle();
   if (r.over) renderResult();
   updatePlayBtn();
 }
@@ -1151,18 +1157,33 @@ function shareText() {
 
 /* ---------- autocomplete ---------- */
 let suggItems = [], suggIdx = 0;
+// "Search by album" (off by default) also matches album names in the guess box. It's only offered when
+// what you're playing has album names: your history, export playlists and CSVs do; pasted links don't.
+function hasAlbums() {
+  const songs = activePlaylist() ? activePlaylist().tracks : lib;
+  return songs.some(t => t.album);
+}
+function albumSearchOn() { return !!settings.albumSearch && hasAlbums(); }
+function renderAlbumToggle() {
+  $('albumToggle').classList.toggle('hidden', !hasAlbums());
+  $('albumSearch').checked = !!settings.albumSearch;
+  $('guess').placeholder = albumSearchOn() ? 'Know it? Search by title, artist or album' : 'Know it? Search by title or artist';
+}
 function updateSugg() {
   const q = norm($('guess').value);
   if (q.length < 2) { hideSugg(); return; }
   const words = q.split(' ');
+  const byAlbum = albumSearchOn();
   const hits = [];
   for (const t of candidates) {
     const hay = t._hay || (t._hay = norm(t.title) + ' ' + norm(t.artist));
-    if (words.every(w => hay.includes(w))) hits.push(t);
+    const all = byAlbum && t.album ? hay + ' ' + norm(t.album) : hay;
+    if (words.every(w => all.includes(w))) hits.push(t);
   }
   // Order by text relevance only: sorting by play count would give the answer away.
-  // Title matches first, then artist matches (typing an artist lists their songs), then the rest.
-  const rank = t => norm(t.title).startsWith(q) ? 0 : norm(t.artist).startsWith(q) ? 1 : 2;
+  // Title matches first, then artist matches (typing an artist lists their songs), then album, then the rest.
+  const rank = t => norm(t.title).startsWith(q) ? 0 : norm(t.artist).startsWith(q) ? 1
+    : byAlbum && t.album && norm(t.album).startsWith(q) ? 2 : 3;
   hits.sort((a, b) => (rank(a) - rank(b)) || a.title.localeCompare(b.title));
   suggItems = hits.slice(0, 12);
   suggIdx = 0;
@@ -1174,7 +1195,7 @@ function updateSugg() {
     li.setAttribute('role', 'option');
     li.innerHTML = '<span class="ti"></span> <span class="ar"></span>';
     li.querySelector('.ti').textContent = t.title;
-    li.querySelector('.ar').textContent = t.artist ? '— ' + t.artist : '';
+    li.querySelector('.ar').textContent = (t.artist ? '— ' + t.artist : '') + (byAlbum && t.album ? ' · ' + t.album : '');
     li.onmousedown = e => { e.preventDefault(); submitGuess(t); };
     ul.appendChild(li);
   });
@@ -1314,7 +1335,7 @@ async function handleFiles(files) {
     const { tracks, streams, counted, isExt } = buildLibrary(parsed, $('thirty').checked ? 30000 : 1);
     if (tracks.length) {
       lib = tracks;
-      save(LS.lib, lib.map(t => [t.title, t.artist, t.plays, t.uri]));
+      save(LS.lib, lib.map(t => [t.title, t.artist, t.plays, t.uri, t.album || '']));
       found.push(`${counted.toLocaleString()} play${counted === 1 ? '' : 's'} of ${tracks.length.toLocaleString()} song${tracks.length === 1 ? '' : 's'} (${streams.toLocaleString()} streams, ${isExt ? 'extended' : 'last-year'} history)`);
       track('import', { source: isExt ? 'extended-history' : 'last-year-history' });
     }
@@ -1378,7 +1399,16 @@ $('playBtn').onclick = () => round && playClip(SNIPPETS[round.step]);
 $('skipBtn').onclick = skip;
 $('submitBtn').onclick = () => suggItems.length ? submitGuess(suggItems[suggIdx]) : $('guess').focus();
 $('guess').oninput = updateSugg;
-$('guess').onblur = () => setTimeout(hideSugg, 100);
+$('albumSearch').onchange = () => {
+  settings.albumSearch = $('albumSearch').checked;
+  save(LS.settings, settings);
+  renderAlbumToggle();
+  // Back to the search box (cancelling its pending blur-hide), with the list redone for the new setting.
+  if ($('guess').value) { $('guess').focus(); updateSugg(); }
+};
+let blurTimer = 0;
+$('guess').onblur = () => { blurTimer = setTimeout(hideSugg, 100); };
+$('guess').onfocus = () => clearTimeout(blurTimer);
 $('guess').onkeydown = e => {
   if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
     if (!suggItems.length) return;
@@ -1426,7 +1456,7 @@ $('reprocessFromSettings').onclick = () => { $('settingsDlg').close(); reprocess
 
 // Resume with what this browser already has.
 const saved = load(LS.lib, null);
-if (Array.isArray(saved)) lib = saved.map(([title, artist, plays, uri]) => ({ key: songKey(title, artist), title, artist, plays, uri }));
+if (Array.isArray(saved)) lib = saved.map(([title, artist, plays, uri, album]) => ({ key: songKey(title, artist), title, artist, plays, uri, album: album || '' }));
 playlists = loadPlaylists();
 if (lib.length || playlists.length) startGame();
 })();
