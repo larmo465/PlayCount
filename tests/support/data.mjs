@@ -12,14 +12,20 @@ export const SONGS = [
   ['Hey Ya!', 'Outkast', 3],
 ];
 export const TOTAL_PLAYS = SONGS.reduce((n, s) => n + s[2], 0);
+// Album per song, as the extended export records it. Two songs share "Rumours".
+export const ALBUMS = {
+  'Mr. Brightside': 'Hot Fuss', 'Bohemian Rhapsody - Remastered 2011': 'A Night at the Opera',
+  'Dreams - 2004 Remaster': 'Rumours', 'Get Lucky (feat. Pharrell Williams and Nile Rodgers)': 'Random Access Memories',
+  'Go Your Own Way - 2004 Remaster': 'Rumours', 'Zzz Nonexistent Track Qwerty': 'Nowhere Album', 'Hey Ya!': 'Speakerboxxx',
+};
 
 // Extended streaming history: counted plays, plus skips under 30 s and a podcast that must be ignored.
 export function extendedHistory() {
   const rows = [];
   SONGS.forEach(([title, artist, plays], i) => {
     for (let p = 0; p < plays; p++) {
-      rows.push({ ts: '2024-01-01T00:00:00Z', ms_played: 200000, master_metadata_track_name: title,
-        master_metadata_album_artist_name: artist, spotify_track_uri: `spotify:track:${String(i).padStart(22, 'x')}` });
+      rows.push({ ts: '2024-01-01T00:00:00Z', ms_played: 200000, master_metadata_track_name: title, master_metadata_album_artist_name: artist,
+        master_metadata_album_album_name: ALBUMS[title], spotify_track_uri: `spotify:track:${String(i).padStart(22, 'x')}` });
     }
     rows.push({ ts: '2024-01-02T00:00:00Z', ms_played: 4000, master_metadata_track_name: title, master_metadata_album_artist_name: artist });
   });

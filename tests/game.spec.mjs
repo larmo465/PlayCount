@@ -484,6 +484,52 @@ test.describe('reprocessing a playlist imported before the better matching', () 
   });
 });
 
+// "Search by album" is off by default, and only offered when what you're playing has album names.
+test.describe('search by album', () => {
+  test.beforeEach(async ({ page }) => { await page.goto(APP_URL); });
+  const suggestions = async (page, text) => {
+    await page.fill('#guess', text);
+    await expect(page.locator('#sugg li').first()).toBeVisible();
+    return page.locator('#sugg li').allTextContents();
+  };
+
+  test('is offered for an export playlist, off until ticked, and remembered', async ({ page }) => {
+    await loadFiles(page, await exportZip());
+    await play(page, 'Road Trip');
+    await expect(page.locator('#albumToggle')).toBeVisible();
+    await expect(page.locator('#albumSearch')).not.toBeChecked();
+    expect(await suggestions(page, 'escape')).toEqual(['No match in your songs']);
+    await page.check('#albumSearch');
+    await expect(page.locator('#guess')).toHaveAttribute('placeholder', 'Know it? Search by title, artist or album');
+    expect(await suggestions(page, 'escape')).toEqual(["Don't Stop Believin' — Journey · Escape"]);
+    await page.reload();
+    await expect(page.locator('#board')).toBeVisible();
+    await expect(page.locator('#albumSearch')).toBeChecked();
+  });
+
+  test('finds every song on an album in your history', async ({ page }) => {
+    await loadFiles(page, historyFile());
+    await play(page, 'My listening history');
+    await page.check('#albumSearch');
+    expect(await suggestions(page, 'rumours')).toEqual([
+      'Dreams - 2004 Remaster — Fleetwood Mac · Rumours',
+      'Go Your Own Way - 2004 Remaster — Fleetwood Mac · Rumours',
+    ]);
+  });
+
+  test("isn't offered for pasted links or the last-year history, which have no album names", async ({ page }) => {
+    await pasteSongs(page, 'Links', PASTE);
+    await play(page, 'Links');
+    await expect(page.locator('#albumToggle')).toBeHidden();
+    await page.click('#settingsBtn');
+    await page.click('#importMore');
+    await page.setInputFiles('#file', [basicHistoryFile()]);
+    await page.locator('.srcrow', { hasText: 'My listening history' }).getByRole('button', { name: 'Play', exact: true }).click();
+    await expect(page.locator('#board')).toBeVisible();
+    await expect(page.locator('#albumToggle')).toBeHidden();
+  });
+});
+
 test.describe('layout', () => {
   test.use({ viewport: { width: 390, height: 844 } });
   test('fits a phone screen without sideways scrolling', async ({ page }) => {
