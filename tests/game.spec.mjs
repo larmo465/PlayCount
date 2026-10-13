@@ -66,12 +66,56 @@ test.describe('listening history', () => {
   test('imports the extended export, counting only plays of 30 s or more', async ({ page }) => {
     await loadFiles(page, historyFile());
     await expect(page.locator('#loadMsg')).toHaveText(
-      `Loaded ${TOTAL_PLAYS} plays of ${SONGS.length} songs (${TOTAL_PLAYS + SONGS.length} streams, extended history).`);
+      `Loaded ${TOTAL_PLAYS} plays of ${SONGS.length} songs (${TOTAL_PLAYS + SONGS.length} streams, extended history, 2024).`);
   });
 
   test('imports the one-year export format too', async ({ page }) => {
     await loadFiles(page, basicHistoryFile());
-    await expect(page.locator('#loadMsg')).toHaveText('Loaded 2 plays of 1 song (3 streams, last-year history).');
+    await expect(page.locator('#loadMsg')).toHaveText('Loaded 2 plays of 1 song (3 streams, last-year history, 2024).');
+  });
+
+  // Spotify's extended export comes as one file per year.
+  const topSong = async page => {
+    await page.click('#settingsBtn');
+    const row = await page.locator('#topTable tr').first().textContent();
+    await page.click('#closeSettings');
+    return row;
+  };
+
+  test('files dropped one at a time add up, and the same file twice counts once', async ({ page }) => {
+    await loadFiles(page, historyFile(2024));
+    await page.setInputFiles('#file', [historyFile(2025)]);
+    await expect(page.locator('#loadMsg')).toHaveText(
+      `Added ${TOTAL_PLAYS} new plays. Your history now has ${2 * TOTAL_PLAYS} plays of ${SONGS.length} songs, 2024–2025.`);
+    await page.setInputFiles('#file', [historyFile(2024)]);
+    await expect(page.locator('#loadMsg')).toHaveText(
+      `Nothing new: those plays were already loaded. Your history has ${2 * TOTAL_PLAYS} plays of ${SONGS.length} songs, 2024–2025.`);
+    await play(page, 'My listening history');
+    expect(await topSong(page)).toContain('Mr. Brightside — The Killers120 plays');
+  });
+
+  test('files dropped together count the same as one at a time', async ({ page }) => {
+    await loadFiles(page, historyFile(2024), historyFile(2025), historyFile(2026));
+    await expect(page.locator('#loadMsg')).toHaveText(
+      `Loaded ${3 * TOTAL_PLAYS} plays of ${SONGS.length} songs (${3 * (TOTAL_PLAYS + SONGS.length)} streams, extended history, 2024–2026).`);
+    await play(page, 'My listening history');
+    expect(await topSong(page)).toContain('Mr. Brightside — The Killers180 plays');
+  });
+
+  test('history saved before files could be combined is replaced once, then added to', async ({ page }) => {
+    // Saved without play fingerprints, so it can't be checked for repeats.
+    await page.addInitScript(() => {
+      if (localStorage.getItem('test.seeded')) return;
+      localStorage.setItem('test.seeded', '1');
+      localStorage.setItem('pc.lib.v1', JSON.stringify([['Mr. Brightside', 'The Killers', 60, null]]));
+    });
+    await page.reload();
+    await page.click('#settingsBtn');
+    await page.click('#importMore');
+    await page.setInputFiles('#file', [historyFile(2024)]);
+    await expect(page.locator('#loadMsg')).toContainText(`Loaded ${TOTAL_PLAYS} plays`);
+    await page.setInputFiles('#file', [historyFile(2025)]);
+    await expect(page.locator('#loadMsg')).toContainText(`Your history now has ${2 * TOTAL_PLAYS} plays`);
   });
 
   test('weights songs by play count, adjustable in settings', async ({ page }) => {
@@ -153,7 +197,7 @@ test.describe('playlists', () => {
 
   test('imports history, playlists and Liked Songs from the export zip, and a CSV', async ({ page }) => {
     await loadFiles(page, await exportZip());
-    await expect(page.locator('#loadMsg')).toContainText('and 2 playlists.');
+    await expect(page.locator('#loadMsg')).toContainText('Also loaded 2 playlists.');
     await page.setInputFiles('#file', [csvFile()]);
     await expect(page.locator('.srcrow .sn')).toHaveText(['My listening history', 'Road Trip', 'Liked Songs', 'Gym Mix']);
     await expect(page.locator('.srcrow', { hasText: 'Road Trip' })).toContainText('3 songs, shuffled');

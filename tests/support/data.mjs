@@ -14,21 +14,24 @@ export const SONGS = [
 export const TOTAL_PLAYS = SONGS.reduce((n, s) => n + s[2], 0);
 
 // Extended streaming history: counted plays, plus skips under 30 s and a podcast that must be ignored.
-export function extendedHistory() {
+// Each play gets its own time, like real plays. `year` makes per-year files like Spotify's export.
+export function extendedHistory(year = 2024) {
   const rows = [];
+  let minute = 0;
+  const at = () => new Date(Date.UTC(year, 0, 1, 0, minute++)).toISOString().replace('.000', '');
   SONGS.forEach(([title, artist, plays], i) => {
     for (let p = 0; p < plays; p++) {
-      rows.push({ ts: '2024-01-01T00:00:00Z', ms_played: 200000, master_metadata_track_name: title,
+      rows.push({ ts: at(), ms_played: 200000, master_metadata_track_name: title,
         master_metadata_album_artist_name: artist, spotify_track_uri: `spotify:track:${String(i).padStart(22, 'x')}` });
     }
-    rows.push({ ts: '2024-01-02T00:00:00Z', ms_played: 4000, master_metadata_track_name: title, master_metadata_album_artist_name: artist });
+    rows.push({ ts: at(), ms_played: 4000, master_metadata_track_name: title, master_metadata_album_artist_name: artist });
   });
-  rows.push({ ts: '2024-01-03T00:00:00Z', ms_played: 900000, master_metadata_track_name: null, episode_name: 'A podcast' });
+  rows.push({ ts: at(), ms_played: 900000, master_metadata_track_name: null, episode_name: 'A podcast' });
   return rows;
 }
-export const historyFile = () => ({
-  name: 'Streaming_History_Audio_2024_0.json', mimeType: 'application/json',
-  buffer: Buffer.from(JSON.stringify(extendedHistory()))
+export const historyFile = (year = 2024) => ({
+  name: `Streaming_History_Audio_${year}.json`, mimeType: 'application/json',
+  buffer: Buffer.from(JSON.stringify(extendedHistory(year)))
 });
 
 // The one-year "Account data" export uses camelCase keys.

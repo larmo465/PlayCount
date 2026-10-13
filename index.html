@@ -263,7 +263,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
 const SNIPPETS = [0.5, 1, 2, 4, 8, 16];   // seconds unlocked at each step
 const MAX_CLIP = SNIPPETS[SNIPPETS.length - 1];
 const RECENT_LIMIT = 30;                   // history mode: don't repeat a song within this many rounds
-const LS = { reprocessDismissed: 'pc.reprocessDismissed.v1', retried: 'pc.retried.v1', lib: 'pc.lib.v1', playlists: 'pc.playlists.v1', cache: 'pc.cache.v1', settings: 'pc.settings.v1', stats: 'pc.stats.v1', recent: 'pc.recent.v1' };
+const LS = { prints: 'pc.prints.v1', historyRange: 'pc.historyRange.v1', reprocessDismissed: 'pc.reprocessDismissed.v1', retried: 'pc.retried.v1', lib: 'pc.lib.v1', playlists: 'pc.playlists.v1', cache: 'pc.cache.v1', settings: 'pc.settings.v1', stats: 'pc.stats.v1', recent: 'pc.recent.v1' };
 
 const $ = id => document.getElementById(id);
 
@@ -370,7 +370,16 @@ function loadJSZip() {
 }
 
 /* ---------- listening history ---------- */
-function buildLibrary(files, minMs) {
+// A short fingerprint of one play (when, which song, how long), so the same play loaded twice (the same
+// file dropped again, or overlapping exports) is only counted once.
+function playPrint(when, song, ms) {
+  let h = 0x811c9dc5;
+  const s = `${when}|${song}|${ms}`;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+  return (h >>> 0).toString(36);
+}
+// `seen` holds fingerprints of plays already counted; new ones are added to it.
+function buildLibrary(files, minMs, seen = new Set()) {
   // Extended history uses snake_case keys; the 1-year "Account data" export uses camelCase.
   // If both are present they overlap, so prefer the extended one.
   const ext = [], basic = [];
@@ -382,7 +391,7 @@ function buildLibrary(files, minMs) {
   }
   const isExt = ext.length > 0;
   const map = new Map();
-  let streams = 0, counted = 0;
+  let streams = 0, counted = 0, repeats = 0, from = '', to = '';
   for (const arr of (isExt ? ext : basic)) {
     for (const r of arr) {
       if (!r) continue;
@@ -390,6 +399,13 @@ function buildLibrary(files, minMs) {
       const artist = isExt ? r.master_metadata_album_artist_name : r.artistName;
       const ms = isExt ? r.ms_played : r.msPlayed;
       if (!title || !artist) continue;           // podcasts, audiobooks
+      const when = String((isExt ? r.ts : r.endTime) || '');
+      const print = playPrint(when, r.spotify_track_uri || songKey(title, artist), ms);
+      if (seen.has(print)) { repeats++; continue; }
+      seen.add(print);
+      const day = when.slice(0, 10);
+      if (day && (!from || day < from)) from = day;
+      if (day > to) to = day;
       streams++;
       if ((ms || 0) < minMs) continue;
       counted++;
@@ -400,7 +416,23 @@ function buildLibrary(files, minMs) {
       if (!t.uri && r.spotify_track_uri) t.uri = r.spotify_track_uri;
     }
   }
-  return { tracks: [...map.values()].sort((a, b) => b.plays - a.plays), streams, counted, isExt };
+  return { tracks: [...map.values()].sort((a, b) => b.plays - a.plays), streams, counted, repeats, isExt, from, to };
+}
+// Add newly loaded plays to the history already loaded.
+function mergeLibraries(old, added) {
+  const map = new Map(old.map(t => [t.key, { ...t }]));
+  for (const t of added) {
+    const e = map.get(t.key);
+    if (e) { e.plays += t.plays; e.uri = e.uri || t.uri; }
+    else map.set(t.key, { ...t });
+  }
+  return [...map.values()].sort((a, b) => b.plays - a.plays);
+}
+const plural = (n, word) => `${n.toLocaleString()} ${word}${n === 1 ? '' : 's'}`;
+function yearsText(range) {
+  if (!range || !range.from) return '';
+  const a = range.from.slice(0, 4), b = range.to.slice(0, 4);
+  return a === b ? a : `${a}–${b}`;
 }
 
 /* ---------- playlists ---------- */
@@ -1306,11 +1338,32 @@ async function handleFiles(files) {
   try {
     const parsed = await readFiles(files);
     const found = [];
-    const { tracks, streams, counted, isExt } = buildLibrary(parsed, $('thirty').checked ? 30000 : 1);
-    if (tracks.length) {
-      lib = tracks;
+    // Spotify splits the history into one file per year (or per chunk). Files dropped together are
+    // combined, and files dropped later are added to what's already loaded. History saved before
+    // fingerprints existed can't be checked for repeats, so it's replaced once instead.
+    const savedPrints = load(LS.prints, null);
+    const merging = lib.length > 0 && typeof savedPrints === 'string';
+    const seen = new Set(merging && savedPrints ? savedPrints.split(',') : []);
+    const { tracks, streams, counted, repeats, isExt, from, to } = buildLibrary(parsed, $('thirty').checked ? 30000 : 1, seen);
+    if (streams || repeats) {
+      const old = load(LS.historyRange, null);
+      const range = merging && old && old.from
+        ? { from: from && from < old.from ? from : old.from, to: to > old.to ? to : old.to }
+        : { from, to };
+      lib = merging ? mergeLibraries(lib, tracks) : tracks;
       save(LS.lib, lib.map(t => [t.title, t.artist, t.plays, t.uri]));
-      found.push(`${counted.toLocaleString()} play${counted === 1 ? '' : 's'} of ${tracks.length.toLocaleString()} song${tracks.length === 1 ? '' : 's'} (${streams.toLocaleString()} streams, ${isExt ? 'extended' : 'last-year'} history)`);
+      save(LS.prints, [...seen].join(','));
+      save(LS.historyRange, range);
+      const total = lib.reduce((n, t) => n + t.plays, 0);
+      const years = yearsText(range);
+      const yrs = years ? `, ${years}` : '';
+      if (!merging) {
+        found.push(`Loaded ${plural(counted, 'play')} of ${plural(tracks.length, 'song')} (${streams.toLocaleString()} streams, ${isExt ? 'extended' : 'last-year'} history${yrs})`);
+      } else if (streams) {
+        found.push(`Added ${plural(counted, 'new play')}${repeats ? ` (${repeats.toLocaleString()} ${repeats === 1 ? 'was' : 'were'} already loaded)` : ''}. Your history now has ${plural(total, 'play')} of ${plural(lib.length, 'song')}${yrs}`);
+      } else {
+        found.push(`Nothing new: those plays were already loaded. Your history has ${plural(total, 'play')} of ${plural(lib.length, 'song')}${yrs}`);
+      }
       track('import', { source: isExt ? 'extended-history' : 'last-year-history' });
     }
     const pls = playlistsFromExport(parsed);
@@ -1318,10 +1371,10 @@ async function handleFiles(files) {
     const csvCount = pls.length;
     for (const f of parsed) if (/\.csv$/i.test(f.name)) { const p = playlistFromCSV(f.name, f.text); if (p) pls.push(p); }
     if (pls.length > csvCount) track('import', { source: 'csv' });
-    if (pls.length) { addPlaylists(pls); found.push(`${pls.length} playlist${pls.length === 1 ? '' : 's'}`); }
+    if (pls.length) { addPlaylists(pls); found.push(`${found.length ? 'Also loaded' : 'Loaded'} ${plural(pls.length, 'playlist')}`); }
     if (!found.length) throw new Error('Found no listening history or playlists. Pick the Streaming_History_Audio_… / StreamingHistory_music_… files, Playlist1.json, or a playlist CSV.');
-    msg.textContent = 'Loaded ' + found.join(' and ') + '.';
-    if (tracks.length) settings.source = 'history';
+    msg.textContent = found.join('. ') + '.';
+    if (streams || repeats) settings.source = 'history';
     else if (pls.length) settings.source = pls[0].id;
     renderSources();
     $('sources').scrollIntoView({ behavior: 'smooth', block: 'start' });
