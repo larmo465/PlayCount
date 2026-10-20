@@ -13,6 +13,7 @@ You hear the first half-second of a song. Every wrong guess or skip unlocks more
   of coming up is proportional to how often you've played it. A slider in Settings
   goes from "every song equally likely" to "strongly favour your top songs", and you
   can set a minimum play count.
+  The **Genre** button above the guesses limits the game to the genres you pick.
 - **Playlists, shuffled.** Every song plays once in random order, then it reshuffles.
   Import a playlist from:
   - the `Playlist*.json` / `YourLibrary.json` (Liked Songs) files in the same export,
@@ -44,6 +45,13 @@ A play counts when you listened for 30 seconds or more, matching Spotify's own r
 - Audio is the 30-second preview from the public iTunes Search API (no key needed).
   Songs iTunes can't find drop out of the pool. The matcher prefers the original
   recording over live, acoustic, remix, cover and karaoke versions.
+- Spotify's export has no genres, so the game looks them up on iTunes in the
+  background while you play history mode, most-played artists first. An artist
+  search gives the artist's genre for all their songs. Then a lookup of the artist's
+  song list gives each song its own genre where iTunes has it (one artist's songs can
+  span Country and Singer/Songwriter, say). Fine-grained iTunes genres are grouped
+  under iTunes' top-level ones ("Indie Rock" → Alternative). Songs with no genre yet
+  sit out while a genre is picked.
 - Pasted Spotify track links are resolved with Spotify's public oEmbed endpoint,
   which gives the title and album cover but not the artist. To find the right song
   among same-titled ones, the game:

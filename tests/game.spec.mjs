@@ -530,6 +530,112 @@ test.describe('search by album', () => {
   });
 });
 
+test.describe('genre filter', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => { window.__PC_BG_INTERVAL__ = 20; });
+    await page.goto(APP_URL);
+  });
+  const ROCK = ['Bohemian Rhapsody - Remastered 2011', 'Go Your Own Way - 2004 Remaster'];
+  const genreNames = page => page.locator('#genreList .gn').allTextContents();
+  async function lookupsDone(page) {
+    await page.click('#genreBtn');
+    await expect(page.locator('#genreNote')).not.toContainText('Finding more');
+    await expect(page.locator('#genreNote')).toContainText('Genres known for');
+  }
+  async function pick(page, genre) {
+    await page.locator('#genreList label', { hasText: genre }).locator('input').check();
+    await page.click('#closeGenres');
+  }
+
+  test('looks up artists first, most played first, then refines song by song', async ({ page, net }) => {
+    await loadFiles(page, historyFile());
+    await play(page, 'My listening history');
+    await expect(page.locator('#genreBtn')).toHaveText('Genre: All');
+    await lookupsDone(page);
+    expect(net.genres).toEqual([
+      'artist:The Killers', 'artist:Queen', 'artist:Fleetwood Mac', 'songs:The Killers', 'songs:Queen', 'artist:Daft Punk',
+      'songs:Fleetwood Mac', 'artist:No Such Artist 123', 'artist:Outkast', 'songs:Daft Punk', 'songs:Outkast',
+    ]);
+    // Queen is Rock, not Queen Latifah's Hip-Hop. Fleetwood Mac is Rock, but iTunes files "Dreams" under
+    // Soft Rock, which is Pop. Outkast's song isn't in their iTunes list, so it keeps the artist's genre.
+    expect(await genreNames(page)).toEqual(['Alternative', 'Rock', 'Pop', 'Dance', 'Hip-Hop/Rap']);
+    await expect(page.locator('#genreList label', { hasText: 'Alternative' })).toContainText(/5[24]% of plays/);
+    // The only artist iTunes doesn't know has 4 of the 115 plays (or none, once its song is found to have no preview).
+    await expect(page.locator('#genreNote')).toHaveText(/^Genres known for (97|100)% of your plays, \1% checked song by song\.$/);
+    await expect(page.locator('#genreAll')).toBeChecked();
+  });
+
+  test('plays only the picked genres from the next song on, and remembers them', async ({ page, net }) => {
+    await loadFiles(page, historyFile());
+    await play(page, 'My listening history');
+    await lookupsDone(page);
+    await pick(page, 'Rock');
+    await expect(page.locator('#genreBtn')).toHaveText('Genre: Rock');
+    const first = await giveUp(page);   // the song that was already playing carries on
+    expect(first.title).toBeTruthy();
+    for (let i = 0; i < 4; i++) {
+      await nextSong(page);
+      expect(ROCK).toContain((await giveUp(page)).title);
+    }
+    await page.click('#settingsBtn');
+    await expect(page.locator('#poolInfo')).toHaveText(`2 of ${SONGS.length} songs in the pool (genre filter on).`);
+    await expect(page.locator('#genreSummary')).toHaveText('Rock');
+    await page.click('#closeSettings');
+
+    await expect.poll(() => page.evaluate(() => (JSON.parse(localStorage.getItem('pc.genres.v1')) || { a: {} }).a.outkast)).toEqual(['Hip-Hop/Rap', 1005, 1]);
+    const lookups = net.genres.length;
+    await page.reload();
+    await expect(page.locator('#genreBtn')).toHaveText('Genre: Rock');
+    expect(ROCK).toContain((await giveUp(page)).title);
+    expect(net.genres.length, 'no genre is looked up twice').toBe(lookups);
+  });
+
+  test('says so when no song fits, and plays again once the genres change', async ({ page }) => {
+    await loadFiles(page, historyFile());
+    await play(page, 'My listening history');
+    await lookupsDone(page);
+    await pick(page, 'Rock');
+    await page.click('#settingsBtn');
+    await page.fill('#minPlays', '30');                   // no Rock song has 30 plays
+    await page.locator('#minPlays').dispatchEvent('change');
+    await page.click('#closeSettings');
+    await giveUp(page);
+    await page.click('#nextBtn');
+    await expect(page.locator('#status')).toContainText('None of your songs are in the genres you picked yet');
+    await page.getByRole('button', { name: 'Choose genres' }).click();
+    await page.check('#genreAll');
+    await page.click('#closeGenres');
+    await expect(page.locator('#board')).toBeVisible();
+    await expect(page.locator('#genreBtn')).toHaveText('Genre: All');
+    expect((await giveUp(page)).title).toBe('Mr. Brightside');   // the one song with 30+ plays
+  });
+
+  test.describe('artists named in other scripts', () => {
+    const songs = [['春泥棒', 'ヨルシカ', 8], ['Lemon', '米津玄師', 5]];
+    test.use({ netOptions: {
+      scenario: { links: {}, songs: songs.map(([t, a], i) => scenarioTrack(t, a, i + 1)) },
+      genres: { 'ヨルシカ': ['J-Pop', {}], '米津玄師': ['Anime', { 'Lemon': 'J-Pop' }] },
+    } });
+    test('get their own genres', async ({ page, net }) => {
+      const rows = songs.flatMap(([t, a, n]) => Array.from({ length: n }, () => ({ ts: '2024-01-01T00:00:00Z', ms_played: 200000, master_metadata_track_name: t, master_metadata_album_artist_name: a })));
+      await loadFiles(page, { name: 'Streaming_History_Audio_2024_0.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(rows)) });
+      await play(page, 'My listening history');
+      await lookupsDone(page);
+      expect(net.genres).toEqual(['artist:ヨルシカ', 'artist:米津玄師', 'songs:ヨルシカ', 'songs:米津玄師']);
+      expect(await genreNames(page)).toEqual(['J-Pop']);   // 米津玄師 is Anime, but "Lemon" itself is J-Pop
+    });
+  });
+
+  test("isn't offered or looked up for playlists", async ({ page, net }) => {
+    await loadFiles(page, await exportZip());
+    await play(page, 'Road Trip');
+    await expect(page.locator('#genreBtn')).toBeHidden();
+    await giveUp(page);
+    await page.waitForTimeout(300);
+    expect(net.genres).toEqual([]);
+  });
+});
+
 test.describe('layout', () => {
   test.use({ viewport: { width: 390, height: 844 } });
   test('fits a phone screen without sideways scrolling', async ({ page }) => {

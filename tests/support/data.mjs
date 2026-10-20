@@ -12,6 +12,16 @@ export const SONGS = [
   ['Hey Ya!', 'Outkast', 3],
 ];
 export const TOTAL_PLAYS = SONGS.reduce((n, s) => n + s[2], 0);
+// What the mocked iTunes knows about genres: each artist's genre, and their songs' own genres (as iTunes
+// names them: "Soft Rock" belongs to Pop). "Queen Latifah" comes up first when searching "Queen".
+export const GENRES = {
+  'The Killers': ['Alternative', { 'Mr. Brightside': 'Alternative' }],
+  'Queen Latifah': ['Hip-Hop/Rap', {}],
+  'Queen': ['Rock', { 'Bohemian Rhapsody': 'Rock' }],
+  'Fleetwood Mac': ['Rock', { 'Dreams': 'Soft Rock', 'Go Your Own Way': 'Rock' }],
+  'Daft Punk': ['Electronic', { 'Get Lucky (feat. Pharrell Williams & Nile Rodgers)': 'Dance' }],
+  'Outkast': ['Hip-Hop/Rap', {}],
+};
 // Album per song, as the extended export records it. Two songs share "Rumours".
 export const ALBUMS = {
   'Mr. Brightside': 'Hot Fuss', 'Bohemian Rhapsody - Remastered 2011': 'A Night at the Opera',

@@ -5,6 +5,7 @@
 //   to record any that are missing (needs real network access).
 // - Preview audio is a generated WAV tone: Playwright's Chromium can't decode the real AAC previews.
 // - JSZip comes from node_modules instead of cdnjs.
+// - Genre lookups (artist search and artist song lists) are answered from a made-up catalog (GENRES).
 // - Umami analytics is a stub that records events in window.__umamiEvents.
 // - Any other request is aborted and fails the test, so a new dependency can't sneak in untested.
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
@@ -12,6 +13,7 @@ import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { coverPng } from './images.mjs';
+import { GENRES } from './data.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const FIXTURES = path.join(ROOT, 'tests', 'fixtures');
@@ -55,7 +57,7 @@ async function replayImage(url) {
 const trimItunes = d => ({
   resultCount: d.resultCount,
   results: (d.results || []).map(r => ({
-    trackName: r.trackName, artistName: r.artistName, collectionName: r.collectionName,
+    trackName: r.trackName, artistName: r.artistName, collectionName: r.collectionName, primaryGenreName: r.primaryGenreName,
     previewUrl: r.previewUrl, artworkUrl60: r.artworkUrl60, artworkUrl100: r.artworkUrl100
   }))
 });
@@ -83,9 +85,10 @@ export function toneWav(seconds = 30, rate = 8000) {
  * @param {object} scenario  made-up Spotify links and iTunes answers for matching tests, instead of
  *   recordings (see scenarioSong / scenarioTrack). Covers are generated images, so the game's cover
  *   comparison sees real pixels.
+ * @param {object} genres  { artist: [genre, { song: genre }] } for genre lookups (see GENRES).
  */
-export async function mockNetwork(page, { itunesFetch = 'ok', offline = false, analyticsBlocked = false, scenario = null } = {}) {
-  const log = { itunes: [], oembed: [], unexpected: [] };
+export async function mockNetwork(page, { itunesFetch = 'ok', offline = false, analyticsBlocked = false, scenario = null, genres = GENRES } = {}) {
+  const log = { itunes: [], oembed: [], genres: [], unexpected: [] };
   await page.route('**/*', async route => {
     const req = route.request();
     const url = new URL(req.url());
@@ -95,6 +98,14 @@ export async function mockNetwork(page, { itunesFetch = 'ok', offline = false, a
     }
     if (offline) return route.abort('internetdisconnected');
 
+    const genreLookup = url.host === 'itunes.apple.com' && (url.pathname === '/lookup' || url.searchParams.get('entity') === 'musicArtist');
+    if (genreLookup) {
+      const callback = url.searchParams.get('callback');
+      if (!callback && itunesFetch === 'cors-blocked') return route.abort('failed');
+      const body = genreAnswer(genres, url, log.genres);
+      if (callback) return route.fulfill({ status: 200, contentType: 'text/javascript', body: `${callback}(${JSON.stringify(body)});` });
+      return route.fulfill({ status: 200, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify(body) });
+    }
     if (url.host === 'itunes.apple.com' && url.pathname === '/search') {
       const callback = url.searchParams.get('callback');
       const term = url.searchParams.get('term');
@@ -136,6 +147,25 @@ export async function mockNetwork(page, { itunesFetch = 'ok', offline = false, a
     return route.abort('blockedbyclient');
   });
   return log;
+}
+
+// ---- Made-up genre catalog ----
+// An artist search returns every artist whose name contains the search text (or is contained in it);
+// a lookup by artist id returns the artist and their songs.
+function genreAnswer(genres, url, log) {
+  const names = Object.keys(genres);
+  const artist = (name, i) => ({ wrapperType: 'artist', artistName: name, artistId: 1000 + i, primaryGenreName: genres[name][0] });
+  if (url.pathname === '/lookup') {
+    const i = +url.searchParams.get('id') - 1000, name = names[i];
+    log.push(`songs:${name}`);
+    if (!name) return { resultCount: 0, results: [] };
+    const songs = Object.entries(genres[name][1]).map(([trackName, g]) => ({ wrapperType: 'track', artistName: name, trackName, primaryGenreName: g }));
+    return { resultCount: songs.length + 1, results: [artist(name, i), ...songs] };
+  }
+  const term = url.searchParams.get('term').toLowerCase();
+  log.push(`artist:${url.searchParams.get('term')}`);
+  const results = names.map(artist).filter(a => a.artistName.toLowerCase().includes(term) || term.includes(a.artistName.toLowerCase()));
+  return { resultCount: results.length, results };
 }
 
 // ---- Made-up matching scenarios ----
