@@ -114,6 +114,11 @@ kbd{font:12px ui-monospace,monospace;background:var(--panel2);border:1px solid v
 .srcbtns{display:flex;gap:6px;flex:none}
 dialog{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:var(--radius);max-width:min(480px,calc(100vw - 32px));width:100%}
 dialog::backdrop{background:rgba(0,0,0,.55)}
+.srctag{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+button.chip{padding:2px 10px;font-size:13px}
+#genreList{max-height:50vh;overflow:auto;margin:4px 0 0}
+#genreList label.row{margin:0;padding:7px 0;border-top:1px solid var(--line)}
+#genreList input,#genreAll{accent-color:var(--accent)}
 </style>
 </head>
 <body>
@@ -172,7 +177,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
   <section id="game" class="hidden">
     <div id="status" class="muted">Loading…</div>
     <div id="board" class="hidden">
-      <div id="sourceTag" class="small muted" style="text-align:center;margin-bottom:8px"></div>
+      <div class="srctag small muted"><span id="sourceTag"></span><button id="genreBtn" class="chip hidden" aria-haspopup="dialog"></button></div>
       <div id="slots"></div>
 
       <div id="resultPanel" class="panel hidden">
@@ -221,6 +226,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
   <div id="historyOpts">
     <label class="row"><span>Weighting<br><span class="muted small" id="expLabel"></span></span><input type="range" id="exp" min="0" max="2" step="0.25"></label>
     <label class="row"><span>Only songs with at least this many plays</span><input type="number" id="minPlays" min="1" step="1"></label>
+    <div class="row small" style="display:flex;align-items:center;justify-content:space-between;gap:12px"><span>Genres: <span id="genreSummary"></span></span><button id="genreFromSettings">Choose</button></div>
   </div>
   <label class="row"><span>iTunes store country <span class="muted small">(for previews)</span></span><input type="text" id="country" maxlength="2" style="width:56px;text-transform:uppercase"></label>
   <p class="small muted" id="poolInfo"></p>
@@ -247,6 +253,15 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
   </div>
 </dialog>
 
+<dialog id="genreDlg">
+  <h2>Genres</h2>
+  <p class="small muted" id="genreNote"></p>
+  <label class="row"><span>All genres</span><input type="checkbox" id="genreAll"></label>
+  <div id="genreList"></div>
+  <p class="small muted">Changes start with the next song. Songs whose genre isn't known yet sit out while a genre is picked.</p>
+  <div class="revbtns"><button class="primary" id="closeGenres">Done</button></div>
+</dialog>
+
 <dialog id="statsDlg">
   <h2>Stats</h2>
   <div class="statgrid">
@@ -266,9 +281,53 @@ dialog::backdrop{background:rgba(0,0,0,.55)}
 const SNIPPETS = [0.5, 1, 2, 4, 8, 16];   // seconds unlocked at each step
 const MAX_CLIP = SNIPPETS[SNIPPETS.length - 1];
 const RECENT_LIMIT = 30;                   // history mode: don't repeat a song within this many rounds
-const LS = { reprocessDismissed: 'pc.reprocessDismissed.v1', retried: 'pc.retried.v1', lib: 'pc.lib.v1', playlists: 'pc.playlists.v1', cache: 'pc.cache.v1', settings: 'pc.settings.v1', stats: 'pc.stats.v1', recent: 'pc.recent.v1' };
+const LS = { genres: 'pc.genres.v1', reprocessDismissed: 'pc.reprocessDismissed.v1', retried: 'pc.retried.v1', lib: 'pc.lib.v1', playlists: 'pc.playlists.v1', cache: 'pc.cache.v1', settings: 'pc.settings.v1', stats: 'pc.stats.v1', recent: 'pc.recent.v1' };
 
 const $ = id => document.getElementById(id);
+
+// iTunes files songs under fine-grained genres ("Indie Rock", "Pop/Rock"). The genre filter groups them under
+// iTunes' own top-level genres, from its genre list (itunes.apple.com/WebObjects/MZStoreServices.woa/ws/genres).
+const SUBGENRES = {
+  "African": "African Dancehall|African Reggae|Afrikaans|Afro House|Afro Soul|Afro-Beat|Afro-Pop|Afro-folk|Afro-fusion|Afrobeats|Alte|Amapiano|Benga|Bongo-Flava|Chimurenga|Coupé-Décalé|Fuji|Genge|Gqom|Highlife|Kizomba|Kuduro|Kwaito|Kwassa|Mapouka|Maskandi|Mbalax|Ndombolo|Shangaan Electro|Soukous|Taarab|Zouglou",
+  "Alternative": "Chinese Alt|College Rock|EMO|Goth Rock|Grunge|Indie Egyptian|Indie Levant|Indie Maghreb|Indie Pop|Indie Rock|Korean Indie|New Wave|Pop Punk|Punk|Turkish Alternative",
+  "Arabic": "Arabic Pop|Dabke|Islamic|Khaleeji|Khaleeji Jalsat|Khaleeji Shailat|Levant|Maghreb Rai|North African",
+  "Blues": "Acoustic Blues|Chicago Blues|Classic Blues|Contemporary Blues|Country Blues|Delta Blues|Electric Blues",
+  "Brazilian": "Axé|Baile Funk|Bossa Nova|Choro|Forró|Frevo|MPB|Pagode|Samba|Sertanejo",
+  "Children's Music": "Lullabies|Sing-Along|Stories",
+  "Chinese": "Chinese Classical|Chinese Flute|Chinese Opera|Chinese Orchestral|Chinese Regional Folk|Chinese Strings|Taiwanese Folk|Tibetan Native Music",
+  "Christian": "CCM|Christian Metal|Christian Pop|Christian Rap|Christian Rock|Classic Christian|Contemporary Gospel|Gospel|Praise & Worship|Southern Gospel|Traditional Gospel",
+  "Classical": "21st Century|Air de Cours|Ars Antiqua|Ars Nova|Art Song|Avant-Garde|Ballet|Baroque|Baroque Era|Bel Canto|Brass & Woodwinds|Cantata|Carol|Cello|Chamber Music|Chanson|Chant|Choral|Classical Crossover|Concert Aria|Concerto|Concerto Grosso|Contemporary Era|Dodecaphony|Early 20th Century|Early Music|Early Romantic|Eclecticism|Electroacoustic|Electronic|English Ayre|Experimental Classical|Expressionism|Fantasy|Film Music|First Viennese School|French Baroque|Gregorian Chant|Guitar|High Classical|Impressionism|Impressionist|Late 20th Century|Late Romantic|Lied|Mass|Medieval|Medieval Era|Meistergesang|Minimalism|Minnesang|Modern Era|Modernism|Music Theatre|Musique concrète|Nationalism|Neoclassicism|New Complexity|New Simplicity|Nocturne|Opera|Oratorio|Orchestral|Original Score|Passion|Percussion|Piano|Polyphony|Polystylism|Post-modernism|PostMinimalism|Prima Pratica|Renaissance|Romantic|Romantic Era|Sacred|Second Viennese School|Seconda Pratica|Serialism|Solo Instrumental|Sonata|Spectral Music|Stage Works|String Quartet|Symphony|Tone Poem|Troubadour Music|Trouvère Music|Video Game|Violin|Vocal Music|Wedding Music",
+  "Comedy": "Novelty|Standup Comedy",
+  "Country": "Alternative Country|Americana|Bluegrass|Contemporary Bluegrass|Contemporary Country|Country Gospel|Country Hip-Hop/Rap|Honky Tonk|Outlaw Country|Thai Country|Traditional Bluegrass|Traditional Country|Urban Cowboy",
+  "Cuban": "Bolero|Chachacha|Guajira|Guaracha|Mambo|Son|Timba",
+  "Dance": "Breakbeat|Exercise|Garage|Hardcore|House|Jungle/Drum'n'bass|Maghreb Dance|Techno|Trance",
+  "Easy Listening": "Lounge|Swing",
+  "Electronic": "Ambient|Bass|Downtempo|Dubstep|Electro-Cha'abi|Electronica|IDM/Experimental|Industrial|Levant Electronic|Maghreb Electronic",
+  "Folk": "Iraqi Folk|Khaleeji Folk",
+  "Hip-Hop/Rap": "Alternative Rap|Chinese Hip-Hop|Deutschrap|Dirty South|East Coast Rap|Egyptian Hip-Hop|Gangsta Rap|Ghanaian Drill|Hardcore Rap|Hip-Hop|Hip-Hop in Russian|Khaleeji Hip-Hop|Korean Hip-Hop|Latin Rap|Levant Hip-Hop|Maghreb Hip-Hop|Old School Rap|Rap|South African Hip-Hop|Turkish Hip-Hop/Rap|UK Hip-Hop|Underground Rap|West Coast Rap",
+  "Holiday": "Chanukah|Christmas|Christmas: Children's|Christmas: Classic|Christmas: Classical|Christmas: Country|Christmas: Jazz|Christmas: Modern|Christmas: Pop|Christmas: R&B|Christmas: Religious|Christmas: Rock|Easter|Halloween|Holiday: Other|Thanksgiving",
+  "Indian": "Assamese|Bengali|Bhojpuri|Bollywood|Carnatic Classical|Devotional & Spiritual|Ghazals|Gujarati|Haryanvi|Hindustani Classical|Indian Classical|Indian Folk|Indian Pop|Kannada|Malayalam|Marathi|Odia|Punjabi|Punjabi Pop|Rabindra Sangeet|Rajasthani|Regional Indian|Sufi|Tamil|Telugu|Urdu",
+  "Jazz": "Avant-Garde Jazz|Big Band|Bop|Contemporary Jazz|Cool Jazz|Crossover Jazz|Dixieland|Ethio Jazz|Fusion|Hard Bop|Latin Jazz|Mainstream Jazz|Ragtime|Smooth Jazz|Trad Jazz|Vocal Jazz",
+  "Jewish Music": "Jewish Holidays|Klezmer",
+  "Korean": "Korean Classical|Korean Trad Instrumental|Korean Trad Song|Korean Trad Theater",
+  "Latin": "Baladas y Boleros|Contemporary Latin|Latin Jazz|Música Mexicana|Música tropical|Pop Latino|Raíces|Rock y Alternativo|Urbano latino",
+  "New Age": "Environmental|Healing|Meditation|Nature|Relaxation|Travel|Yoga",
+  "Pop": "Adult Contemporary|Britpop|C-Pop|Cantopop/HK-Pop|Deutschpop|Egyptian Pop|Indo Pop|Iraqi Pop|K-Pop|Khaleeji Pop|Korean Folk-Pop|Levant Pop|Maghreb Pop|Malaysian Pop|Mandopop|Manilla Sound|Oldies|Original Pilipino Music|Pinoy Pop|Pop in Russian|Pop/Rock|Shows|Soft Rock|T-Pop|Tai-Pop|Teen Pop|Thai Pop|Tribute|Turkish Pop",
+  "R&B/Soul": "Contemporary R&B|Disco|Doo Wop|Funk|Motown|Neo-Soul|Quiet Storm|Soul",
+  "Reggae": "Dub|Lovers Rock|Modern Dancehall|Roots Reggae|Ska",
+  "Rock": "Adult Alternative|American Trad Rock|Arena Rock|Blues-Rock|British Invasion|Chinese Rock|Death Metal/Black Metal|Glam Rock|Hair Metal|Hard Rock|Jam Bands|Korean Rock|Metal|Prog-Rock/Art Rock|Psychedelic|Rock & Roll|Rock in Russian|Rockabilly|Roots Rock|Singer/Songwriter|Southern Rock|Surf|Tex-Mex|Turkish Rock",
+  "Russian": "Bard in Russian|Chanson in Russian|Romance in Russian",
+  "Singer/Songwriter": "Alternative Folk|Contemporary Folk|Contemporary Singer/Songwriter|Folk-Rock|New Acoustic|Traditional Folk",
+  "Soundtrack": "Foreign Cinema|Musicals|Original Score|Sound Effects|TV Soundtrack|Video Game",
+  "Tarab": "Egyptian Tarab|Iraqi Tarab|Khaleeji Tarab",
+  "Turkish": "Arabesque|Fantezi|Halk|Religious|Sanat|Özgün",
+  "Vocal": "Standards|Traditional Pop|Trot|Vocal Pop",
+  "Worldwide": "Asia|Australia|Cajun|Calypso|Caribbean|Celtic|Celtic Folk|Contemporary Celtic|Dangdut|Dini|Drinking Songs|Europe|Fado|Farsi|Flamenco|France|Hawaii|Iberia|Indonesian Religious|Israeli|Japan|Japanese Pop|Klezmer|North America|Polka|Soca|South Africa|South America|Tango|Traditional Celtic|Worldbeat|Zydeco",
+};
+const TOP_GENRE = new Map();
+for (const [top, subs] of Object.entries(SUBGENRES)) for (const g of subs.split('|')) if (!TOP_GENRE.has(g)) TOP_GENRE.set(g, top);
+for (const top of Object.keys(SUBGENRES)) TOP_GENRE.set(top, top);
+function topGenre(g) { return g ? TOP_GENRE.get(g) || g : null; }
 
 /* ---------- storage (every call can fail: private mode, quota, previews) ---------- */
 function load(key, fallback) {
@@ -312,9 +371,12 @@ function sameSong(a, b) {
 function label(t) { return t.artist ? `${t.title} — ${t.artist}` : t.title; }
 
 /* ---------- state ---------- */
-const settings = Object.assign({ exp: 1, minPlays: 1, country: guessCountry(), source: 'history' }, load(LS.settings, {}));
+const settings = Object.assign({ exp: 1, minPlays: 1, country: guessCountry(), source: 'history', genres: [] }, load(LS.settings, {}));
 let stats = Object.assign({ played: 0, won: 0, streak: 0, max: 0, dist: [0, 0, 0, 0, 0, 0, 0] }, load(LS.stats, {}));
 let cache = load(LS.cache, {});              // key -> preview info, or null if iTunes has no match
+// Genres found in the background. a: artist -> [genre, iTunes artist id, songs looked up (0/1)], or 0 when
+// iTunes has no such artist. s: song key -> the song's own genre.
+const genreStore = Object.assign({ a: {}, s: {} }, load(LS.genres, {}));
 let recent = load(LS.recent, []);
 let lib = [];                                 // listening history: [{key,title,artist,plays,uri}]
 let playlists = [];                           // [{id,name,tracks:[{key,title,artist,uri,query,titleOnly}]}]
@@ -601,8 +663,12 @@ function addPlaylists(list) {
 }
 
 /* ---------- choosing the next song ---------- */
+// History songs the settings allow, before the genre filter.
+function eligible() { return lib.filter(t => t.plays >= settings.minPlays && cache[t.key] !== null); }
+function genreFilter() { return activePlaylist() || !settings.genres.length ? null : new Set(settings.genres); }
 function rebuildPool() {
-  pool = lib.filter(t => t.plays >= settings.minPlays && cache[t.key] !== null);
+  const only = genreFilter();
+  pool = eligible().filter(t => !only || only.has(genreOf(t)));   // songs with no genre yet sit out a filter
   cum = []; total = 0;
   for (const t of pool) { total += Math.pow(t.plays, settings.exp); cum.push(total); }
   queue = [];
@@ -831,6 +897,7 @@ async function findPreview(t) {
     preview: best.previewUrl,
     art: (best.artworkUrl100 || '').replace('100x100bb', '400x400bb'),
     title: best.trackName, artist: best.artistName,
+    ...(best.primaryGenreName ? { genre: best.primaryGenreName } : {}),
     ...(t.titleOnly ? { sure } : {})
   } : null;
   cache[t.key] = info;
@@ -937,7 +1004,143 @@ function renderSourceTag() {
   const left = unresolved(pl).length;
   if (left) text += ` · finding artists, ${pl.tracks.length - left} of ${pl.tracks.length} done`;
   $('sourceTag').textContent = text;
+  $('genreBtn').classList.toggle('hidden', !!pl);
+  $('genreBtn').textContent = genreLabel();
 }
+
+/* ---------- genre picker (history mode) ---------- */
+function genreLabel() {
+  const g = settings.genres;
+  return !g.length ? 'Genre: All' : g.length === 1 ? `Genre: ${g[0]}` : `Genres: ${g[0]} + ${g.length - 1}`;
+}
+// Plays per genre among the songs your settings allow, and how much of that is known so far.
+function genreCounts() {
+  const plays = new Map();
+  let all = 0, known = 0, bySong = 0;
+  for (const t of eligible()) {
+    all += t.plays;
+    const g = genreOf(t);
+    if (!g) continue;
+    known += t.plays;
+    const a = genreStore.a[artistKey(t.artist)];
+    if ((cache[t.key] && cache[t.key].genre) || genreStore.s[t.key] || (a && a[2])) bySong += t.plays;
+    plays.set(g, (plays.get(g) || 0) + t.plays);
+  }
+  for (const g of settings.genres) if (!plays.has(g)) plays.set(g, 0);   // keep a picked genre visible to untick
+  return { list: [...plays].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])), all, known, bySong };
+}
+const pct = (n, of) => of ? Math.round(n / of * 100) + '%' : '0%';
+function renderGenres() {
+  const { list, all, known, bySong } = genreCounts();
+  const more = !!nextGenreLookup();
+  $('genreNote').textContent = !known
+    ? 'Looking up genres on iTunes in the background, most-played artists first. The first ones appear in a few seconds.'
+    : `Genres known for ${pct(known, all)} of your plays, ${pct(bySong, all)} checked song by song.` + (more ? ' Finding more in the background.' : '');
+  $('genreAll').checked = !settings.genres.length;
+  const box = $('genreList');
+  box.innerHTML = '';
+  for (const [g, n] of list) {
+    const row = document.createElement('label');
+    row.className = 'row';
+    row.innerHTML = '<span><span class="gn"></span> <span class="muted small gp"></span></span><input type="checkbox">';
+    row.querySelector('.gn').textContent = g;
+    row.querySelector('.gp').textContent = `${pct(n, all)} of plays`;
+    const cb = row.querySelector('input');
+    cb.checked = settings.genres.includes(g);
+    cb.onchange = () => setGenres(cb.checked ? [...settings.genres, g] : settings.genres.filter(x => x !== g));
+    box.appendChild(row);
+  }
+}
+// Takes effect from the next pick: the song playing now carries on.
+function setGenres(list) {
+  settings.genres = list;
+  save(LS.settings, settings);
+  nextUp = null;
+  rebuildPool();
+  renderGenres();
+  renderSourceTag();
+  $('genreSummary').textContent = genreLabel().replace(/^Genres?: /, '');
+}
+function openGenres() { renderGenres(); $('genreDlg').showModal(); }
+
+/* ---------- background genre lookup ----------
+   Spotify's export has no genres, so history mode looks them up on iTunes in the background, most-played
+   artists first: an artist search gives the artist's genre for all their songs, then a lookup of the
+   artist's song list gives each song its own genre where iTunes has it. A song played in a round also
+   brings its own genre with it. A little slower than the playlist lookup above (12 a minute), to leave
+   room under iTunes' limit for the game's own lookups. */
+const GENRE_INTERVAL = window.__PC_BG_INTERVAL__ || 5000;
+const REFINE_WEIGHT = 0.25;   // a song-by-song lookup is worth a quarter of finding an artist's genre at all
+let genreTimer = 0, genreBusy = false, genreSaveTimer = 0, rankedArtists = null;
+// Names compared for genres. norm() drops non-Latin letters, so fall back to the plain name for those.
+const nameKeys = new Map();
+function nameKey(s) {
+  if (!nameKeys.has(s)) nameKeys.set(s, norm(s) || String(s || '').toLowerCase().trim());
+  return nameKeys.get(s);
+}
+function artistKey(name) { return nameKey(name); }
+function genreOf(t) {
+  const info = cache[t.key], a = genreStore.a[artistKey(t.artist)];
+  return topGenre((info && info.genre) || genreStore.s[t.key] || (a && a[0]));
+}
+// History artists by plays, with their songs. Rebuilt when the history changes.
+function artistsByPlays() {
+  if (rankedArtists && rankedArtists.lib === lib) return rankedArtists.list;
+  const m = new Map();
+  for (const t of lib) {
+    const k = artistKey(t.artist);
+    const e = m.get(k) || { key: k, name: t.artist, plays: 0, songs: [] };
+    e.plays += t.plays; e.songs.push(t);
+    m.set(k, e);
+  }
+  rankedArtists = { lib, list: [...m.values()].sort((a, b) => b.plays - a.plays) };
+  return rankedArtists.list;
+}
+// The lookup with the most plays at stake: an artist with no genre yet, or a found artist's song list.
+function nextGenreLookup() {
+  let best = null, bestValue = 0;
+  for (const a of artistsByPlays()) {
+    if (a.plays <= bestValue) break;
+    const e = genreStore.a[a.key];
+    const value = e === undefined ? a.plays : e && !e[2] ? a.plays * REFINE_WEIGHT : 0;
+    if (value > bestValue) { bestValue = value; best = a; }
+  }
+  return best;
+}
+function scheduleGenres(delay) {
+  clearTimeout(genreTimer);
+  if (!activePlaylist() && lib.length && nextGenreLookup()) genreTimer = setTimeout(genreNext, delay);
+}
+async function genreNext() {
+  const a = nextGenreLookup();
+  if (!a || activePlaylist()) return;
+  if (genreBusy || document.hidden) { scheduleGenres(GENRE_INTERVAL); return; }
+  genreBusy = true;
+  let delay = GENRE_INTERVAL;
+  const country = encodeURIComponent(settings.country || 'US');
+  try {
+    const e = genreStore.a[a.key];
+    if (e === undefined) {
+      const d = await itunesSearch(`https://itunes.apple.com/search?media=music&entity=musicArtist&limit=10&country=${country}&term=${encodeURIComponent(a.name)}`);
+      // Only the exact name: a near miss is someone else, with someone else's genre.
+      const hit = (d.results || []).find(r => artistKey(r.artistName) === a.key && r.primaryGenreName);
+      genreStore.a[a.key] = hit ? [hit.primaryGenreName, hit.artistId, 0] : 0;
+    } else {
+      const d = await itunesSearch(`https://itunes.apple.com/lookup?id=${e[1]}&entity=song&limit=200&country=${country}`);
+      const byTitle = new Map();
+      for (const r of d.results || []) if (r.wrapperType === 'track' && r.primaryGenreName && !byTitle.has(nameKey(r.trackName))) byTitle.set(nameKey(r.trackName), r.primaryGenreName);
+      for (const t of a.songs) { const g = byTitle.get(nameKey(t.title)); if (g) genreStore.s[t.key] = g; }
+      e[2] = 1;
+    }
+  } catch { delay = BG_BACKOFF; }    // rate-limited or offline: back off, the game's own lookups come first
+  genreBusy = false;
+  clearTimeout(genreSaveTimer);
+  genreSaveTimer = setTimeout(() => save(LS.genres, genreStore), 2000);
+  if (genreFilter()) rebuildPool();   // newly found songs join the filtered pool from the next pick on
+  if ($('genreDlg').open) renderGenres();
+  scheduleGenres(delay);
+}
+
 function overlap(a, b) {
   const A = new Set(a.split(' ')), B = new Set(b.split(' '));
   let n = 0; for (const w of A) if (B.has(w)) n++;
@@ -1010,7 +1213,9 @@ function updatePlayBtn() {
 }
 
 /* ---------- rounds ---------- */
+let waitingForGenres = false;   // no song in the picked genres: a new pick follows the genre picker
 async function newRound() {
+  waitingForGenres = false;
   stopAudio();
   $('board').classList.add('hidden');
   setStatus('Picking a song…');
@@ -1019,6 +1224,17 @@ async function newRound() {
     nextUp = null;
     if (pick && pick.source !== settings.source) pick = null;
     if (!pick) pick = await drawPlayable(round && round.track.key);
+    if (!pick && genreFilter()) {
+      waitingForGenres = true;
+      setStatus('None of your songs are in the genres you picked yet. Genres are still being looked up in the background, so pick more genres or try again in a minute.');
+      const more = document.createElement('div');
+      more.innerHTML = '<br><button class="primary">Choose genres</button> <button>Try again</button>';
+      const [choose, again] = more.querySelectorAll('button');
+      choose.onclick = openGenres;
+      again.onclick = newRound;
+      $('status').appendChild(more);
+      return;
+    }
     if (!pick) {
       track('error', { kind: 'no-playable-songs' });
       setStatus(activePlaylist() ? 'Couldn\'t find previews for any song in this playlist. Try another store country in Settings.'
@@ -1260,11 +1476,12 @@ function renderSettings() {
   $('reprocessRow').classList.toggle('hidden', !needsReprocess(pl));
   $('exp').value = settings.exp;
   $('minPlays').value = settings.minPlays;
+  $('genreSummary').textContent = genreLabel().replace(/^Genres?: /, '');
   $('country').value = settings.country;
   $('expLabel').textContent = EXP_LABELS[settings.exp] || (settings.exp < 1 ? 'Flatter than play counts' : 'Steeper than play counts');
   $('poolInfo').textContent = pl
     ? `${pl.tracks.filter(t => cache[t.key] !== null).length.toLocaleString()} of ${pl.tracks.length.toLocaleString()} songs playable.`
-    : `${pool.length.toLocaleString()} of ${lib.length.toLocaleString()} songs in the pool.`;
+    : `${pool.length.toLocaleString()} of ${lib.length.toLocaleString()} songs in the pool${genreFilter() ? ' (genre filter on)' : ''}.`;
   const tb = $('topTable');
   tb.innerHTML = '';
   if (!pl) [...pool].sort((a, b) => b.plays - a.plays).slice(0, 15).forEach(t => {
@@ -1284,6 +1501,9 @@ function onSettingsChange() {
     settings.country = c;
     for (const k in cache) if (cache[k] === null) delete cache[k];  // retry misses in the new store
     save(LS.cache, cache);
+    for (const k in genreStore.a) if (genreStore.a[k] === 0) delete genreStore.a[k];
+    save(LS.genres, genreStore);
+    scheduleGenres(GENRE_INTERVAL);
   }
   save(LS.settings, settings);
   rebuildPool();
@@ -1323,6 +1543,7 @@ function startGame() {
   $('topBtns').classList.remove('hidden');
   newRound();
   scheduleResolve(BG_INTERVAL);
+  scheduleGenres(GENRE_INTERVAL);
   offerReprocess();
 }
 async function handleFiles(files) {
@@ -1444,6 +1665,11 @@ $('resetData').onclick = () => {
   try { Object.values(LS).forEach(k => localStorage.removeItem(k)); } catch {}
   location.reload();
 };
+$('genreBtn').onclick = openGenres;
+$('genreFromSettings').onclick = () => { $('settingsDlg').close(); openGenres(); };
+$('genreAll').onchange = () => { if ($('genreAll').checked) setGenres([]); else $('genreAll').checked = !settings.genres.length; };
+$('closeGenres').onclick = () => $('genreDlg').close();
+$('genreDlg').addEventListener('close', () => { if (waitingForGenres) newRound(); });
 $('statsBtn').onclick = () => { renderStats(); $('statsDlg').showModal(); };
 $('closeStats').onclick = () => $('statsDlg').close();
 $('reprocessGo').onclick = runReprocess;
