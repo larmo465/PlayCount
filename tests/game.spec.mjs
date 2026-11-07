@@ -78,6 +78,7 @@ test.describe('listening history', () => {
     await loadFiles(page, historyFile());
     await play(page, 'My listening history');
     await page.click('#settingsBtn');
+    await page.click('#requeueBtn');   // put the song now playing back in the draw, so the table shows every song
     const rows = page.locator('#topTable tr');
     await expect(rows.first()).toContainText('Mr. Brightside — The Killers60 plays');
     await expect(rows.nth(1)).toContainText('Bohemian Rhapsody - Remastered 2011 — Queen25 plays');
@@ -138,13 +139,29 @@ test.describe('listening history', () => {
     await expect(page.locator('#tNow')).toHaveText('0:00');
   });
 
-  test('picks are spread across songs, and none repeats back to back', async ({ page }) => {
+  test('plays every song once, then waits for a requeue', async ({ page }) => {
+    const playable = SONGS.filter(s => !s[0].startsWith('Zzz')).map(s => s[0]);   // "Zzz…" has no preview
     await loadFiles(page, historyFile());
     await play(page, 'My listening history');
     const seen = [(await giveUp(page)).title];
-    for (let i = 0; i < 5; i++) { await nextSong(page); seen.push((await giveUp(page)).title); }
-    for (let i = 1; i < seen.length; i++) expect(seen[i], `round ${i + 1}`).not.toBe(seen[i - 1]);
-    expect(new Set(seen).size).toBeGreaterThan(2);
+    await expect(page.locator('#revPlays')).toContainText(`${playable.length - 1} unplayed songs left.`);
+    for (let i = 1; i < playable.length; i++) { await nextSong(page); seen.push((await giveUp(page)).title); }
+    expect([...seen].sort()).toEqual([...playable].sort());
+    await expect(page.locator('#revPlays')).toContainText('That was the last unplayed song.');
+
+    await page.click('#nextBtn');
+    await expect(page.locator('#status')).toContainText(`You've played all ${playable.length} songs.`);
+    await page.click('#settingsBtn');
+    await expect(page.locator('#playedInfo')).toHaveText(`${playable.length} played, 0 still to come.`);
+    await page.click('#closeSettings');
+
+    // Played songs stay out after a reload too, until the button puts them back.
+    await page.reload();
+    await expect(page.locator('#status')).toContainText(`You've played all ${playable.length} songs.`);
+    await page.getByRole('button', { name: 'Requeue played songs' }).click();
+    await expect(page.locator('#board')).toBeVisible();
+    expect(playable).toContain((await giveUp(page)).title);
+    await expect(page.locator('#revPlays')).toContainText(`${playable.length - 1} unplayed songs left.`);
   });
 });
 
@@ -572,11 +589,15 @@ test.describe('genre filter', () => {
     await pick(page, 'Rock');
     await expect(page.locator('#genreBtn')).toHaveText('Genre: Rock');
     const first = await giveUp(page);   // the song that was already playing carries on
-    expect(first.title).toBeTruthy();
-    for (let i = 0; i < 4; i++) {
+    expect(ROCK).not.toContain(first.title);
+    const rock = [];
+    for (let i = 0; i < ROCK.length; i++) {
       await nextSong(page);
-      expect(ROCK).toContain((await giveUp(page)).title);
+      rock.push((await giveUp(page)).title);
     }
+    expect(rock.sort()).toEqual([...ROCK].sort());   // each Rock song once
+    await page.click('#nextBtn');
+    await expect(page.locator('#status')).toContainText(`You've played all ${ROCK.length} songs in the genres you picked.`);
     await page.click('#settingsBtn');
     await expect(page.locator('#poolInfo')).toHaveText(`2 of ${SONGS.length} songs in the pool (genre filter on).`);
     await expect(page.locator('#genreSummary')).toHaveText('Rock');
@@ -585,6 +606,8 @@ test.describe('genre filter', () => {
     await expect.poll(() => page.evaluate(() => (JSON.parse(localStorage.getItem('pc.genres.v1')) || { a: {} }).a.outkast)).toEqual(['Hip-Hop/Rap', 1005, 1]);
     const lookups = net.genres.length;
     await page.reload();
+    await expect(page.locator('#status')).toContainText('in the genres you picked');
+    await page.getByRole('button', { name: 'Requeue played songs' }).click();
     await expect(page.locator('#genreBtn')).toHaveText('Genre: Rock');
     expect(ROCK).toContain((await giveUp(page)).title);
     expect(net.genres.length, 'no genre is looked up twice').toBe(lookups);
@@ -605,9 +628,12 @@ test.describe('genre filter', () => {
     await page.getByRole('button', { name: 'Choose genres' }).click();
     await page.check('#genreAll');
     await page.click('#closeGenres');
+    // The one song with 30+ plays is the one just played, so it waits for a requeue.
+    await expect(page.locator('#status')).toContainText('You\'ve played all 1 song.');
+    await page.getByRole('button', { name: 'Requeue played songs' }).click();
     await expect(page.locator('#board')).toBeVisible();
     await expect(page.locator('#genreBtn')).toHaveText('Genre: All');
-    expect((await giveUp(page)).title).toBe('Mr. Brightside');   // the one song with 30+ plays
+    expect((await giveUp(page)).title).toBe('Mr. Brightside');
   });
 
   test.describe('artists named in other scripts', () => {

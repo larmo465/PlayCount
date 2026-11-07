@@ -13,6 +13,8 @@ You hear the first half-second of a song. Every wrong guess or skip unlocks more
   of coming up is proportional to how often you've played it. A slider in Settings
   goes from "every song equally likely" to "strongly favour your top songs", and you
   can set a minimum play count.
+  Each song comes up only once: played songs stay out (even across reloads) until you
+  press **Requeue played songs** in Settings, or on the screen that says you've played them all.
   The **Genre** button above the guesses limits the game to the genres you pick.
 - **Playlists, shuffled.** Every song plays once in random order, then it reshuffles.
   Import a playlist from:
