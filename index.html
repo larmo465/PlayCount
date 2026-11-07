@@ -227,7 +227,6 @@ button.chip{padding:2px 10px;font-size:13px}
     <label class="row"><span>Weighting<br><span class="muted small" id="expLabel"></span></span><input type="range" id="exp" min="0" max="2" step="0.25"></label>
     <label class="row"><span>Only songs with at least this many plays</span><input type="number" id="minPlays" min="1" step="1"></label>
     <div class="row small" style="display:flex;align-items:center;justify-content:space-between;gap:12px"><span>Genres: <span id="genreSummary"></span></span><button id="genreFromSettings">Choose</button></div>
-    <div class="row small" style="display:flex;align-items:center;justify-content:space-between;gap:12px"><span>Played songs don't come up again until you requeue them.<br><span class="muted" id="playedInfo"></span></span><button id="requeueBtn">Requeue played songs</button></div>
   </div>
   <label class="row"><span>iTunes store country <span class="muted small">(for previews)</span></span><input type="text" id="country" maxlength="2" style="width:56px;text-transform:uppercase"></label>
   <p class="small muted" id="poolInfo"></p>
@@ -281,7 +280,8 @@ button.chip{padding:2px 10px;font-size:13px}
 
 const SNIPPETS = [0.5, 1, 2, 4, 8, 16];   // seconds unlocked at each step
 const MAX_CLIP = SNIPPETS[SNIPPETS.length - 1];
-const LS = { genres: 'pc.genres.v1', reprocessDismissed: 'pc.reprocessDismissed.v1', retried: 'pc.retried.v1', lib: 'pc.lib.v1', playlists: 'pc.playlists.v1', cache: 'pc.cache.v1', settings: 'pc.settings.v1', stats: 'pc.stats.v1', recent: 'pc.recent.v1', played: 'pc.played.v1' };
+const RECENT_LIMIT = 30;                   // history mode: don't repeat a song within this many rounds
+const LS = { genres: 'pc.genres.v1', reprocessDismissed: 'pc.reprocessDismissed.v1', retried: 'pc.retried.v1', lib: 'pc.lib.v1', playlists: 'pc.playlists.v1', cache: 'pc.cache.v1', settings: 'pc.settings.v1', stats: 'pc.stats.v1', recent: 'pc.recent.v1' };
 
 const $ = id => document.getElementById(id);
 
@@ -377,10 +377,7 @@ let cache = load(LS.cache, {});              // key -> preview info, or null if 
 // Genres found in the background. a: artist -> [genre, iTunes artist id, songs looked up (0/1)], or 0 when
 // iTunes has no such artist. s: song key -> the song's own genre.
 const genreStore = Object.assign({ a: {}, s: {} }, load(LS.genres, {}));
-// History mode: a song that has been played stays out of the draw until the player requeues played songs.
-// (Older saves only remembered the last 30 rounds, in pc.recent; start from those.)
-const played = new Set(load(LS.played, null) || load(LS.recent, []));
-let exhausted = false;                        // history mode has played every song the settings allow
+let recent = load(LS.recent, []);
 let lib = [];                                 // listening history: [{key,title,artist,plays,uri}]
 let playlists = [];                           // [{id,name,tracks:[{key,title,artist,uri,query,titleOnly}]}]
 let pool = [], cum = [], total = 0;           // history mode
@@ -669,32 +666,11 @@ function addPlaylists(list) {
 // History songs the settings allow, before the genre filter.
 function eligible() { return lib.filter(t => t.plays >= settings.minPlays && cache[t.key] !== null); }
 function genreFilter() { return activePlaylist() || !settings.genres.length ? null : new Set(settings.genres); }
-// History songs the settings and genre filter allow, played or not.
-function matching() {
+function rebuildPool() {
   const only = genreFilter();
-  return eligible().filter(t => !only || only.has(genreOf(t)));   // songs with no genre yet sit out a filter
-}
-// The draw: matching songs not played since the last requeue, weighted by plays.
-function rebuildWeights() {
-  pool = matching().filter(t => !played.has(t.key));
+  pool = eligible().filter(t => !only || only.has(genreOf(t)));   // songs with no genre yet sit out a filter
   cum = []; total = 0;
   for (const t of pool) { total += Math.pow(t.plays, settings.exp); cum.push(total); }
-}
-function markPlayed(key) {
-  played.add(key);
-  save(LS.played, [...played]);
-  rebuildWeights();
-}
-function requeue() {
-  track('requeue', { songs: played.size });
-  played.clear();
-  save(LS.played, []);
-  rebuildWeights();
-  if ($('settingsDlg').open) renderSettings();
-  if (exhausted) newRound();
-}
-function rebuildPool() {
-  rebuildWeights();
   queue = [];
   const seen = new Map();
   for (const t of [...(activePlaylist() ? activePlaylist().tracks : []), ...lib]) {
@@ -732,7 +708,14 @@ function shufflePick(avoid) {
 }
 function pickNext(avoid) {
   if (activePlaylist()) return shufflePick(avoid);
-  return weightedPick(new Set(avoid ? [avoid] : []));
+  return weightedPick(excludeSet(avoid));
+}
+function excludeSet(extra) {
+  const s = new Set(recent);
+  if (extra) s.add(extra);
+  // When the pool is small, allow repeats rather than stalling.
+  if (pool.length <= s.size + 1) return new Set(extra ? [extra] : []);
+  return s;
 }
 function remainingInCycle() { return activePlaylist() ? queue.length : null; }   // read before prefetch pops the next one
 
@@ -1171,7 +1154,7 @@ async function drawPlayable(avoid) {
     if (!t) return null;
     const info = await findPreview(t);
     if (info) return { track: t, info, source: settings.source };
-    if (!activePlaylist()) rebuildWeights();
+    if (!activePlaylist()) { const q = queue; rebuildPool(); queue = q; }
   }
   return null;
 }
@@ -1233,7 +1216,6 @@ function updatePlayBtn() {
 let waitingForGenres = false;   // no song in the picked genres: a new pick follows the genre picker
 async function newRound() {
   waitingForGenres = false;
-  exhausted = false;
   stopAudio();
   $('board').classList.add('hidden');
   setStatus('Picking a song…');
@@ -1241,15 +1223,7 @@ async function newRound() {
     let pick = nextUp ? await nextUp : null;
     nextUp = null;
     if (pick && pick.source !== settings.source) pick = null;
-    if (pick && !activePlaylist() && played.has(pick.track.key)) pick = null;
     if (!pick) pick = await drawPlayable(round && round.track.key);
-    if (!pick && !activePlaylist() && !pool.length && matching().length) {
-      exhausted = true;
-      const n = matching().length;
-      setStatus(`You've played all ${n.toLocaleString()} song${n === 1 ? '' : 's'}${genreFilter() ? ' in the genres you picked' : ''}. Requeue them to hear them again.`);
-      addStatusButton('Requeue played songs', requeue);
-      return;
-    }
     if (!pick && genreFilter()) {
       waitingForGenres = true;
       setStatus('None of your songs are in the genres you picked yet. Genres are still being looked up in the background, so pick more genres or try again in a minute.');
@@ -1271,8 +1245,8 @@ async function newRound() {
     round = { track: pick.track, info: pick.info, step: 0, guesses: [], over: false, won: false };
     resetBar();   // the last round may have ended mid-clip (a right guess or giving up while it played)
     if (!activePlaylist()) {
-      round.chance = chance(pick.track);   // before it leaves the draw
-      markPlayed(pick.track.key);
+      recent = [pick.track.key, ...recent.filter(k => k !== pick.track.key)].slice(0, RECENT_LIMIT);
+      save(LS.recent, recent);
     }
     ready = false;
     audio.src = pick.info.preview;
@@ -1286,16 +1260,11 @@ async function newRound() {
   } catch (e) {
     track('error', { kind: 'song-lookup' });
     setStatus(e.message || String(e), true);
-    addStatusButton('Try again', newRound);
+    const retry = document.createElement('div');
+    retry.innerHTML = '<br><button class="primary">Try again</button>';
+    retry.querySelector('button').onclick = newRound;
+    $('status').appendChild(retry);
   }
-}
-function addStatusButton(text, onclick) {
-  const wrap = document.createElement('div');
-  wrap.innerHTML = '<br><button class="primary"></button>';
-  const b = wrap.querySelector('button');
-  b.textContent = text;
-  b.onclick = onclick;
-  $('status').appendChild(wrap);
 }
 function setStatus(msg, isErr) {
   const s = $('status');
@@ -1391,9 +1360,7 @@ function renderResult() {
     $('revPlays').textContent = [playsText, left ? `${left} song${left === 1 ? '' : 's'} left in this shuffle` : 'Last song of this shuffle. The next one reshuffles'].filter(Boolean).join('. ') + '.';
   } else {
     const rank = lib.indexOf(t) + 1;
-    const c = r.chance || 0, left = pool.length;
-    $('revPlays').textContent = `${playsText}: #${rank.toLocaleString()} of ${lib.length.toLocaleString()} songs, a ${(c * 100).toFixed(c < 0.001 ? 3 : 2)}% chance this round. `
-      + (left ? `${left.toLocaleString()} unplayed song${left === 1 ? '' : 's'} left.` : 'That was the last unplayed song. Requeue in Settings to hear them again.');
+    $('revPlays').textContent = `${playsText}: #${rank.toLocaleString()} of ${lib.length.toLocaleString()} songs, a ${(chance(t) * 100).toFixed(chance(t) < 0.001 ? 3 : 2)}% chance each round.`;
   }
   const id = trackId(t.uri);
   $('spLink').href = id ? `https://open.spotify.com/track/${id}` : `https://open.spotify.com/search/${encodeURIComponent(t.title + ' ' + t.artist)}`;
@@ -1457,7 +1424,7 @@ function hideSugg() { $('sugg').classList.add('hidden'); suggItems = []; }
 /* ---------- source chooser, settings, stats ---------- */
 function sourceOptions() {
   const out = [];
-  if (lib.length) out.push({ id: 'history', name: 'My listening history', detail: `${lib.length.toLocaleString()} songs, weighted by how often you played them, each once until you requeue` });
+  if (lib.length) out.push({ id: 'history', name: 'My listening history', detail: `${lib.length.toLocaleString()} songs, weighted by how often you played them` });
   for (const p of playlists) out.push({ id: p.id, name: p.name, detail: `${p.tracks.length.toLocaleString()} songs, shuffled`, removable: true });
   return out;
 }
@@ -1514,12 +1481,7 @@ function renderSettings() {
   $('expLabel').textContent = EXP_LABELS[settings.exp] || (settings.exp < 1 ? 'Flatter than play counts' : 'Steeper than play counts');
   $('poolInfo').textContent = pl
     ? `${pl.tracks.filter(t => cache[t.key] !== null).length.toLocaleString()} of ${pl.tracks.length.toLocaleString()} songs playable.`
-    : `${matching().length.toLocaleString()} of ${lib.length.toLocaleString()} songs in the pool${genreFilter() ? ' (genre filter on)' : ''}.`;
-  if (!pl) {
-    const done = matching().length - pool.length;
-    $('playedInfo').textContent = `${done.toLocaleString()} played, ${pool.length.toLocaleString()} still to come.`;
-    $('requeueBtn').disabled = !played.size;
-  }
+    : `${pool.length.toLocaleString()} of ${lib.length.toLocaleString()} songs in the pool${genreFilter() ? ' (genre filter on)' : ''}.`;
   const tb = $('topTable');
   tb.innerHTML = '';
   if (!pl) [...pool].sort((a, b) => b.plays - a.plays).slice(0, 15).forEach(t => {
@@ -1694,7 +1656,6 @@ document.addEventListener('keydown', e => {
 
 $('settingsBtn').onclick = () => { renderSettings(); $('settingsDlg').showModal(); };
 $('closeSettings').onclick = () => $('settingsDlg').close();
-$('requeueBtn').onclick = requeue;
 ['exp', 'minPlays', 'country'].forEach(id => $(id).addEventListener('change', onSettingsChange));
 $('exp').addEventListener('input', onSettingsChange);
 $('sourceSel').onchange = () => { setSource($('sourceSel').value); renderSettings(); $('settingsDlg').close(); startGame(); };
